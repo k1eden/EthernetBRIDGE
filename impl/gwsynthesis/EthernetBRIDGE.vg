@@ -1,0 +1,27 @@
+//
+//Written by GowinSynthesis
+//Product Version "GowinSynthesis V1.9.8.10"
+//Mon Jan 02 22:34:02 2023
+
+//Source file index table:
+//file0 "\E:/EthernetBRIDGE/EthernetBRIDGE/src/mac1100.v"
+//file1 "\E:/EthernetBRIDGE/EthernetBRIDGE/src/mac1200.v"
+//file2 "\E:/EthernetBRIDGE/EthernetBRIDGE/src/txfifo.v"
+//file3 "\E:/EthernetBRIDGE/EthernetBRIDGE/src/rxfifo.v"
+`timescale 100 ps/100 ps
+module rxfifo (
+
+)
+;
+wire VCC;
+wire GND;
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+  GSR GSR (
+    .GSRI(VCC) 
+);
+endmodule /* rxfifo */

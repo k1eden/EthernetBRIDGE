@@ -1,0 +1,13 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW1N-4D" pn="GW1N-LV4MG160C5/I4">gw1n4d-047</Device>
+    <FileList>
+        <File path="src/mac1100.v" type="file.verilog" enable="1"/>
+        <File path="src/mac1200.v" type="file.verilog" enable="1"/>
+        <File path="src/rxfifo.v" type="file.verilog" enable="1"/>
+        <File path="src/txfifo.v" type="file.verilog" enable="1"/>
+    </FileList>
+</Project>

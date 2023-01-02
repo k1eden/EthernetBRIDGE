@@ -1,0 +1,34 @@
+[
+ {
+  "InstFile" : "E:/EthernetBRIDGE/EthernetBRIDGE/src/mac1100.v",
+  "InstLine" : 1,
+  "InstName" : "mac1100",
+  "ModuleFile" : "E:/EthernetBRIDGE/EthernetBRIDGE/src/mac1100.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "mac1100"
+ },
+ {
+  "InstFile" : "E:/EthernetBRIDGE/EthernetBRIDGE/src/mac1200.v",
+  "InstLine" : 1,
+  "InstName" : "mac1200",
+  "ModuleFile" : "E:/EthernetBRIDGE/EthernetBRIDGE/src/mac1200.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "mac1200"
+ },
+ {
+  "InstFile" : "E:/EthernetBRIDGE/EthernetBRIDGE/src/txfifo.v",
+  "InstLine" : 1,
+  "InstName" : "txfifo",
+  "ModuleFile" : "E:/EthernetBRIDGE/EthernetBRIDGE/src/txfifo.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "txfifo"
+ },
+ {
+  "InstFile" : "E:/EthernetBRIDGE/EthernetBRIDGE/src/rxfifo.v",
+  "InstLine" : 1,
+  "InstName" : "rxfifo",
+  "ModuleFile" : "E:/EthernetBRIDGE/EthernetBRIDGE/src/rxfifo.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "rxfifo"
+ }
+]
