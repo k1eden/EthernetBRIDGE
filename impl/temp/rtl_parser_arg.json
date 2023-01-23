@@ -1,19 +1,27 @@
 {
  "Files" : [
   {
-   "Path" : "E:/EthernetBRIDGE/EthernetBRIDGE/src/mac1100.v",
+   "Path" : "E:/EthernetBRIDGE/src/mac1100.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/EthernetBRIDGE/src/mac1200.v",
+   "Path" : "E:/EthernetBRIDGE/src/mac1200.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/EthernetBRIDGE/src/txfifo.v",
+   "Path" : "E:/EthernetBRIDGE/src/rxfifo.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/EthernetBRIDGE/src/rxfifo.v",
+   "Path" : "E:/EthernetBRIDGE/src/top_bridge.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/txfifo.v",
    "Type" : "verilog"
   }
  ],
@@ -21,8 +29,8 @@
 
  ],
  "LoopLimit" : 2000,
- "ResultFile" : "E:/EthernetBRIDGE/EthernetBRIDGE/impl/temp/rtl_parser.result",
- "Top" : "",
+ "ResultFile" : "E:/EthernetBRIDGE/impl/temp/rtl_parser.result",
+ "Top" : "mac1200",
  "VerilogStd" : "verilog_2001",
  "VhdlStd" : "vhdl_93"
 }

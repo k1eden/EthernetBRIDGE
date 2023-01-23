@@ -8,6 +8,8 @@
         <File path="src/mac1100.v" type="file.verilog" enable="1"/>
         <File path="src/mac1200.v" type="file.verilog" enable="1"/>
         <File path="src/rxfifo.v" type="file.verilog" enable="1"/>
+        <File path="src/top_bridge.v" type="file.verilog" enable="1"/>
+        <File path="src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v" type="file.verilog" enable="1"/>
         <File path="src/txfifo.v" type="file.verilog" enable="1"/>
     </FileList>
 </Project>

@@ -1,0 +1,10 @@
+-d E:\EthernetBRIDGE\impl\gwsynthesis\EthernetBRIDGE.vg
+-p GW1N-4D-MBGA160-5
+-pn GW1N-LV4MG160C5/I4
+-cfg E:\EthernetBRIDGE\impl\pnr\device.cfg
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-route_maxfan 23
