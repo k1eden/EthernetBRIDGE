@@ -1,4 +1,0 @@
-module txfifo ();
-
-//TODO()
-endmodule

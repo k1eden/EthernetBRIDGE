@@ -1,4 +1,0 @@
-module rxfifo ();
-
-//TODO()
-endmodule
