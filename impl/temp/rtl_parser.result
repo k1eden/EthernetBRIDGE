@@ -28,55 +28,85 @@
   ]
  },
  {
-  "InstFile" : "E:/EthernetBRIDGE/src/mac1200.v",
-  "InstLine" : 1,
-  "InstName" : "mac1200",
-  "ModuleFile" : "E:/EthernetBRIDGE/src/mac1200.v",
-  "ModuleLine" : 1,
-  "ModuleName" : "mac1200",
-  "SubInsts" : [
-   {
-    "InstFile" : "E:/EthernetBRIDGE/src/mac1200.v",
-    "InstLine" : 60,
-    "InstName" : "mac1200",
-    "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
-    "ModuleLine" : 6522,
-    "ModuleName" : "Triple_Speed_Ethernet_MAC_Top",
-    "SubInsts" : [
-     {
-      "InstFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
-      "InstLine" : 6631,
-      "InstName" : "u_triple_speed_mac",
-      "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
-      "ModuleLine" : 1,
-      "ModuleName" : "~triple_speed_mac.Triple_Speed_Ethernet_MAC_Top"
-     }
-    ]
-   }
-  ]
- },
- {
-  "InstFile" : "E:/EthernetBRIDGE/src/rxfifo.v",
-  "InstLine" : 1,
-  "InstName" : "rxfifo",
-  "ModuleFile" : "E:/EthernetBRIDGE/src/rxfifo.v",
-  "ModuleLine" : 1,
-  "ModuleName" : "rxfifo"
- },
- {
   "InstFile" : "E:/EthernetBRIDGE/src/top_bridge.v",
   "InstLine" : 1,
   "InstName" : "top_bridge",
   "ModuleFile" : "E:/EthernetBRIDGE/src/top_bridge.v",
   "ModuleLine" : 1,
-  "ModuleName" : "top_bridge"
- },
- {
-  "InstFile" : "E:/EthernetBRIDGE/src/txfifo.v",
-  "InstLine" : 1,
-  "InstName" : "txfifo",
-  "ModuleFile" : "E:/EthernetBRIDGE/src/txfifo.v",
-  "ModuleLine" : 1,
-  "ModuleName" : "txfifo"
+  "ModuleName" : "top_bridge",
+  "SubInsts" : [
+   {
+    "InstFile" : "E:/EthernetBRIDGE/src/top_bridge.v",
+    "InstLine" : 48,
+    "InstName" : "mac1100",
+    "ModuleFile" : "E:/EthernetBRIDGE/src/mac1200.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "mac1200",
+    "SubInsts" : [
+     {
+      "InstFile" : "E:/EthernetBRIDGE/src/mac1200.v",
+      "InstLine" : 60,
+      "InstName" : "mac1200",
+      "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+      "ModuleLine" : 6522,
+      "ModuleName" : "Triple_Speed_Ethernet_MAC_Top",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+        "InstLine" : 6631,
+        "InstName" : "u_triple_speed_mac",
+        "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "~triple_speed_mac.Triple_Speed_Ethernet_MAC_Top"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "InstFile" : "E:/EthernetBRIDGE/src/top_bridge.v",
+    "InstLine" : 55,
+    "InstName" : "txfifo_1100",
+    "ModuleFile" : "E:/EthernetBRIDGE/src/fifo_buff.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "fifo_buff"
+   },
+   {
+    "InstFile" : "E:/EthernetBRIDGE/src/top_bridge.v",
+    "InstLine" : 60,
+    "InstName" : "txfifo_1200",
+    "ModuleFile" : "E:/EthernetBRIDGE/src/fifo_buff.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "fifo_buff"
+   },
+   {
+    "InstFile" : "E:/EthernetBRIDGE/src/top_bridge.v",
+    "InstLine" : 64,
+    "InstName" : "mac1200",
+    "ModuleFile" : "E:/EthernetBRIDGE/src/mac1200.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "mac1200",
+    "SubInsts" : [
+     {
+      "InstFile" : "E:/EthernetBRIDGE/src/mac1200.v",
+      "InstLine" : 60,
+      "InstName" : "mac1200",
+      "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+      "ModuleLine" : 6522,
+      "ModuleName" : "Triple_Speed_Ethernet_MAC_Top",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+        "InstLine" : 6631,
+        "InstName" : "u_triple_speed_mac",
+        "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "~triple_speed_mac.Triple_Speed_Ethernet_MAC_Top"
+       }
+      ]
+     }
+    ]
+   }
+  ]
  }
 ]

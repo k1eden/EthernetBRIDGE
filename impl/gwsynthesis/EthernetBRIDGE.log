@@ -1,11 +1,12 @@
 GowinSynthesis start
 Running parser ...
-Analyzing Verilog file 'E:\EthernetBRIDGE\src\mac1100.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\mac1200.v'
-Analyzing Verilog file 'E:\EthernetBRIDGE\src\rxfifo.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\top_bridge.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v'
-Analyzing Verilog file 'E:\EthernetBRIDGE\src\txfifo.v'
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\fifo_buff.v'
+WARN  (EX3073) : Port 'rst_n' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_bridge.v":57)
+WARN  (EX3073) : Port 'rst_n' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_bridge.v":62)
+Compiling module 'top_bridge'("E:\EthernetBRIDGE\src\top_bridge.v":1)
 WARN  (EX3073) : Port 'rx_pause_req' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac1200.v":67)
 Compiling module 'mac1200'("E:\EthernetBRIDGE\src\mac1200.v":1)
 Compiling module 'Triple_Speed_Ethernet_MAC_Top'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":6522)
@@ -27,7 +28,6 @@ Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_sp
 Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
 WARN  (EX1998) : Net 'reset' does not have a driver("E:\EthernetBRIDGE\src\mac1200.v":18)
 WARN  (EX1998) : Net 'tx_mac_valid' does not have a driver("E:\EthernetBRIDGE\src\mac1200.v":20)
-WARN  (EX1998) : Net 'tx_mac_data[7]' does not have a driver("E:\EthernetBRIDGE\src\mac1200.v":21)
 WARN  (EX1998) : Net 'tx_mac_last' does not have a driver("E:\EthernetBRIDGE\src\mac1200.v":22)
 WARN  (EX1998) : Net 'tx_mac_err' does not have a driver("E:\EthernetBRIDGE\src\mac1200.v":23)
 WARN  (EX1947) : Input port 'rx_fcs_fwd_ena' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac1200.v":67)
@@ -136,13 +136,18 @@ WARN  (EX1947) : Input port 'miim_wrdata[1]' remains unconnected for this instan
 WARN  (EX1947) : Input port 'miim_wrdata[0]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac1200.v":67)
 WARN  (EX1947) : Input port 'miim_wren' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac1200.v":67)
 WARN  (EX1947) : Input port 'miim_rden' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac1200.v":67)
-NOTE  (EX0101) : Current top module is "mac1200"
+Compiling module 'fifo_buff'("E:\EthernetBRIDGE\src\fifo_buff.v":1)
+Extracting RAM for identifier 'memory'("E:\EthernetBRIDGE\src\fifo_buff.v":15)
+WARN  (EX1947) : Input port 'rst_n' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_bridge.v":57)
+WARN  (EX2565) : Input 'is_another_empty' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration("E:\EthernetBRIDGE\src\top_bridge.v":57)
+WARN  (EX1947) : Input port 'rst_n' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_bridge.v":62)
+WARN  (EX2565) : Input 'is_another_empty' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration("E:\EthernetBRIDGE\src\top_bridge.v":62)
+NOTE  (EX0101) : Current top module is "top_bridge"
 [5%] Running netlist conversion ...
-WARN  (CV0016) : Input phy_rx_clk is unused("E:\EthernetBRIDGE\src\mac1200.v":3)
-WARN  (CV0016) : Input phy_rx_dv is unused("E:\EthernetBRIDGE\src\mac1200.v":5)
-WARN  (CV0016) : Input phy_rxd is unused("E:\EthernetBRIDGE\src\mac1200.v":4)
-WARN  (CV0016) : Input phy_rx_err is unused("E:\EthernetBRIDGE\src\mac1200.v":6)
-WARN  (CV0016) : Input phy_mdio is unused("E:\EthernetBRIDGE\src\mac1200.v":44)
+WARN  (CV0016) : Input phy1100_rx_err is unused("E:\EthernetBRIDGE\src\top_bridge.v":8)
+WARN  (CV0016) : Input phy1100_mdio is unused("E:\EthernetBRIDGE\src\top_bridge.v":17)
+WARN  (CV0016) : Input phy1200_rx_err is unused("E:\EthernetBRIDGE\src\top_bridge.v":23)
+WARN  (CV0016) : Input phy1200_mdio is unused("E:\EthernetBRIDGE\src\top_bridge.v":32)
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
 [15%] Optimizing Phase 1 completed
@@ -163,6 +168,13 @@ WARN  (NL0002) : The module "~crc_chk.Triple_Speed_Ethernet_MAC_Top" instantiate
 WARN  (NL0002) : The module "~mac_rx_if_mux.Triple_Speed_Ethernet_MAC_Top" instantiated to "u_mac_rx_if_mux" is swept in optimizing("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
 WARN  (NL0002) : The module "~eth_outputcontrol.Triple_Speed_Ethernet_MAC_Top" instantiated to "outctrl" is swept in optimizing("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
 WARN  (NL0002) : The module "~eth_shiftreg.Triple_Speed_Ethernet_MAC_Top" instantiated to "shftrg" is swept in optimizing("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+WARN  (NL0002) : The module "~mac_rx_ctrl.Triple_Speed_Ethernet_MAC_Top" instantiated to "u_mac_rx_ctrl" is swept in optimizing("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+WARN  (NL0002) : The module "~crc_chk.Triple_Speed_Ethernet_MAC_Top" instantiated to "u_crc_chk" is swept in optimizing("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+WARN  (NL0002) : The module "~mac_rx_if_mux.Triple_Speed_Ethernet_MAC_Top" instantiated to "u_mac_rx_if_mux" is swept in optimizing("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+WARN  (NL0002) : The module "~eth_outputcontrol.Triple_Speed_Ethernet_MAC_Top" instantiated to "outctrl" is swept in optimizing("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+WARN  (NL0002) : The module "~eth_shiftreg.Triple_Speed_Ethernet_MAC_Top" instantiated to "shftrg" is swept in optimizing("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+WARN  (NL0002) : The module "fifo_buff" instantiated to "txfifo_1100" is swept in optimizing("E:\EthernetBRIDGE\src\top_bridge.v":57)
+WARN  (NL0002) : The module "fifo_buff" instantiated to "txfifo_1200" is swept in optimizing("E:\EthernetBRIDGE\src\top_bridge.v":62)
 [95%] Generate netlist file "E:\EthernetBRIDGE\impl\gwsynthesis\EthernetBRIDGE.vg" completed
 [100%] Generate report file "E:\EthernetBRIDGE\impl\gwsynthesis\EthernetBRIDGE_syn.rpt.html" completed
 GowinSynthesis finish

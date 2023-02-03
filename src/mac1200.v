@@ -1,4 +1,4 @@
-module mac1200 (phy_rx_clk, phy_rx_dv, phy_rxd, phy_rx_err, phy_tx_clk, phy_tx_en, phy_txd, phy_tx_err, phy_crs, phy_col, phy_mdio, phy_mdc);
+module mac1200 (phy_rx_clk, phy_rx_dv, phy_rxd, phy_rx_err, phy_tx_clk, phy_tx_en, phy_txd, phy_tx_err, phy_crs, phy_col, phy_mdio, phy_mdc, rx_mac_data, tx_mac_data, rx_mac_clk);
 
 input phy_rx_clk;
 input [3:0] phy_rxd;
@@ -18,15 +18,15 @@ output phy_tx_err;
 wire reset; 
 
 wire tx_mac_valid; 
-reg [7:0] tx_mac_data; 
+input [7:0] tx_mac_data; 
 wire tx_mac_last; 
 wire tx_mac_err; 
 
 //Outputs
 wire tx_mac_clk;
-wire rx_mac_clk;
+output rx_mac_clk;
 wire rx_mac_valid;
-wire [7:0] rx_mac_data;
+output wire [7:0] rx_mac_data;
 wire rx_mac_last;
 wire rx_mac_err;
 wire tx_mac_ready;

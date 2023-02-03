@@ -55,12 +55,10 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 </tr>
 <tr>
 <td class="label">Design File</td>
-<td>E:\EthernetBRIDGE\src\mac1100.v<br>
-E:\EthernetBRIDGE\src\mac1200.v<br>
-E:\EthernetBRIDGE\src\rxfifo.v<br>
+<td>E:\EthernetBRIDGE\src\mac1200.v<br>
 E:\EthernetBRIDGE\src\top_bridge.v<br>
 E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v<br>
-E:\EthernetBRIDGE\src\txfifo.v<br>
+E:\EthernetBRIDGE\src\fifo_buff.v<br>
 </td>
 </tr>
 <tr>
@@ -73,19 +71,19 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 </tr>
 <tr>
 <td class="label">Part Number</td>
-<td>GW1N-LV4MG160C5/I4</td>
+<td>GW2A-LV18EQ144C8/I7</td>
 </tr>
 <tr>
 <td class="label">Device</td>
-<td>GW1N-4</td>
+<td>GW2A-18</td>
 </tr>
 <tr>
 <td class="label">Device Version</td>
-<td>D</td>
+<td>C</td>
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Sat Jan 21 22:52:33 2023
+<td>Fri Feb 03 17:03:29 2023
 </td>
 </tr>
 <tr>
@@ -97,15 +95,15 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <table class="summary_table">
 <tr>
 <td class="label">Top Level Module</td>
-<td>mac1200</td>
+<td>top_bridge</td>
 </tr>
 <tr>
 <td class="label">Synthesis Process</td>
-<td>Running parser:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.312s, Elapsed time = 0h 0m 0.408s, Peak memory usage = 137.340MB<br/>Running netlist conversion:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 0MB<br/>Running device independent optimization:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 0: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.006s, Peak memory usage = 137.340MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 1: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.011s, Peak memory usage = 137.340MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 2: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.01s, Peak memory usage = 137.340MB<br/>Running inference:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 0: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.007s, Peak memory usage = 137.340MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 1: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 137.340MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 2: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.003s, Peak memory usage = 137.340MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 137.340MB<br/>Running technical mapping:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.006s, Peak memory usage = 137.340MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 1: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.005s, Peak memory usage = 137.340MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 2: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.004s, Peak memory usage = 137.340MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 3: CPU time = 0h 0m 0.046s, Elapsed time = 0h 0m 0.051s, Peak memory usage = 137.340MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 4: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.001s, Peak memory usage = 137.340MB<br/>Generate output files:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.031s, Elapsed time = 0h 0m 0.037s, Peak memory usage = 137.340MB<br/></td>
+<td>Running parser:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.406s, Elapsed time = 0h 0m 0.474s, Peak memory usage = 306.254MB<br/>Running netlist conversion:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 0MB<br/>Running device independent optimization:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 0: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.018s, Peak memory usage = 306.254MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 1: CPU time = 0h 0m 0.031s, Elapsed time = 0h 0m 0.023s, Peak memory usage = 306.254MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 2: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.019s, Peak memory usage = 306.254MB<br/>Running inference:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 0: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.015s, Peak memory usage = 306.254MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 1: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.001s, Peak memory usage = 306.254MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 2: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.007s, Peak memory usage = 306.254MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 306.254MB<br/>Running technical mapping:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 0: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.013s, Peak memory usage = 306.254MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 1: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.011s, Peak memory usage = 306.254MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 2: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.007s, Peak memory usage = 306.254MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 3: CPU time = 0h 0m 0.093s, Elapsed time = 0h 0m 0.067s, Peak memory usage = 306.254MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 4: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.002s, Peak memory usage = 306.254MB<br/>Generate output files:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.078s, Elapsed time = 0h 0m 0.066s, Peak memory usage = 306.254MB<br/></td>
 </tr>
 <tr>
 <td class="label">Total Time and Memory Usage</td>
-<td>CPU time = 0h 0m 0.434s, Elapsed time = 0h 0m 0.549s, Peak memory usage = 137.340MB</td>
+<td>CPU time = 0h 0m 0.683s, Elapsed time = 0h 0m 0.723s, Peak memory usage = 306.254MB</td>
 </tr>
 </table>
 <h1><a name="resource">Resource</a></h1>
@@ -117,63 +115,63 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 </tr>
 <tr>
 <td class="label"><b>I/O Port </b></td>
-<td>18</td>
+<td>36</td>
 </tr>
 <tr>
 <td class="label"><b>I/O Buf </b></td>
-<td>10</td>
+<td>20</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspIBUF</td>
-<td>3</td>
+<td>6</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspOBUF</td>
-<td>7</td>
+<td>14</td>
 </tr>
 <tr>
 <td class="label"><b>Register </b></td>
-<td>456</td>
+<td>912</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFP</td>
-<td>3</td>
+<td>6</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFPE</td>
-<td>41</td>
+<td>82</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFC</td>
-<td>286</td>
+<td>572</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFCE</td>
-<td>126</td>
+<td>252</td>
 </tr>
 <tr>
 <td class="label"><b>LUT </b></td>
-<td>511</td>
+<td>1022</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT2</td>
-<td>71</td>
+<td>142</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT3</td>
-<td>101</td>
+<td>202</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT4</td>
-<td>339</td>
+<td>678</td>
 </tr>
 <tr>
 <td class="label"><b>INV </b></td>
-<td>3</td>
+<td>6</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspINV</td>
-<td>3</td>
+<td>6</td>
 </tr>
 </table>
 <h2><a name="utilization">Resource Utilization Summary</a></h2>
@@ -185,27 +183,27 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 </tr>
 <tr>
 <td class="label">Logic</td>
-<td>514(514 LUTs, 0 ALUs) / 4608</td>
-<td>12%</td>
+<td>1028(1028 LUTs, 0 ALUs) / 20736</td>
+<td>5%</td>
 </tr>
 <tr>
 <td class="label">Register</td>
-<td>456 / 3792</td>
-<td>13%</td>
+<td>912 / 15909</td>
+<td>6%</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp--Register as Latch</td>
-<td>0 / 3792</td>
+<td>0 / 15909</td>
 <td>0%</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp--Register as FF</td>
-<td>456 / 3792</td>
-<td>13%</td>
+<td>912 / 15909</td>
+<td>6%</td>
 </tr>
 <tr>
 <td class="label">BSRAM</td>
-<td>0 / 10</td>
+<td>0 / 46</td>
 <td>0%</td>
 </tr>
 </table>
@@ -224,15 +222,26 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <th>Object</th>
 </tr>
 <tr>
-<td>phy_tx_clk</td>
+<td>phy1100_tx_clk</td>
 <td>Base</td>
-<td>20.000</td>
-<td>50.0</td>
-<td>0.000</td>
 <td>10.000</td>
+<td>100.0</td>
+<td>0.000</td>
+<td>5.000</td>
 <td> </td>
 <td> </td>
-<td>phy_tx_clk_ibuf/I </td>
+<td>phy1100_tx_clk_ibuf/I </td>
+</tr>
+<tr>
+<td>phy1200_tx_clk</td>
+<td>Base</td>
+<td>10.000</td>
+<td>100.0</td>
+<td>0.000</td>
+<td>5.000</td>
+<td> </td>
+<td> </td>
+<td>phy1200_tx_clk_ibuf/I </td>
 </tr>
 </table>
 <h2><a name="performance">Max Frequency Summary:</a></h2>
@@ -247,9 +256,17 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 </tr>
 <tr>
 <td>1</td>
-<td>phy_tx_clk</td>
-<td>50.0(MHz)</td>
-<td>86.6(MHz)</td>
+<td>phy1100_tx_clk</td>
+<td>100.0(MHz)</td>
+<td>224.0(MHz)</td>
+<td>6</td>
+<td>TOP</td>
+</tr>
+<tr>
+<td>2</td>
+<td>phy1200_tx_clk</td>
+<td>100.0(MHz)</td>
+<td>224.0(MHz)</td>
 <td>6</td>
 <td>TOP</td>
 </tr>
@@ -260,31 +277,31 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>8.458</td>
+<td>5.536</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>12.723</td>
+<td>5.292</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
-<td>21.181</td>
+<td>10.828</td>
 </tr>
 <tr>
 <td class="label">From</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1</td>
 </tr>
 <tr>
 <td class="label">To</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_12_s1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_12_s1</td>
 </tr>
 <tr>
 <td class="label">Launch Clk</td>
-<td>phy_tx_clk[R]</td>
+<td>phy1200_tx_clk[R]</td>
 </tr>
 <tr>
 <td class="label">Latch Clk</td>
-<td>phy_tx_clk[R]</td>
+<td>phy1200_tx_clk[R]</td>
 </tr>
 </table>
 <b>Data Arrival Path:</b>
@@ -303,7 +320,7 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>phy_tx_clk</td>
+<td>phy1200_tx_clk</td>
 </tr>
 <tr>
 <td>0.000</td>
@@ -311,119 +328,119 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <td>tCL</td>
 <td>RR</td>
 <td>1</td>
-<td>phy_tx_clk_ibuf/I</td>
+<td>phy1200_tx_clk_ibuf/I</td>
 </tr>
 <tr>
-<td>1.227</td>
-<td>1.227</td>
+<td>0.683</td>
+<td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
 <td>447</td>
-<td>phy_tx_clk_ibuf/O</td>
+<td>phy1200_tx_clk_ibuf/O</td>
 </tr>
 <tr>
-<td>1.681</td>
-<td>0.454</td>
+<td>0.863</td>
+<td>0.180</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1/CLK</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1/CLK</td>
 </tr>
 <tr>
-<td>2.254</td>
-<td>0.573</td>
+<td>1.095</td>
+<td>0.232</td>
 <td>tC2Q</td>
 <td>RF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1/Q</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1/Q</td>
 </tr>
 <tr>
-<td>2.854</td>
-<td>0.600</td>
+<td>1.332</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1466_s8/I1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1466_s8/I1</td>
 </tr>
 <tr>
-<td>4.228</td>
-<td>1.374</td>
+<td>1.887</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>2</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1466_s8/F</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1466_s8/F</td>
 </tr>
 <tr>
-<td>4.828</td>
-<td>0.600</td>
+<td>2.124</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n268_s3/I1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n268_s3/I1</td>
 </tr>
 <tr>
-<td>6.202</td>
-<td>1.374</td>
+<td>2.679</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>8</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n268_s3/F</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n268_s3/F</td>
 </tr>
 <tr>
-<td>6.802</td>
-<td>0.600</td>
+<td>2.916</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n290_s4/I1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n290_s4/I1</td>
 </tr>
 <tr>
-<td>8.175</td>
-<td>1.374</td>
+<td>3.471</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>4</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n290_s4/F</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n290_s4/F</td>
 </tr>
 <tr>
-<td>8.775</td>
-<td>0.600</td>
+<td>3.708</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n278_s3/I1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n278_s3/I1</td>
 </tr>
 <tr>
-<td>10.149</td>
-<td>1.374</td>
+<td>4.263</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n278_s3/F</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n278_s3/F</td>
 </tr>
 <tr>
-<td>10.749</td>
-<td>0.600</td>
+<td>4.500</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n278_s2/I1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n278_s2/I1</td>
 </tr>
 <tr>
-<td>12.123</td>
-<td>1.374</td>
+<td>5.055</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n278_s2/F</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n278_s2/F</td>
 </tr>
 <tr>
-<td>12.723</td>
-<td>0.600</td>
+<td>5.292</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_12_s1/D</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_12_s1/D</td>
 </tr>
 </table>
 <b>Data Required Path:</b>
@@ -437,44 +454,44 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <th>NODE</th>
 </tr>
 <tr>
-<td>20.000</td>
+<td>10.000</td>
 <td>0.000</td>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>phy_tx_clk</td>
+<td>phy1200_tx_clk</td>
 </tr>
 <tr>
-<td>20.000</td>
+<td>10.000</td>
 <td>0.000</td>
 <td>tCL</td>
 <td>RR</td>
 <td>1</td>
-<td>phy_tx_clk_ibuf/I</td>
+<td>phy1200_tx_clk_ibuf/I</td>
 </tr>
 <tr>
-<td>21.227</td>
-<td>1.227</td>
+<td>10.682</td>
+<td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
 <td>447</td>
-<td>phy_tx_clk_ibuf/O</td>
+<td>phy1200_tx_clk_ibuf/O</td>
 </tr>
 <tr>
-<td>21.681</td>
-<td>0.454</td>
+<td>10.863</td>
+<td>0.180</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_12_s1/CLK</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_12_s1/CLK</td>
 </tr>
 <tr>
-<td>21.181</td>
-<td>-0.500</td>
+<td>10.828</td>
+<td>-0.035</td>
 <td>tSu</td>
 <td> </td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_12_s1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_12_s1</td>
 </tr>
 </table>
 <b>Path Statistics:</b>
@@ -485,18 +502,18 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 </tr>
 <tr>
 <td class="label">Setup Relationship:</td>
-<td>20.000</td>
+<td>10.000</td>
 </tr>
 <tr>
 <td class="label">Logic Level:</td>
 <td>6</td>
 </tr>
 <tr>
-<td class="label">Arrival Clock Path Delay:</td><td> cell: 1.227, 73.009%; route: 0.454, 26.991%</td></tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.683, 79.130%; route: 0.180, 20.870%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 6.869, 62.207%; route: 3.600, 32.604%; tC2Q: 0.573, 5.189%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 2.775, 62.655%; route: 1.422, 32.107%; tC2Q: 0.232, 5.238%</td></tr>
 <tr>
-<td class="label">Required Clock Path Delay:</td><td> cell: 1.227, 73.009%; route: 0.454, 26.991%</td></tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.683, 79.130%; route: 0.180, 20.870%</td></tr>
 </table>
 <br/>
 <h3>Path&nbsp2</h3>
@@ -504,31 +521,31 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>8.458</td>
+<td>5.536</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>12.723</td>
+<td>5.292</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
-<td>21.181</td>
+<td>10.828</td>
 </tr>
 <tr>
 <td class="label">From</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1</td>
 </tr>
 <tr>
 <td class="label">To</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_23_s1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_23_s1</td>
 </tr>
 <tr>
 <td class="label">Launch Clk</td>
-<td>phy_tx_clk[R]</td>
+<td>phy1200_tx_clk[R]</td>
 </tr>
 <tr>
 <td class="label">Latch Clk</td>
-<td>phy_tx_clk[R]</td>
+<td>phy1200_tx_clk[R]</td>
 </tr>
 </table>
 <b>Data Arrival Path:</b>
@@ -547,7 +564,7 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>phy_tx_clk</td>
+<td>phy1200_tx_clk</td>
 </tr>
 <tr>
 <td>0.000</td>
@@ -555,119 +572,119 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <td>tCL</td>
 <td>RR</td>
 <td>1</td>
-<td>phy_tx_clk_ibuf/I</td>
+<td>phy1200_tx_clk_ibuf/I</td>
 </tr>
 <tr>
-<td>1.227</td>
-<td>1.227</td>
+<td>0.683</td>
+<td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
 <td>447</td>
-<td>phy_tx_clk_ibuf/O</td>
+<td>phy1200_tx_clk_ibuf/O</td>
 </tr>
 <tr>
-<td>1.681</td>
-<td>0.454</td>
+<td>0.863</td>
+<td>0.180</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1/CLK</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1/CLK</td>
 </tr>
 <tr>
-<td>2.254</td>
-<td>0.573</td>
+<td>1.095</td>
+<td>0.232</td>
 <td>tC2Q</td>
 <td>RF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1/Q</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1/Q</td>
 </tr>
 <tr>
-<td>2.854</td>
-<td>0.600</td>
+<td>1.332</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1466_s8/I1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1466_s8/I1</td>
 </tr>
 <tr>
-<td>4.228</td>
-<td>1.374</td>
+<td>1.887</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>2</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1466_s8/F</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1466_s8/F</td>
 </tr>
 <tr>
-<td>4.828</td>
-<td>0.600</td>
+<td>2.124</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n268_s3/I1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n268_s3/I1</td>
 </tr>
 <tr>
-<td>6.202</td>
-<td>1.374</td>
+<td>2.679</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>8</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n268_s3/F</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n268_s3/F</td>
 </tr>
 <tr>
-<td>6.802</td>
-<td>0.600</td>
+<td>2.916</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n290_s4/I1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n290_s4/I1</td>
 </tr>
 <tr>
-<td>8.175</td>
-<td>1.374</td>
+<td>3.471</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>4</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n290_s4/F</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n290_s4/F</td>
 </tr>
 <tr>
-<td>8.775</td>
-<td>0.600</td>
+<td>3.708</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n267_s3/I1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n267_s3/I1</td>
 </tr>
 <tr>
-<td>10.149</td>
-<td>1.374</td>
+<td>4.263</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n267_s3/F</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n267_s3/F</td>
 </tr>
 <tr>
-<td>10.749</td>
-<td>0.600</td>
+<td>4.500</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n267_s2/I1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n267_s2/I1</td>
 </tr>
 <tr>
-<td>12.123</td>
-<td>1.374</td>
+<td>5.055</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n267_s2/F</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n267_s2/F</td>
 </tr>
 <tr>
-<td>12.723</td>
-<td>0.600</td>
+<td>5.292</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_23_s1/D</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_23_s1/D</td>
 </tr>
 </table>
 <b>Data Required Path:</b>
@@ -681,44 +698,44 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <th>NODE</th>
 </tr>
 <tr>
-<td>20.000</td>
+<td>10.000</td>
 <td>0.000</td>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>phy_tx_clk</td>
+<td>phy1200_tx_clk</td>
 </tr>
 <tr>
-<td>20.000</td>
+<td>10.000</td>
 <td>0.000</td>
 <td>tCL</td>
 <td>RR</td>
 <td>1</td>
-<td>phy_tx_clk_ibuf/I</td>
+<td>phy1200_tx_clk_ibuf/I</td>
 </tr>
 <tr>
-<td>21.227</td>
-<td>1.227</td>
+<td>10.682</td>
+<td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
 <td>447</td>
-<td>phy_tx_clk_ibuf/O</td>
+<td>phy1200_tx_clk_ibuf/O</td>
 </tr>
 <tr>
-<td>21.681</td>
-<td>0.454</td>
+<td>10.863</td>
+<td>0.180</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_23_s1/CLK</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_23_s1/CLK</td>
 </tr>
 <tr>
-<td>21.181</td>
-<td>-0.500</td>
+<td>10.828</td>
+<td>-0.035</td>
 <td>tSu</td>
 <td> </td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_23_s1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_23_s1</td>
 </tr>
 </table>
 <b>Path Statistics:</b>
@@ -729,18 +746,18 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 </tr>
 <tr>
 <td class="label">Setup Relationship:</td>
-<td>20.000</td>
+<td>10.000</td>
 </tr>
 <tr>
 <td class="label">Logic Level:</td>
 <td>6</td>
 </tr>
 <tr>
-<td class="label">Arrival Clock Path Delay:</td><td> cell: 1.227, 73.009%; route: 0.454, 26.991%</td></tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.683, 79.130%; route: 0.180, 20.870%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 6.869, 62.207%; route: 3.600, 32.604%; tC2Q: 0.573, 5.189%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 2.775, 62.655%; route: 1.422, 32.107%; tC2Q: 0.232, 5.238%</td></tr>
 <tr>
-<td class="label">Required Clock Path Delay:</td><td> cell: 1.227, 73.009%; route: 0.454, 26.991%</td></tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.683, 79.130%; route: 0.180, 20.870%</td></tr>
 </table>
 <br/>
 <h3>Path&nbsp3</h3>
@@ -748,31 +765,31 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>8.542</td>
+<td>5.536</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>12.639</td>
+<td>5.292</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
-<td>21.181</td>
+<td>10.828</td>
 </tr>
 <tr>
 <td class="label">From</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_4_s1</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1</td>
 </tr>
 <tr>
 <td class="label">To</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_14_s1</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_12_s1</td>
 </tr>
 <tr>
 <td class="label">Launch Clk</td>
-<td>phy_tx_clk[R]</td>
+<td>phy1100_tx_clk[R]</td>
 </tr>
 <tr>
 <td class="label">Latch Clk</td>
-<td>phy_tx_clk[R]</td>
+<td>phy1100_tx_clk[R]</td>
 </tr>
 </table>
 <b>Data Arrival Path:</b>
@@ -791,7 +808,7 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>phy_tx_clk</td>
+<td>phy1100_tx_clk</td>
 </tr>
 <tr>
 <td>0.000</td>
@@ -799,119 +816,119 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <td>tCL</td>
 <td>RR</td>
 <td>1</td>
-<td>phy_tx_clk_ibuf/I</td>
+<td>phy1100_tx_clk_ibuf/I</td>
 </tr>
 <tr>
-<td>1.227</td>
-<td>1.227</td>
+<td>0.683</td>
+<td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
 <td>447</td>
-<td>phy_tx_clk_ibuf/O</td>
+<td>phy1100_tx_clk_ibuf/O</td>
 </tr>
 <tr>
-<td>1.681</td>
-<td>0.454</td>
+<td>0.863</td>
+<td>0.180</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_4_s1/CLK</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1/CLK</td>
 </tr>
 <tr>
-<td>2.254</td>
-<td>0.573</td>
+<td>1.095</td>
+<td>0.232</td>
 <td>tC2Q</td>
 <td>RF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_4_s1/Q</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1/Q</td>
 </tr>
 <tr>
-<td>2.854</td>
-<td>0.600</td>
+<td>1.332</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1469_s7/I1</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1466_s8/I1</td>
 </tr>
 <tr>
-<td>4.228</td>
-<td>1.374</td>
+<td>1.887</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>2</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1469_s7/F</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1466_s8/F</td>
 </tr>
 <tr>
-<td>4.828</td>
-<td>0.600</td>
+<td>2.124</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n285_s3/I1</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n268_s3/I1</td>
 </tr>
 <tr>
-<td>6.202</td>
-<td>1.374</td>
+<td>2.679</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
-<td>7</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n285_s3/F</td>
+<td>8</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n268_s3/F</td>
 </tr>
 <tr>
-<td>6.802</td>
-<td>0.600</td>
+<td>2.916</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n286_s7/I0</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n290_s4/I1</td>
 </tr>
 <tr>
-<td>8.092</td>
-<td>1.290</td>
+<td>3.471</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>4</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n286_s7/F</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n290_s4/F</td>
 </tr>
 <tr>
-<td>8.692</td>
-<td>0.600</td>
+<td>3.708</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n276_s3/I1</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n278_s3/I1</td>
 </tr>
 <tr>
-<td>10.065</td>
-<td>1.374</td>
+<td>4.263</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n276_s3/F</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n278_s3/F</td>
 </tr>
 <tr>
-<td>10.665</td>
-<td>0.600</td>
+<td>4.500</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n276_s2/I1</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n278_s2/I1</td>
 </tr>
 <tr>
-<td>12.039</td>
-<td>1.374</td>
+<td>5.055</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n276_s2/F</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n278_s2/F</td>
 </tr>
 <tr>
-<td>12.639</td>
-<td>0.600</td>
+<td>5.292</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_14_s1/D</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_12_s1/D</td>
 </tr>
 </table>
 <b>Data Required Path:</b>
@@ -925,44 +942,44 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <th>NODE</th>
 </tr>
 <tr>
-<td>20.000</td>
+<td>10.000</td>
 <td>0.000</td>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>phy_tx_clk</td>
+<td>phy1100_tx_clk</td>
 </tr>
 <tr>
-<td>20.000</td>
+<td>10.000</td>
 <td>0.000</td>
 <td>tCL</td>
 <td>RR</td>
 <td>1</td>
-<td>phy_tx_clk_ibuf/I</td>
+<td>phy1100_tx_clk_ibuf/I</td>
 </tr>
 <tr>
-<td>21.227</td>
-<td>1.227</td>
+<td>10.682</td>
+<td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
 <td>447</td>
-<td>phy_tx_clk_ibuf/O</td>
+<td>phy1100_tx_clk_ibuf/O</td>
 </tr>
 <tr>
-<td>21.681</td>
-<td>0.454</td>
+<td>10.863</td>
+<td>0.180</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_14_s1/CLK</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_12_s1/CLK</td>
 </tr>
 <tr>
-<td>21.181</td>
-<td>-0.500</td>
+<td>10.828</td>
+<td>-0.035</td>
 <td>tSu</td>
 <td> </td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_14_s1</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_12_s1</td>
 </tr>
 </table>
 <b>Path Statistics:</b>
@@ -973,18 +990,18 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 </tr>
 <tr>
 <td class="label">Setup Relationship:</td>
-<td>20.000</td>
+<td>10.000</td>
 </tr>
 <tr>
 <td class="label">Logic Level:</td>
 <td>6</td>
 </tr>
 <tr>
-<td class="label">Arrival Clock Path Delay:</td><td> cell: 1.227, 73.009%; route: 0.454, 26.991%</td></tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.683, 79.130%; route: 0.180, 20.870%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 6.785, 61.919%; route: 3.600, 32.853%; tC2Q: 0.573, 5.228%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 2.775, 62.655%; route: 1.422, 32.107%; tC2Q: 0.232, 5.238%</td></tr>
 <tr>
-<td class="label">Required Clock Path Delay:</td><td> cell: 1.227, 73.009%; route: 0.454, 26.991%</td></tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.683, 79.130%; route: 0.180, 20.870%</td></tr>
 </table>
 <br/>
 <h3>Path&nbsp4</h3>
@@ -992,31 +1009,31 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>8.805</td>
+<td>5.536</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>12.377</td>
+<td>5.292</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
-<td>21.181</td>
+<td>10.828</td>
 </tr>
 <tr>
 <td class="label">From</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_0_s1</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1</td>
 </tr>
 <tr>
 <td class="label">To</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_13_s1</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_23_s1</td>
 </tr>
 <tr>
 <td class="label">Launch Clk</td>
-<td>phy_tx_clk[R]</td>
+<td>phy1100_tx_clk[R]</td>
 </tr>
 <tr>
 <td class="label">Latch Clk</td>
-<td>phy_tx_clk[R]</td>
+<td>phy1100_tx_clk[R]</td>
 </tr>
 </table>
 <b>Data Arrival Path:</b>
@@ -1035,7 +1052,7 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>phy_tx_clk</td>
+<td>phy1100_tx_clk</td>
 </tr>
 <tr>
 <td>0.000</td>
@@ -1043,119 +1060,119 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <td>tCL</td>
 <td>RR</td>
 <td>1</td>
-<td>phy_tx_clk_ibuf/I</td>
+<td>phy1100_tx_clk_ibuf/I</td>
 </tr>
 <tr>
-<td>1.227</td>
-<td>1.227</td>
+<td>0.683</td>
+<td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
 <td>447</td>
-<td>phy_tx_clk_ibuf/O</td>
+<td>phy1100_tx_clk_ibuf/O</td>
 </tr>
 <tr>
-<td>1.681</td>
-<td>0.454</td>
+<td>0.863</td>
+<td>0.180</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_0_s1/CLK</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1/CLK</td>
 </tr>
 <tr>
-<td>2.254</td>
-<td>0.573</td>
+<td>1.095</td>
+<td>0.232</td>
 <td>tC2Q</td>
 <td>RF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_0_s1/Q</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_7_s1/Q</td>
 </tr>
 <tr>
-<td>2.854</td>
-<td>0.600</td>
+<td>1.332</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n283_s5/I1</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1466_s8/I1</td>
 </tr>
 <tr>
-<td>4.228</td>
-<td>1.374</td>
+<td>1.887</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>2</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n283_s5/F</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1466_s8/F</td>
 </tr>
 <tr>
-<td>4.828</td>
-<td>0.600</td>
+<td>2.124</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n283_s3/I1</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n268_s3/I1</td>
 </tr>
 <tr>
-<td>6.202</td>
-<td>1.374</td>
+<td>2.679</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
-<td>10</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n283_s3/F</td>
+<td>8</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n268_s3/F</td>
 </tr>
 <tr>
-<td>6.802</td>
-<td>0.600</td>
+<td>2.916</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n289_s3/I1</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n290_s4/I1</td>
 </tr>
 <tr>
-<td>8.175</td>
-<td>1.374</td>
+<td>3.471</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
-<td>2</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n289_s3/F</td>
+<td>4</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n290_s4/F</td>
 </tr>
 <tr>
-<td>8.775</td>
-<td>0.600</td>
+<td>3.708</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n277_s3/I1</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n267_s3/I1</td>
 </tr>
 <tr>
-<td>10.149</td>
-<td>1.374</td>
-<td>tINS</td>
-<td>FF</td>
-<td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n277_s3/F</td>
-</tr>
-<tr>
-<td>10.749</td>
-<td>0.600</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n277_s2/I2</td>
-</tr>
-<tr>
-<td>11.777</td>
-<td>1.028</td>
+<td>4.263</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n277_s2/F</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n267_s3/F</td>
 </tr>
 <tr>
-<td>12.377</td>
-<td>0.600</td>
+<td>4.500</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_13_s1/D</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n267_s2/I1</td>
+</tr>
+<tr>
+<td>5.055</td>
+<td>0.555</td>
+<td>tINS</td>
+<td>FF</td>
+<td>1</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n267_s2/F</td>
+</tr>
+<tr>
+<td>5.292</td>
+<td>0.237</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_23_s1/D</td>
 </tr>
 </table>
 <b>Data Required Path:</b>
@@ -1169,44 +1186,44 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <th>NODE</th>
 </tr>
 <tr>
-<td>20.000</td>
+<td>10.000</td>
 <td>0.000</td>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>phy_tx_clk</td>
+<td>phy1100_tx_clk</td>
 </tr>
 <tr>
-<td>20.000</td>
+<td>10.000</td>
 <td>0.000</td>
 <td>tCL</td>
 <td>RR</td>
 <td>1</td>
-<td>phy_tx_clk_ibuf/I</td>
+<td>phy1100_tx_clk_ibuf/I</td>
 </tr>
 <tr>
-<td>21.227</td>
-<td>1.227</td>
+<td>10.682</td>
+<td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
 <td>447</td>
-<td>phy_tx_clk_ibuf/O</td>
+<td>phy1100_tx_clk_ibuf/O</td>
 </tr>
 <tr>
-<td>21.681</td>
-<td>0.454</td>
+<td>10.863</td>
+<td>0.180</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_13_s1/CLK</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_23_s1/CLK</td>
 </tr>
 <tr>
-<td>21.181</td>
-<td>-0.500</td>
+<td>10.828</td>
+<td>-0.035</td>
 <td>tSu</td>
 <td> </td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_13_s1</td>
+<td>mac1100/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_23_s1</td>
 </tr>
 </table>
 <b>Path Statistics:</b>
@@ -1217,18 +1234,18 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 </tr>
 <tr>
 <td class="label">Setup Relationship:</td>
-<td>20.000</td>
+<td>10.000</td>
 </tr>
 <tr>
 <td class="label">Logic Level:</td>
 <td>6</td>
 </tr>
 <tr>
-<td class="label">Arrival Clock Path Delay:</td><td> cell: 1.227, 73.009%; route: 0.454, 26.991%</td></tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.683, 79.130%; route: 0.180, 20.870%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 6.523, 60.984%; route: 3.600, 33.659%; tC2Q: 0.573, 5.357%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 2.775, 62.655%; route: 1.422, 32.107%; tC2Q: 0.232, 5.238%</td></tr>
 <tr>
-<td class="label">Required Clock Path Delay:</td><td> cell: 1.227, 73.009%; route: 0.454, 26.991%</td></tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.683, 79.130%; route: 0.180, 20.870%</td></tr>
 </table>
 <br/>
 <h3>Path&nbsp5</h3>
@@ -1236,31 +1253,31 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <table class="summary_table">
 <tr>
 <td class="label">Slack</td>
-<td>8.888</td>
+<td>5.574</td>
 </tr>
 <tr>
 <td class="label">Data Arrival Time</td>
-<td>12.293</td>
+<td>5.253</td>
 </tr>
 <tr>
 <td class="label">Data Required Time</td>
-<td>21.181</td>
+<td>10.828</td>
 </tr>
 <tr>
 <td class="label">From</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_4_s1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_4_s1</td>
 </tr>
 <tr>
 <td class="label">To</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_4_s1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_14_s1</td>
 </tr>
 <tr>
 <td class="label">Launch Clk</td>
-<td>phy_tx_clk[R]</td>
+<td>phy1200_tx_clk[R]</td>
 </tr>
 <tr>
 <td class="label">Latch Clk</td>
-<td>phy_tx_clk[R]</td>
+<td>phy1200_tx_clk[R]</td>
 </tr>
 </table>
 <b>Data Arrival Path:</b>
@@ -1279,7 +1296,7 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>phy_tx_clk</td>
+<td>phy1200_tx_clk</td>
 </tr>
 <tr>
 <td>0.000</td>
@@ -1287,119 +1304,119 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <td>tCL</td>
 <td>RR</td>
 <td>1</td>
-<td>phy_tx_clk_ibuf/I</td>
+<td>phy1200_tx_clk_ibuf/I</td>
 </tr>
 <tr>
-<td>1.227</td>
-<td>1.227</td>
+<td>0.683</td>
+<td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
 <td>447</td>
-<td>phy_tx_clk_ibuf/O</td>
+<td>phy1200_tx_clk_ibuf/O</td>
 </tr>
 <tr>
-<td>1.681</td>
-<td>0.454</td>
+<td>0.863</td>
+<td>0.180</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_4_s1/CLK</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_4_s1/CLK</td>
 </tr>
 <tr>
-<td>2.254</td>
-<td>0.573</td>
+<td>1.095</td>
+<td>0.232</td>
 <td>tC2Q</td>
 <td>RF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_4_s1/Q</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/pause_frm_reg_4_s1/Q</td>
 </tr>
 <tr>
-<td>2.854</td>
-<td>0.600</td>
+<td>1.332</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1469_s7/I1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1469_s7/I1</td>
 </tr>
 <tr>
-<td>4.228</td>
-<td>1.374</td>
+<td>1.887</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>2</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1469_s7/F</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/n1469_s7/F</td>
 </tr>
 <tr>
-<td>4.828</td>
-<td>0.600</td>
+<td>2.124</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n285_s3/I1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n285_s3/I1</td>
 </tr>
 <tr>
-<td>6.202</td>
-<td>1.374</td>
+<td>2.679</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>7</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n285_s3/F</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n285_s3/F</td>
 </tr>
 <tr>
-<td>6.802</td>
-<td>0.600</td>
+<td>2.916</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n286_s7/I0</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n286_s7/I0</td>
 </tr>
 <tr>
-<td>8.092</td>
-<td>1.290</td>
+<td>3.433</td>
+<td>0.517</td>
 <td>tINS</td>
 <td>FF</td>
 <td>4</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n286_s7/F</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n286_s7/F</td>
 </tr>
 <tr>
-<td>8.692</td>
-<td>0.600</td>
+<td>3.670</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n286_s8/I2</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n276_s3/I1</td>
 </tr>
 <tr>
-<td>9.719</td>
-<td>1.028</td>
-<td>tINS</td>
-<td>FF</td>
-<td>2</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n286_s8/F</td>
-</tr>
-<tr>
-<td>10.319</td>
-<td>0.600</td>
-<td>tNET</td>
-<td>FF</td>
-<td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n286_s9/I1</td>
-</tr>
-<tr>
-<td>11.693</td>
-<td>1.374</td>
+<td>4.225</td>
+<td>0.555</td>
 <td>tINS</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n286_s9/F</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n276_s3/F</td>
 </tr>
 <tr>
-<td>12.293</td>
-<td>0.600</td>
+<td>4.462</td>
+<td>0.237</td>
 <td>tNET</td>
 <td>FF</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_4_s1/D</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n276_s2/I1</td>
+</tr>
+<tr>
+<td>5.016</td>
+<td>0.555</td>
+<td>tINS</td>
+<td>FF</td>
+<td>1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/n276_s2/F</td>
+</tr>
+<tr>
+<td>5.253</td>
+<td>0.237</td>
+<td>tNET</td>
+<td>FF</td>
+<td>1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_14_s1/D</td>
 </tr>
 </table>
 <b>Data Required Path:</b>
@@ -1413,44 +1430,44 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 <th>NODE</th>
 </tr>
 <tr>
-<td>20.000</td>
+<td>10.000</td>
 <td>0.000</td>
 <td> </td>
 <td> </td>
 <td> </td>
-<td>phy_tx_clk</td>
+<td>phy1200_tx_clk</td>
 </tr>
 <tr>
-<td>20.000</td>
+<td>10.000</td>
 <td>0.000</td>
 <td>tCL</td>
 <td>RR</td>
 <td>1</td>
-<td>phy_tx_clk_ibuf/I</td>
+<td>phy1200_tx_clk_ibuf/I</td>
 </tr>
 <tr>
-<td>21.227</td>
-<td>1.227</td>
+<td>10.682</td>
+<td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
 <td>447</td>
-<td>phy_tx_clk_ibuf/O</td>
+<td>phy1200_tx_clk_ibuf/O</td>
 </tr>
 <tr>
-<td>21.681</td>
-<td>0.454</td>
+<td>10.863</td>
+<td>0.180</td>
 <td>tNET</td>
 <td>RR</td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_4_s1/CLK</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_14_s1/CLK</td>
 </tr>
 <tr>
-<td>21.181</td>
-<td>-0.500</td>
+<td>10.828</td>
+<td>-0.035</td>
 <td>tSu</td>
 <td> </td>
 <td>1</td>
-<td>mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_4_s1</td>
+<td>mac1200/mac1200/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/crc_reg_14_s1</td>
 </tr>
 </table>
 <b>Path Statistics:</b>
@@ -1461,18 +1478,18 @@ E:\EthernetBRIDGE\src\txfifo.v<br>
 </tr>
 <tr>
 <td class="label">Setup Relationship:</td>
-<td>20.000</td>
+<td>10.000</td>
 </tr>
 <tr>
 <td class="label">Logic Level:</td>
 <td>6</td>
 </tr>
 <tr>
-<td class="label">Arrival Clock Path Delay:</td><td> cell: 1.227, 73.009%; route: 0.454, 26.991%</td></tr>
+<td class="label">Arrival Clock Path Delay:</td><td> cell: 0.683, 79.130%; route: 0.180, 20.870%</td></tr>
 <tr>
-<td class="label">Arrival Data Path Delay:</td><td> cell: 6.439, 60.676%; route: 3.600, 33.925%; tC2Q: 0.573, 5.399%</td></tr>
+<td class="label">Arrival Data Path Delay:</td><td> cell: 2.737, 62.332%; route: 1.422, 32.384%; tC2Q: 0.232, 5.284%</td></tr>
 <tr>
-<td class="label">Required Clock Path Delay:</td><td> cell: 1.227, 73.009%; route: 0.454, 26.991%</td></tr>
+<td class="label">Required Clock Path Delay:</td><td> cell: 0.683, 79.130%; route: 0.180, 20.870%</td></tr>
 </table>
 <br/>
 </div><!-- content -->

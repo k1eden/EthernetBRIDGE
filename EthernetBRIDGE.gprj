@@ -3,13 +3,11 @@
 <Project>
     <Template>FPGA</Template>
     <Version>5</Version>
-    <Device name="GW1N-4D" pn="GW1N-LV4MG160C5/I4">gw1n4d-047</Device>
+    <Device name="GW2A-18C" pn="GW2A-LV18EQ144C8/I7">gw2a18c-005</Device>
     <FileList>
-        <File path="src/mac1100.v" type="file.verilog" enable="1"/>
+        <File path="src/fifo_buff.v" type="file.verilog" enable="1"/>
         <File path="src/mac1200.v" type="file.verilog" enable="1"/>
-        <File path="src/rxfifo.v" type="file.verilog" enable="1"/>
         <File path="src/top_bridge.v" type="file.verilog" enable="1"/>
         <File path="src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v" type="file.verilog" enable="1"/>
-        <File path="src/txfifo.v" type="file.verilog" enable="1"/>
     </FileList>
 </Project>

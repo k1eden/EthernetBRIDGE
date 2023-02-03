@@ -1,15 +1,7 @@
 {
  "Files" : [
   {
-   "Path" : "E:/EthernetBRIDGE/src/mac1100.v",
-   "Type" : "verilog"
-  },
-  {
    "Path" : "E:/EthernetBRIDGE/src/mac1200.v",
-   "Type" : "verilog"
-  },
-  {
-   "Path" : "E:/EthernetBRIDGE/src/rxfifo.v",
    "Type" : "verilog"
   },
   {
@@ -21,7 +13,7 @@
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/src/txfifo.v",
+   "Path" : "E:/EthernetBRIDGE/src/fifo_buff.v",
    "Type" : "verilog"
   }
  ],
@@ -30,7 +22,7 @@
  ],
  "LoopLimit" : 2000,
  "ResultFile" : "E:/EthernetBRIDGE/impl/temp/rtl_parser.result",
- "Top" : "mac1200",
+ "Top" : "",
  "VerilogStd" : "verilog_2001",
  "VhdlStd" : "vhdl_93"
 }

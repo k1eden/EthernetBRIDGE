@@ -1,6 +1,6 @@
 -d E:\EthernetBRIDGE\impl\gwsynthesis\EthernetBRIDGE.vg
--p GW1N-4D-MBGA160-5
--pn GW1N-LV4MG160C5/I4
+-p GW2A-18C-eLQFP144-8
+-pn GW2A-LV18EQ144C8/I7
 -cfg E:\EthernetBRIDGE\impl\pnr\device.cfg
 -bit
 -tr
