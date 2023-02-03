@@ -4,10 +4,10 @@
     <Version>beta</Version>
     <Device id="GW2A-18C" package="eLQFP144" speed="8" partNumber="GW2A-LV18EQ144C8/I7"/>
     <FileList>
-        <File path="E:\EthernetBRIDGE\src\mac1200.v" type="verilog"/>
         <File path="E:\EthernetBRIDGE\src\top_bridge.v" type="verilog"/>
         <File path="E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v" type="verilog"/>
         <File path="E:\EthernetBRIDGE\src\fifo_buff.v" type="verilog"/>
+        <File path="E:\EthernetBRIDGE\src\mac_controller.v" type="verilog"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="0"/>
