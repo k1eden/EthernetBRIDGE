@@ -57,7 +57,7 @@ wire duplex_stat = 0; // if 0 = full duplex, else half duplex
 
 //----------------------------------------------------------------------------------------------------------------------------- Interface status configure
 
-Triple_Speed_Ethernet_MAC_Top mac1200 (
+Triple_Speed_Ethernet_MAC_Top mac_controller (
 .mii_rx_clk(phy_rx_clk), .mii_rxd(phy_rxd), .mii_rx_dv(phy_rx_dv), .mii_rx_er(phy_rx_err), .mii_tx_clk(phy_tx_clk), .mii_txd(phy_txd),
 .mii_tx_en(phy_tx_en), .mii_tx_er(phy_tx_err), .mii_col(phy_col), .mii_crs(phy_crs), .duplex_status(duplex_stat), .rstn(reset), .rx_mac_clk(rx_mac_clk),
 .rx_mac_valid(rx_mac_valid), .rx_mac_data(rx_mac_data), .rx_mac_last(rx_mac_last), .rx_mac_error(rx_mac_err), .rx_statistics_valid(rx_stat_valid),

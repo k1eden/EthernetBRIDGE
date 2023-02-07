@@ -1,9 +1,9 @@
 GowinSynthesis start
 Running parser ...
-Analyzing Verilog file 'E:\EthernetBRIDGE\src\top_bridge.v'
-Analyzing Verilog file 'E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\fifo_buff.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\mac_controller.v'
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\top_bridge.v'
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v'
 WARN  (EX3073) : Port 'rst_n' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_bridge.v":57)
 WARN  (EX3073) : Port 'rst_n' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_bridge.v":62)
 Compiling module 'top_bridge'("E:\EthernetBRIDGE\src\top_bridge.v":1)

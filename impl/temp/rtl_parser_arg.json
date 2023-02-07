@@ -1,19 +1,19 @@
 {
  "Files" : [
   {
-   "Path" : "E:/EthernetBRIDGE/src/top_bridge.v",
-   "Type" : "verilog"
-  },
-  {
-   "Path" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
-   "Type" : "verilog"
-  },
-  {
    "Path" : "E:/EthernetBRIDGE/src/fifo_buff.v",
    "Type" : "verilog"
   },
   {
    "Path" : "E:/EthernetBRIDGE/src/mac_controller.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/top_bridge.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
    "Type" : "verilog"
   }
  ],

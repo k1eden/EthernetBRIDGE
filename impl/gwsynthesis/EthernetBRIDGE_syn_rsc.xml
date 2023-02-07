@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module name="top_bridge">
     <SubModule name="mac1100">
-        <SubModule name="mac1200" Register="456" Lut="514"/>
+        <SubModule name="mac_controller" Register="456" Lut="514"/>
     </SubModule>
     <SubModule name="mac1200">
-        <SubModule name="mac1200" Register="456" Lut="514"/>
+        <SubModule name="mac_controller" Register="456" Lut="514"/>
     </SubModule>
 </Module>
