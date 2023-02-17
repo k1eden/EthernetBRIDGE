@@ -4,15 +4,15 @@ phy1200_rx_clk, phy1200_rx_dv, phy1200_rxd, phy1200_rx_err, phy1200_tx_clk, phy1
 
 input phy1100_rx_clk;
 input [3:0] phy1100_rxd;
-input phy1100_rx_dv;
-input phy1100_rx_err;
+input phy1100_rx_dv; // data valid -- Указывает на действительность данных на phy1100_rxd
+input phy1100_rx_err; // PHY обнаружил ошибку приема
 input phy1100_tx_clk;
-input phy1100_crs;
-input phy1100_col;
+input phy1100_crs; // Указывает на наличие соединения с МАК
+input phy1100_col; // Указывает на наличие коллизий 
 
 output phy1100_tx_en;
 output [3:0] phy1100_txd;
-output phy1100_tx_err;
+output phy1100_tx_err; // Передает ошибку от МАК до PHY
 
 input phy1100_mdio; 
 output phy1100_mdc;
@@ -53,12 +53,12 @@ mac_controller mac1100 (
 );
 
 fifo_buff txfifo_1100 (
-.clk(rx_mac_clk_1100), .read(!empty1200), .write(1'b1), .data_in(data_from_1100), .data_out(data_from_buffer_1100), .empty(empty1100)
+.clk(rx_mac_clk_1100), .read(!empty1100), .write(1'b1), .data_in(data_from_1100), .data_out(data_from_buffer_1100), .empty(empty1100)
 );
 
 
 fifo_buff txfifo_1200 (
-.clk(rx_mac_clk_1200), .read(!empty1100), .write(1'b1), .data_in(data_from_1200), .data_out(data_from_buffer_1200), .empty(empty1200)
+.clk(rx_mac_clk_1200), .read(!empty1200), .write(1'b1), .data_in(data_from_1200), .data_out(data_from_buffer_1200), .empty(empty1200)
 );
 
 mac_controller mac1200 (

@@ -8,6 +8,7 @@
         <File path="E:\EthernetBRIDGE\src\mac_controller.v" type="verilog"/>
         <File path="E:\EthernetBRIDGE\src\top_bridge.v" type="verilog"/>
         <File path="E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v" type="verilog"/>
+        <File path="E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v" type="verilog"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="0"/>
@@ -16,6 +17,7 @@
         <Option type="output_file" value="E:\EthernetBRIDGE\impl\gwsynthesis\EthernetBRIDGE.vg"/>
         <Option type="print_all_synthesis_warning" value="0"/>
         <Option type="ram_rw_check" value="1"/>
+        <Option type="top_module" value="top_mac_to_fifo_test"/>
         <Option type="verilog_language" value="verilog-2001"/>
         <Option type="vhdl_language" value="vhdl-1993"/>
     </OptionList>

@@ -1,0 +1,34 @@
+module top_mac_to_fifo_test (phy_rx_clk, phy_rx_dv, phy_rxd, phy_rx_err, phy_tx_clk, phy_tx_en, phy_txd, phy_tx_err, phy_mdio, phy_mdc, data_from_buff, data_from_phy);
+
+input phy_rx_clk;
+input [3:0] phy_rxd;
+input phy_rx_dv; // data valid -- Указывает на действительность данных на phy1100_rxd
+input phy_rx_err; // PHY обнаружил ошибку приема
+input phy_tx_clk;
+
+
+output phy_tx_en;
+output [3:0] phy_txd;
+output phy_tx_err; // Передает ошибку от МАК до PHY
+
+input phy_mdio; 
+output phy_mdc;
+
+wire empty_phy;
+wire rx_mac_clk; 
+output wire [7:0] data_from_phy;
+output wire [7:0] data_from_buff;
+
+
+mac_controller mac (
+.phy_rx_clk(phy_rx_clk), .phy_rx_dv(phy_rx_dv), .phy_rxd(phy_rxd), .phy_rx_err(phy_rx_err),
+.phy_tx_clk(phy_tx_clk), .phy_tx_en(phy_tx_en), .phy_txd(phy_txd), .phy_tx_err(phy_tx_err),
+.phy_crs(phy_crs), .phy_col(phy_col), .phy_mdio(phy_mdio), .phy_mdc(phy_mdc), .tx_mac_valid(!empty_phy),
+.rx_mac_data(data_from_phy), .tx_mac_data(data_from_buff), .rx_mac_clk(rx_mac_clk)
+);
+
+fifo_buff txfifo (
+.clk(rx_mac_clk), .read(!empty_phy), .write(1'b1), .data_in(data_from_phy), .data_out(data_from_buff), .empty(empty_phy)
+);
+
+endmodule

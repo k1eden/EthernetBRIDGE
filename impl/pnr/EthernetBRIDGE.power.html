@@ -63,7 +63,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Physical Constraints File</td>
-<td>---</td>
+<td>E:\EthernetBRIDGE\src\pinout_test_board.cst</td>
 </tr>
 <tr>
 <td class="label">Timing Constraints File</td>
@@ -87,7 +87,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Sun Feb 05 21:39:26 2023
+<td>Fri Feb 17 23:51:45 2023
 </td>
 </tr>
 <tr>
@@ -100,22 +100,22 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <table class="summary_table">
 <tr>
 <td class="label">Total Power (mW)</td>
-<td>171.233</td>
+<td>172.830</td>
 </tr>
 <tr>
 <td class="label">Quiescent Power (mW)</td>
-<td>162.080</td>
+<td>163.237</td>
 </tr>
 <tr>
 <td class="label">Dynamic Power (mW)</td>
-<td>9.152</td>
+<td>9.593</td>
 </tr>
 </table>
 <h2><a name="Thermal_Info">Thermal Information:</a></h2>
 <table class="summary_table">
 <tr>
 <td class="label">Junction Temperature</td>
-<td>27.889</td>
+<td>27.916</td>
 </tr>
 <tr>
 <td class="label">Theta JA</td>
@@ -123,7 +123,7 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td class="label">Max Allowed Ambient Temperature</td>
-<td>82.111</td>
+<td>82.084</td>
 </tr>
 </table>
 <h2><a name="Configure_Info">Configure Information:</a></h2>
@@ -192,30 +192,23 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <tr>
 <td>VCC</td>
 <td>1.000</td>
-<td>2.967</td>
-<td>102.385</td>
-<td>105.352</td>
+<td>2.559</td>
+<td>102.764</td>
+<td>105.323</td>
 </tr>
 <tr>
 <td>VCCX</td>
 <td>2.500</td>
-<td>1.485</td>
+<td>1.641</td>
 <td>23.366</td>
-<td>62.127</td>
-</tr>
-<tr>
-<td>VCCIO12</td>
-<td>1.200</td>
-<td>0.315</td>
-<td>0.012</td>
-<td>0.393</td>
+<td>62.516</td>
 </tr>
 <tr>
 <td>VCCIO18</td>
 <td>1.800</td>
-<td>1.163</td>
-<td>0.704</td>
-<td>3.361</td>
+<td>1.629</td>
+<td>1.144</td>
+<td>4.991</td>
 </tr>
 </table>
 <h1><a name="Detail">Power Details</a></h1>
@@ -229,15 +222,15 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 </tr>
 <tr>
 <td>Logic</td>
-<td>1.461</td>
+<td>0.862</td>
 <td>NA</td>
-<td>12.229</td>
+<td>12.279</td>
 </tr>
 <tr>
 <td>IO</td>
-<td>11.495
-<td>3.817
-<td>20.000
+<td>14.783
+<td>6.100
+<td>14.583
 </tr>
 </table>
 <h2><a name="By_Hierarchy">Power By Hierarchy:</a></h2>
@@ -248,95 +241,67 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <th class="label">Block Dynamic Power(mW)</th>
 </tr>
 <tr>
-<td>top_bridge</td>
-<td>1.461</td>
-<td>1.461(1.461)</td>
+<td>top_mac_to_fifo_test</td>
+<td>0.862</td>
+<td>0.862(0.862)</td>
 <tr>
-<td>top_bridge/mac1100/</td>
-<td>0.730</td>
-<td>0.730(0.730)</td>
+<td>top_mac_to_fifo_test/mac/</td>
+<td>0.862</td>
+<td>0.862(0.862)</td>
 <tr>
-<td>top_bridge/mac1100/mac_controller/</td>
-<td>0.730</td>
-<td>0.730(0.730)</td>
+<td>top_mac_to_fifo_test/mac/mac_controller/</td>
+<td>0.862</td>
+<td>0.862(0.862)</td>
 <tr>
-<td>top_bridge/mac1100/mac_controller/u_triple_speed_mac/</td>
-<td>0.730</td>
-<td>0.730(0.730)</td>
+<td>top_mac_to_fifo_test/mac/mac_controller/u_triple_speed_mac/</td>
+<td>0.862</td>
+<td>0.862(0.862)</td>
 <tr>
-<td>top_bridge/mac1100/mac_controller/u_triple_speed_mac/u_mac_tx_ctrl/</td>
+<td>top_mac_to_fifo_test/mac/mac_controller/u_triple_speed_mac/u_mac_rx_ctrl/</td>
+<td>0.090</td>
+<td>0.090(0.000)</td>
+<tr>
+<td>top_mac_to_fifo_test/mac/mac_controller/u_triple_speed_mac/u_mac_rx_if_block/</td>
+<td>0.042</td>
+<td>0.042(0.042)</td>
+<tr>
+<td>top_mac_to_fifo_test/mac/mac_controller/u_triple_speed_mac/u_mac_rx_if_block/u_mac_rx_if_mux/</td>
+<td>0.005</td>
+<td>0.005(0.000)</td>
+<tr>
+<td>top_mac_to_fifo_test/mac/mac_controller/u_triple_speed_mac/u_mac_rx_if_block/u_mii_rx_if/</td>
+<td>0.037</td>
+<td>0.037(0.000)</td>
+<tr>
+<td>top_mac_to_fifo_test/mac/mac_controller/u_triple_speed_mac/u_mac_tx_ctrl/</td>
 <td>0.715</td>
 <td>0.715(0.139)</td>
 <tr>
-<td>top_bridge/mac1100/mac_controller/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/</td>
+<td>top_mac_to_fifo_test/mac/mac_controller/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/</td>
 <td>0.093</td>
 <td>0.093(0.000)</td>
 <tr>
-<td>top_bridge/mac1100/mac_controller/u_triple_speed_mac/u_mac_tx_ctrl/u_lfsr/</td>
+<td>top_mac_to_fifo_test/mac/mac_controller/u_triple_speed_mac/u_mac_tx_ctrl/u_lfsr/</td>
 <td>0.045</td>
 <td>0.045(0.000)</td>
 <tr>
-<td>top_bridge/mac1100/mac_controller/u_triple_speed_mac/u_mac_tx_if_block/</td>
+<td>top_mac_to_fifo_test/mac/mac_controller/u_triple_speed_mac/u_mac_tx_if_block/</td>
 <td>0.016</td>
 <td>0.016(0.016)</td>
 <tr>
-<td>top_bridge/mac1100/mac_controller/u_triple_speed_mac/u_mac_tx_if_block/u_mii_tx_if/</td>
+<td>top_mac_to_fifo_test/mac/mac_controller/u_triple_speed_mac/u_mac_tx_if_block/u_mii_tx_if/</td>
 <td>0.016</td>
 <td>0.016(0.000)</td>
 <tr>
-<td>top_bridge/mac1100/mac_controller/u_triple_speed_mac/u_miim_block/</td>
+<td>top_mac_to_fifo_test/mac/mac_controller/u_triple_speed_mac/u_miim_block/</td>
 <td>0.000</td>
 <td>0.000(0.000)</td>
 <tr>
-<td>top_bridge/mac1100/mac_controller/u_triple_speed_mac/u_miim_block/u_eth_miim/</td>
+<td>top_mac_to_fifo_test/mac/mac_controller/u_triple_speed_mac/u_miim_block/u_eth_miim/</td>
 <td>0.000</td>
 <td>0.000(0.000)</td>
 <tr>
-<td>top_bridge/mac1100/mac_controller/u_triple_speed_mac/u_miim_block/u_eth_miim/clkgen/</td>
-<td>0.000</td>
-<td>0.000(0.000)</td>
-<tr>
-<td>top_bridge/mac1200/</td>
-<td>0.730</td>
-<td>0.730(0.730)</td>
-<tr>
-<td>top_bridge/mac1200/mac_controller/</td>
-<td>0.730</td>
-<td>0.730(0.730)</td>
-<tr>
-<td>top_bridge/mac1200/mac_controller/u_triple_speed_mac/</td>
-<td>0.730</td>
-<td>0.730(0.730)</td>
-<tr>
-<td>top_bridge/mac1200/mac_controller/u_triple_speed_mac/u_mac_tx_ctrl/</td>
-<td>0.715</td>
-<td>0.715(0.139)</td>
-<tr>
-<td>top_bridge/mac1200/mac_controller/u_triple_speed_mac/u_mac_tx_ctrl/u_crc_gen/</td>
-<td>0.093</td>
-<td>0.093(0.000)</td>
-<tr>
-<td>top_bridge/mac1200/mac_controller/u_triple_speed_mac/u_mac_tx_ctrl/u_lfsr/</td>
-<td>0.045</td>
-<td>0.045(0.000)</td>
-<tr>
-<td>top_bridge/mac1200/mac_controller/u_triple_speed_mac/u_mac_tx_if_block/</td>
-<td>0.016</td>
-<td>0.016(0.016)</td>
-<tr>
-<td>top_bridge/mac1200/mac_controller/u_triple_speed_mac/u_mac_tx_if_block/u_mii_tx_if/</td>
-<td>0.016</td>
-<td>0.016(0.000)</td>
-<tr>
-<td>top_bridge/mac1200/mac_controller/u_triple_speed_mac/u_miim_block/</td>
-<td>0.000</td>
-<td>0.000(0.000)</td>
-<tr>
-<td>top_bridge/mac1200/mac_controller/u_triple_speed_mac/u_miim_block/u_eth_miim/</td>
-<td>0.000</td>
-<td>0.000(0.000)</td>
-<tr>
-<td>top_bridge/mac1200/mac_controller/u_triple_speed_mac/u_miim_block/u_eth_miim/clkgen/</td>
+<td>top_mac_to_fifo_test/mac/mac_controller/u_triple_speed_mac/u_miim_block/u_eth_miim/clkgen/</td>
 <td>0.000</td>
 <td>0.000(0.000)</td>
 </table>
@@ -348,19 +313,19 @@ table.detail_table th.label {  min-width: 8%; width: 8%; }
 <th class="label">Total Dynamic Power(mW)</th>
 </tr>
 <tr>
-<td>phy1100_tx_clk</td>
+<td>phy_rx_clk</td>
 <td>100.000</td>
-<td>0.737</td>
+<td>0.153</td>
+</tr>
+<tr>
+<td>phy_tx_clk</td>
+<td>100.000</td>
+<td>0.758</td>
 </tr>
 <tr>
 <td>NO CLOCK DOMAIN</td>
 <td>0.000</td>
 <td>0.000</td>
-</tr>
-<tr>
-<td>phy1200_tx_clk</td>
-<td>100.000</td>
-<td>0.737</td>
 </tr>
 </table>
 </div><!-- content -->
