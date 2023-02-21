@@ -1,15 +1,14 @@
-module top_mac_to_fifo_test (phy_rx_clk, phy_rx_dv, phy_rxd, phy_rx_err, phy_tx_clk, phy_tx_en, phy_txd, phy_tx_err, phy_mdio, phy_mdc, data_from_buff, data_from_phy);
+module top_mac_to_fifo_test (phy_rx_clk, phy_rx_dv, phy_rxd, phy_tx_clk, phy_tx_en, phy_txd, phy_mdio, phy_mdc, data_from_buff, data_from_phy);
 
 input phy_rx_clk;
 input [3:0] phy_rxd;
 input phy_rx_dv; // data valid -- Указывает на действительность данных на phy1100_rxd
-input phy_rx_err; // PHY обнаружил ошибку приема
 input phy_tx_clk;
 
 
 output phy_tx_en;
 output [3:0] phy_txd;
-output phy_tx_err; // Передает ошибку от МАК до PHY
+
 
 input phy_mdio; 
 output phy_mdc;

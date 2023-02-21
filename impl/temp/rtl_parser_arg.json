@@ -13,11 +13,11 @@
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+   "Path" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
+   "Path" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
    "Type" : "verilog"
   }
  ],
