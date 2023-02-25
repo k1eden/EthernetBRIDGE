@@ -19,6 +19,10 @@
   {
    "Path" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
    "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/tx_control.v",
+   "Type" : "verilog"
   }
  ],
  "IncludePath" : [

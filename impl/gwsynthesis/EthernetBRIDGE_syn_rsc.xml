@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module name="top_mac_to_fifo_test">
     <SubModule name="mac">
-        <SubModule name="mac_controller" Register="634" Lut="554"/>
+        <SubModule name="mac_controller" Register="629" Lut="551"/>
     </SubModule>
 </Module>

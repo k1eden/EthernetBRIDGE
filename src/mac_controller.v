@@ -1,5 +1,6 @@
 module mac_controller (
-phy_rx_clk, phy_rx_dv, phy_rxd, phy_rx_err, phy_tx_clk, phy_tx_en, phy_txd, phy_tx_err, phy_crs, phy_col, phy_mdio, phy_mdc, rx_mac_data, tx_mac_data, rx_mac_clk, tx_mac_valid, tx_mac_err);
+phy_rx_clk, phy_rx_dv, phy_rxd, phy_rx_err, phy_tx_clk, phy_tx_en, phy_txd, phy_tx_err, reset,
+phy_crs, phy_col, phy_mdio, phy_mdc, rx_mac_data, tx_mac_data, rx_mac_clk, tx_mac_valid, tx_mac_err, tx_mac_last);
 
 input phy_rx_clk;
 input [3:0] phy_rxd;
@@ -16,11 +17,11 @@ output phy_tx_err;
 //----------------------------------------------------------------------------------------------------------------------------- MII interface
 
 //Inputs
-wire reset; 
+input wire reset; 
 
 input tx_mac_valid; 
 input [7:0] tx_mac_data; 
-wire tx_mac_last; 
+input wire tx_mac_last; 
 input wire tx_mac_err; 
 
 //Outputs

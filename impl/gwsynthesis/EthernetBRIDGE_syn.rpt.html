@@ -58,8 +58,9 @@ table.detail_table td.label { min-width: 100px; width: 8%;}
 <td>E:\EthernetBRIDGE\src\fifo_buff.v<br>
 E:\EthernetBRIDGE\src\mac_controller.v<br>
 E:\EthernetBRIDGE\src\top_bridge.v<br>
-E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v<br>
 E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
+E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v<br>
+E:\EthernetBRIDGE\src\tx_control.v<br>
 </td>
 </tr>
 <tr>
@@ -84,7 +85,7 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Fri Feb 17 23:39:38 2023
+<td>Sat Feb 25 16:53:31 2023
 </td>
 </tr>
 <tr>
@@ -100,11 +101,11 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 </tr>
 <tr>
 <td class="label">Synthesis Process</td>
-<td>Running parser:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.39s, Elapsed time = 0h 0m 0.414s, Peak memory usage = 344.188MB<br/>Running netlist conversion:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 0MB<br/>Running device independent optimization:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 0: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.01s, Peak memory usage = 344.188MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 1: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.014s, Peak memory usage = 344.188MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 2: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.011s, Peak memory usage = 344.188MB<br/>Running inference:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.009s, Peak memory usage = 344.188MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 1: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 344.188MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 2: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.004s, Peak memory usage = 344.188MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 344.188MB<br/>Running technical mapping:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 0: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.008s, Peak memory usage = 344.188MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 1: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.006s, Peak memory usage = 344.188MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 2: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.004s, Peak memory usage = 344.188MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 3: CPU time = 0h 0m 0.046s, Elapsed time = 0h 0m 0.054s, Peak memory usage = 344.188MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 4: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.001s, Peak memory usage = 344.188MB<br/>Generate output files:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.031s, Elapsed time = 0h 0m 0.043s, Peak memory usage = 344.188MB<br/></td>
+<td>Running parser:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.375s, Elapsed time = 0h 0m 0.415s, Peak memory usage = 324.465MB<br/>Running netlist conversion:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 0MB<br/>Running device independent optimization:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.01s, Peak memory usage = 324.465MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 1: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.015s, Peak memory usage = 324.465MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 2: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.012s, Peak memory usage = 324.465MB<br/>Running inference:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 0: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.009s, Peak memory usage = 324.465MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 1: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 324.465MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 2: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.004s, Peak memory usage = 324.465MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 324.465MB<br/>Running technical mapping:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 0: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.008s, Peak memory usage = 324.465MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 1: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.007s, Peak memory usage = 324.465MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 2: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.005s, Peak memory usage = 324.465MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 3: CPU time = 0h 0m 0.046s, Elapsed time = 0h 0m 0.055s, Peak memory usage = 324.465MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 4: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.001s, Peak memory usage = 324.465MB<br/>Generate output files:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.046s, Elapsed time = 0h 0m 0.043s, Peak memory usage = 324.465MB<br/></td>
 </tr>
 <tr>
 <td class="label">Total Time and Memory Usage</td>
-<td>CPU time = 0h 0m 0.542s, Elapsed time = 0h 0m 0.578s, Peak memory usage = 344.188MB</td>
+<td>CPU time = 0h 0m 0.527s, Elapsed time = 0h 0m 0.584s, Peak memory usage = 324.465MB</td>
 </tr>
 </table>
 <h1><a name="resource">Resource</a></h1>
@@ -116,11 +117,11 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 </tr>
 <tr>
 <td class="label"><b>I/O Port </b></td>
-<td>32</td>
+<td>30</td>
 </tr>
 <tr>
 <td class="label"><b>I/O Buf </b></td>
-<td>30</td>
+<td>29</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspIBUF</td>
@@ -128,11 +129,11 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspOBUF</td>
-<td>23</td>
+<td>22</td>
 </tr>
 <tr>
 <td class="label"><b>Register </b></td>
-<td>634</td>
+<td>629</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFP</td>
@@ -144,15 +145,15 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFC</td>
-<td>445</td>
+<td>441</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFCE</td>
-<td>145</td>
+<td>144</td>
 </tr>
 <tr>
 <td class="label"><b>LUT </b></td>
-<td>550</td>
+<td>547</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT2</td>
@@ -160,11 +161,11 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT3</td>
-<td>113</td>
+<td>112</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT4</td>
-<td>353</td>
+<td>351</td>
 </tr>
 <tr>
 <td class="label"><b>INV </b></td>
@@ -184,12 +185,12 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 </tr>
 <tr>
 <td class="label">Logic</td>
-<td>554(554 LUTs, 0 ALUs) / 20736</td>
+<td>551(551 LUTs, 0 ALUs) / 20736</td>
 <td>3%</td>
 </tr>
 <tr>
 <td class="label">Register</td>
-<td>634 / 15909</td>
+<td>629 / 15909</td>
 <td>4%</td>
 </tr>
 <tr>
@@ -199,7 +200,7 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp--Register as FF</td>
-<td>634 / 15909</td>
+<td>629 / 15909</td>
 <td>4%</td>
 </tr>
 <tr>
@@ -336,7 +337,7 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>447</td>
+<td>442</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -475,7 +476,7 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>447</td>
+<td>442</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -580,7 +581,7 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>447</td>
+<td>442</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -719,7 +720,7 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>447</td>
+<td>442</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -824,7 +825,7 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>447</td>
+<td>442</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -963,7 +964,7 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>447</td>
+<td>442</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -1068,7 +1069,7 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>447</td>
+<td>442</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -1207,7 +1208,7 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>447</td>
+<td>442</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -1312,7 +1313,7 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>447</td>
+<td>442</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -1451,7 +1452,7 @@ E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>447</td>
+<td>442</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
