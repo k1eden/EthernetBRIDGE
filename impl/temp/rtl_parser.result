@@ -17,7 +17,7 @@
     "SubInsts" : [
      {
       "InstFile" : "E:/EthernetBRIDGE/src/mac_controller.v",
-      "InstLine" : 61,
+      "InstLine" : 62,
       "InstName" : "mac_controller",
       "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
       "ModuleLine" : 6522,
@@ -61,7 +61,7 @@
     "SubInsts" : [
      {
       "InstFile" : "E:/EthernetBRIDGE/src/mac_controller.v",
-      "InstLine" : 61,
+      "InstLine" : 62,
       "InstName" : "mac_controller",
       "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
       "ModuleLine" : 6522,
@@ -91,7 +91,7 @@
   "SubInsts" : [
    {
     "InstFile" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
-    "InstLine" : 22,
+    "InstLine" : 29,
     "InstName" : "mac",
     "ModuleFile" : "E:/EthernetBRIDGE/src/mac_controller.v",
     "ModuleLine" : 1,
@@ -99,7 +99,7 @@
     "SubInsts" : [
      {
       "InstFile" : "E:/EthernetBRIDGE/src/mac_controller.v",
-      "InstLine" : 61,
+      "InstLine" : 62,
       "InstName" : "mac_controller",
       "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
       "ModuleLine" : 6522,
@@ -119,12 +119,28 @@
    },
    {
     "InstFile" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
-    "InstLine" : 29,
+    "InstLine" : 37,
+    "InstName" : "last_byte_checker",
+    "ModuleFile" : "E:/EthernetBRIDGE/src/tx_control.v",
+    "ModuleLine" : 4,
+    "ModuleName" : "tx_control"
+   },
+   {
+    "InstFile" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
+    "InstLine" : 41,
     "InstName" : "txfifo",
     "ModuleFile" : "E:/EthernetBRIDGE/src/fifo_buff.v",
     "ModuleLine" : 1,
     "ModuleName" : "fifo_buff"
    }
   ]
+ },
+ {
+  "InstFile" : "E:/EthernetBRIDGE/src/phy_conf.v",
+  "InstLine" : 1,
+  "InstName" : "phy_conf",
+  "ModuleFile" : "E:/EthernetBRIDGE/src/phy_conf.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "phy_conf"
  }
 ]

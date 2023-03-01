@@ -1,3 +1,6 @@
+/* 
+ THIS MODULE RESPONSE FOR FORMING LAST_BYTE SIGNAL OF ETHERNET PACK
+*/
 module tx_control(clk, tx_data, tx_data_valid, rst, last_byte);
 
 input clk;
@@ -32,6 +35,7 @@ else
                     end
 endcase
 end
+
 endmodule
 /*    if (pointer == 6'b111111)
  begin

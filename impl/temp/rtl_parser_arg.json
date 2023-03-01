@@ -23,6 +23,10 @@
   {
    "Path" : "E:/EthernetBRIDGE/src/tx_control.v",
    "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/phy_conf.v",
+   "Type" : "verilog"
   }
  ],
  "IncludePath" : [

@@ -1,5 +1,5 @@
 module mac_controller (
-phy_rx_clk, phy_rx_dv, phy_rxd, phy_rx_err, phy_tx_clk, phy_tx_en, phy_txd, phy_tx_err, reset,
+phy_rx_clk, phy_rx_dv, phy_rxd, phy_rx_err, phy_tx_clk, phy_tx_en, phy_txd, phy_tx_err, reset, mdio_out, mdio_oen,
 phy_crs, phy_col, phy_mdio, phy_mdc, rx_mac_data, tx_mac_data, rx_mac_clk, tx_mac_valid, tx_mac_err, tx_mac_last);
 
 input phy_rx_clk;
@@ -46,8 +46,8 @@ wire [28:0] tx_stat_vector;
 input phy_mdio; 
 
 output phy_mdc;
-wire mdio_out;
-wire mdio_oen;
+output mdio_out;
+output mdio_oen;
 
 //----------------------------------------------------------------------------------------------------------------------------- Managment interface (input)
 

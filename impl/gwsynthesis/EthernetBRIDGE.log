@@ -4,13 +4,14 @@ Analyzing Verilog file 'E:\EthernetBRIDGE\src\fifo_buff.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\mac_controller.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\top_bridge.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v'
-Undeclared symbol 'phy_rx_err', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":25)
-Undeclared symbol 'phy_tx_err', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":26)
-Undeclared symbol 'phy_crs', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":27)
-Undeclared symbol 'phy_col', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":27)
+Undeclared symbol 'phy_rx_err', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":33)
+Undeclared symbol 'phy_tx_err', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":34)
+Undeclared symbol 'phy_crs', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":35)
+Undeclared symbol 'phy_col', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":35)
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\tx_control.v'
-WARN  (EX3073) : Port 'rst_n' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":37)
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\phy_conf.v'
+WARN  (EX3073) : Port 'rst_n' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":46)
 Compiling module 'top_mac_to_fifo_test'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":1)
 WARN  (EX3073) : Port 'rx_pause_req' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":69)
 Compiling module 'mac_controller'("E:\EthernetBRIDGE\src\mac_controller.v":1)
@@ -137,21 +138,20 @@ WARN  (EX1947) : Input port 'miim_wrdata[1]' remains unconnected for this instan
 WARN  (EX1947) : Input port 'miim_wrdata[0]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":69)
 WARN  (EX1947) : Input port 'miim_wren' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":69)
 WARN  (EX1947) : Input port 'miim_rden' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":69)
-Compiling module 'tx_control'("E:\EthernetBRIDGE\src\tx_control.v":1)
-Extracting RAM for identifier 'memory'("E:\EthernetBRIDGE\src\tx_control.v":8)
+Compiling module 'tx_control'("E:\EthernetBRIDGE\src\tx_control.v":4)
+Extracting RAM for identifier 'memory'("E:\EthernetBRIDGE\src\tx_control.v":11)
 Compiling module 'fifo_buff'("E:\EthernetBRIDGE\src\fifo_buff.v":1)
 Extracting RAM for identifier 'memory'("E:\EthernetBRIDGE\src\fifo_buff.v":15)
-WARN  (EX1998) : Net 'phy_rx_err' does not have a driver("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":25)
-WARN  (EX1998) : Net 'phy_crs' does not have a driver("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":27)
-WARN  (EX1998) : Net 'phy_col' does not have a driver("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":27)
-WARN  (EX1947) : Input port 'reset' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":29)
-WARN  (EX1947) : Input port 'tx_mac_err' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":29)
-WARN  (EX1947) : Input port 'rst' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":33)
-WARN  (EX1947) : Input port 'rst_n' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":37)
-WARN  (EX2565) : Input 'is_another_empty' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":37)
+WARN  (EX1998) : Net 'phy_rx_err' does not have a driver("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":33)
+WARN  (EX1998) : Net 'phy_crs' does not have a driver("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":35)
+WARN  (EX1998) : Net 'phy_col' does not have a driver("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":35)
+WARN  (EX1947) : Input port 'reset' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":38)
+WARN  (EX1947) : Input port 'tx_mac_err' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":38)
+WARN  (EX1947) : Input port 'rst' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":42)
+WARN  (EX1947) : Input port 'rst_n' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":46)
+WARN  (EX2565) : Input 'is_another_empty' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":46)
 NOTE  (EX0101) : Current top module is "top_mac_to_fifo_test"
 [5%] Running netlist conversion ...
-WARN  (CV0016) : Input phy_mdio is unused("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":13)
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
 [15%] Optimizing Phase 1 completed
@@ -167,11 +167,9 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
-WARN  (NL0002) : The module "tx_control" instantiated to "last_byte_checker" is swept in optimizing("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":33)
+WARN  (NL0002) : The module "tx_control" instantiated to "last_byte_checker" is swept in optimizing("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":42)
 WARN  (NL0002) : The module "~crc_chk.Triple_Speed_Ethernet_MAC_Top" instantiated to "u_crc_chk" is swept in optimizing("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
-WARN  (NL0002) : The module "~eth_outputcontrol.Triple_Speed_Ethernet_MAC_Top" instantiated to "outctrl" is swept in optimizing("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
-WARN  (NL0002) : The module "~eth_shiftreg.Triple_Speed_Ethernet_MAC_Top" instantiated to "shftrg" is swept in optimizing("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
-WARN  (NL0002) : The module "fifo_buff" instantiated to "txfifo" is swept in optimizing("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":37)
+WARN  (NL0002) : The module "fifo_buff" instantiated to "txfifo" is swept in optimizing("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":46)
 [95%] Generate netlist file "E:\EthernetBRIDGE\impl\gwsynthesis\EthernetBRIDGE.vg" completed
 [100%] Generate report file "E:\EthernetBRIDGE\impl\gwsynthesis\EthernetBRIDGE_syn.rpt.html" completed
 GowinSynthesis finish
