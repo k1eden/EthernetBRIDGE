@@ -17,7 +17,7 @@
     "SubInsts" : [
      {
       "InstFile" : "E:/EthernetBRIDGE/src/mac_controller.v",
-      "InstLine" : 62,
+      "InstLine" : 76,
       "InstName" : "mac_controller",
       "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
       "ModuleLine" : 6522,
@@ -61,7 +61,7 @@
     "SubInsts" : [
      {
       "InstFile" : "E:/EthernetBRIDGE/src/mac_controller.v",
-      "InstLine" : 62,
+      "InstLine" : 76,
       "InstName" : "mac_controller",
       "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
       "ModuleLine" : 6522,
@@ -91,7 +91,15 @@
   "SubInsts" : [
    {
     "InstFile" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
-    "InstLine" : 29,
+    "InstLine" : 42,
+    "InstName" : "config_adin1300",
+    "ModuleFile" : "E:/EthernetBRIDGE/src/phy_conf.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "phy_conf"
+   },
+   {
+    "InstFile" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
+    "InstLine" : 45,
     "InstName" : "mac",
     "ModuleFile" : "E:/EthernetBRIDGE/src/mac_controller.v",
     "ModuleLine" : 1,
@@ -99,7 +107,7 @@
     "SubInsts" : [
      {
       "InstFile" : "E:/EthernetBRIDGE/src/mac_controller.v",
-      "InstLine" : 62,
+      "InstLine" : 76,
       "InstName" : "mac_controller",
       "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
       "ModuleLine" : 6522,
@@ -119,7 +127,7 @@
    },
    {
     "InstFile" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
-    "InstLine" : 37,
+    "InstLine" : 55,
     "InstName" : "last_byte_checker",
     "ModuleFile" : "E:/EthernetBRIDGE/src/tx_control.v",
     "ModuleLine" : 4,
@@ -127,20 +135,12 @@
    },
    {
     "InstFile" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
-    "InstLine" : 41,
+    "InstLine" : 59,
     "InstName" : "txfifo",
     "ModuleFile" : "E:/EthernetBRIDGE/src/fifo_buff.v",
     "ModuleLine" : 1,
     "ModuleName" : "fifo_buff"
    }
   ]
- },
- {
-  "InstFile" : "E:/EthernetBRIDGE/src/phy_conf.v",
-  "InstLine" : 1,
-  "InstName" : "phy_conf",
-  "ModuleFile" : "E:/EthernetBRIDGE/src/phy_conf.v",
-  "ModuleLine" : 1,
-  "ModuleName" : "phy_conf"
  }
 ]

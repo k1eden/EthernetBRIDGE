@@ -1,6 +1,7 @@
 module mac_controller (
 phy_rx_clk, phy_rx_dv, phy_rxd, phy_rx_err, phy_tx_clk, phy_tx_en, phy_txd, phy_tx_err, reset, mdio_out, mdio_oen,
-phy_crs, phy_col, phy_mdio, phy_mdc, rx_mac_data, tx_mac_data, rx_mac_clk, tx_mac_valid, tx_mac_err, tx_mac_last);
+phy_crs, phy_col, phy_mdio, phy_mdc, rx_mac_data, tx_mac_data, rx_mac_clk, tx_mac_valid, tx_mac_err, tx_mac_last, miim_wren,
+miim_rden, miim_wrdata, miim_regad, miim_phyad, miim_rddata_valid, miim_busy, miim_rddata, clk, rx_mac_valid);
 
 input phy_rx_clk;
 input [3:0] phy_rxd;
@@ -13,6 +14,19 @@ input phy_col;
 output phy_tx_en;
 output [3:0] phy_txd;
 output phy_tx_err;
+
+//-----------------------------------------------------------------------------------------------------------------------------MIIM interface
+input clk;
+input [4:0] miim_phyad;
+input [4:0] miim_regad;
+input [15:0] miim_wrdata;
+input miim_wren;
+input miim_rden;
+
+output [15:0] miim_rddata;
+output miim_rddata_valid;
+output miim_busy;
+
 
 //----------------------------------------------------------------------------------------------------------------------------- MII interface
 
@@ -27,7 +41,7 @@ input wire tx_mac_err;
 //Outputs
 wire tx_mac_clk;
 output rx_mac_clk;
-wire rx_mac_valid;
+output rx_mac_valid;
 output wire [7:0] rx_mac_data;
 wire rx_mac_last;
 wire rx_mac_err;
@@ -63,9 +77,16 @@ Triple_Speed_Ethernet_MAC_Top mac_controller (
 .mii_rx_clk(phy_rx_clk), .mii_rxd(phy_rxd), .mii_rx_dv(phy_rx_dv), .mii_rx_er(phy_rx_err), .mii_tx_clk(phy_tx_clk), .mii_txd(phy_txd),
 .mii_tx_en(phy_tx_en), .mii_tx_er(phy_tx_err), .mii_col(phy_col), .mii_crs(phy_crs), .duplex_status(duplex_stat), .rstn(reset), .rx_mac_clk(rx_mac_clk),
 .rx_mac_valid(rx_mac_valid), .rx_mac_data(rx_mac_data), .rx_mac_last(rx_mac_last), .rx_mac_error(rx_mac_err), .rx_statistics_valid(rx_stat_valid),
-.rx_statistics_vector(rx_stat_vector), . tx_mac_clk(tx_mac_clk), .tx_mac_valid(tx_mac_valid), .tx_mac_data(tx_mac_data), .tx_mac_last(tx_mac_last),
+.rx_statistics_vector(rx_stat_vector), .tx_mac_clk(tx_mac_clk), .tx_mac_valid(tx_mac_valid), .tx_mac_data(tx_mac_data), .tx_mac_last(tx_mac_last),
 .tx_mac_error(tx_mac_err), .tx_mac_ready(tx_mac_ready), .tx_collision(tx_collision), .tx_retransmit(tx_retransmit), .tx_statistics_valid(tx_stat_valid),
-.tx_statistics_vector(tx_stat_vector), .mdc(phy_mdc), .mdio_in(phy_mdio), .mdio_out(mdio_out), .mdio_oen(mdio_oen)
+.tx_statistics_vector(tx_stat_vector), .mdc(phy_mdc), .mdio_in(phy_mdio), .mdio_out(mdio_out), .mdio_oen(mdio_oen), .clk(clk), .miim_phyad(miim_phyad),
+.miim_regad(miim_regad),
+.miim_wrdata(miim_wrdata),
+.miim_wren(miim_wren),
+.miim_rden(miim_rden),
+.miim_rddata(miim_rddata),
+.miim_rddata_valid(miim_rddata_valid),
+.miim_busy(miim_busy)
 );
 
 endmodule

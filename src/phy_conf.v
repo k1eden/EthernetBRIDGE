@@ -1,6 +1,8 @@
-module phy_conf (mdc, phy_add, reg_add, wr_data, wren);
+module phy_conf (clk, phy_add, reg_add, wr_data, wren, busy);
 
-input mdc; 
+input clk;
+input busy;
+ 
 output [4:0] phy_add;
 output reg [4:0] reg_add;
 output reg [15:0] wr_data;
@@ -9,6 +11,8 @@ output reg wren;
  
 // broadcast address
 assign phy_add = 4'b0;
+
+reg process_flag;
 
 // ------------------------------------------------------------------------------------------------------------- MII CONTROL REG
 
@@ -72,21 +76,24 @@ speed_sel_msb = 0; // 01 => 100 mb/s
 
 end
 
-always@(posedge mdc) 
+always@(posedge clk) 
 begin
     //MII_CONTROL REG
     reg_add = 5'h0;
 
     wren = 1'b0;
 
-    if (reg_add == 5'h0) 
+    if (reg_add == 5'h0 && process_flag == 1'b0 && !busy)
         begin
+        process_flag = 1'b1;
         wren = 1'b1;
         wr_data = {
                     sft_rst, loopback, speed_sel_lsb, autoneg_en, sft_pd,
                     isolate, restart_aneg, dplx_mode, coltest, speed_sel_msb 
                   };
+        process_flag = 1'b0;
         end
+  
     
 
 
