@@ -8,6 +8,9 @@
         <File path="src/fifo_buff.v" type="file.verilog" enable="1"/>
         <File path="src/mac_controller.v" type="file.verilog" enable="1"/>
         <File path="src/phy_conf.v" type="file.verilog" enable="1"/>
+        <File path="src/rx_control.v" type="file.verilog" enable="1"/>
+        <File path="src/tb_mac_controller.v" type="file.verilog" enable="1"/>
+        <File path="src/tb_phy_mac_trans.v" type="file.verilog" enable="1"/>
         <File path="src/top_bridge.v" type="file.verilog" enable="1"/>
         <File path="src/top_mac_to_fifo_test.v" type="file.verilog" enable="1"/>
         <File path="src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v" type="file.verilog" enable="1"/>

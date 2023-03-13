@@ -91,7 +91,7 @@
   "SubInsts" : [
    {
     "InstFile" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
-    "InstLine" : 42,
+    "InstLine" : 44,
     "InstName" : "config_adin1300",
     "ModuleFile" : "E:/EthernetBRIDGE/src/phy_conf.v",
     "ModuleLine" : 1,
@@ -99,7 +99,7 @@
    },
    {
     "InstFile" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
-    "InstLine" : 45,
+    "InstLine" : 49,
     "InstName" : "mac",
     "ModuleFile" : "E:/EthernetBRIDGE/src/mac_controller.v",
     "ModuleLine" : 1,
@@ -127,7 +127,7 @@
    },
    {
     "InstFile" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
-    "InstLine" : 55,
+    "InstLine" : 59,
     "InstName" : "last_byte_checker",
     "ModuleFile" : "E:/EthernetBRIDGE/src/tx_control.v",
     "ModuleLine" : 4,
@@ -135,7 +135,7 @@
    },
    {
     "InstFile" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
-    "InstLine" : 59,
+    "InstLine" : 63,
     "InstName" : "txfifo",
     "ModuleFile" : "E:/EthernetBRIDGE/src/fifo_buff.v",
     "ModuleLine" : 1,

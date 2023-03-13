@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="Triple_Speed_Ethernet_MAC_Top" Register="1189" Alu="6" Lut="1039"/>
+<Module name="Triple_Speed_Ethernet_MAC_Top" Register="949" Alu="6" Lut="1104" Ssram="23"/>

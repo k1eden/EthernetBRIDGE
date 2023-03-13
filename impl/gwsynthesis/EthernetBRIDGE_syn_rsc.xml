@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top_mac_to_fifo_test">
+<Module name="top_mac_to_fifo_test" Lut="1">
     <SubModule name="config_adin1300" Register="1" Lut="1"/>
-    <SubModule name="mac">
-        <SubModule name="mac_controller" Register="670" Lut="611"/>
+    <SubModule name="mac" Lut="1">
+        <SubModule name="mac_controller" Register="462" Lut="662" Ssram="22"/>
     </SubModule>
 </Module>

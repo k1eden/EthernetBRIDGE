@@ -2,10 +2,10 @@
 //All rights reserved.
 //File Title: Template file for instantiation
 //GOWIN Version: GowinSynthesis V1.9.8.10
-//Part Number: GW1N-LV4MG160C5/I4
-//Device: GW1N-4
-//Device Version: D
-//Created Time: Thu Jan 05 10:46:19 2023
+//Part Number: GW2A-LV18EQ144C8/I7
+//Device: GW2A-18
+//Device Version: C
+//Created Time: Sat Mar 11 00:06:56 2023
 
 //Change the instance name and port connections to the signal names
 //--------Copy here to design--------
