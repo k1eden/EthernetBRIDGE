@@ -2,7 +2,7 @@ module mac_controller (
 phy_rx_clk, phy_rx_dv, phy_rxd, phy_rx_err, phy_tx_clk, phy_tx_en, phy_txd, phy_tx_err, reset, mdio_out, mdio_oen,
 phy_crs, phy_col, phy_mdio, phy_mdc, rx_mac_data, tx_mac_data, rx_mac_clk, tx_mac_valid, tx_mac_err, tx_mac_last, miim_wren,
 miim_rden, miim_wrdata, miim_regad, miim_phyad, miim_rddata_valid, miim_busy, miim_rddata, clk, rx_mac_valid, tx_mac_clk,
-rx_stat_valid, rx_stat_vector, tx_pause_req, tx_pause_val, tx_pause_source_addr);
+rx_stat_valid, rx_stat_vector, tx_pause_req, tx_pause_val, tx_pause_source_addr, rx_mac_last, tx_mac_ready);
 
 input phy_rx_clk;
 input [3:0] phy_rxd;
@@ -44,9 +44,9 @@ output tx_mac_clk;
 output rx_mac_clk;
 output rx_mac_valid;
 output wire [7:0] rx_mac_data;
-wire rx_mac_last;
+output rx_mac_last;
 wire rx_mac_err;
-wire tx_mac_ready;
+output tx_mac_ready;
 
 wire tx_collision;
 wire tx_retransmit;
@@ -98,7 +98,8 @@ Triple_Speed_Ethernet_MAC_Top mac_controller (
 .miim_busy(miim_busy),
 .tx_pause_req(tx_pause_req),
 .tx_pause_val(tx_pause_val),
-.tx_pause_source_addr(tx_pause_source_addr)
+.tx_pause_source_addr(tx_pause_source_addr),
+.tx_fcs_fwd_ena(1'b0) //auto fcs 
 );
 
 endmodule

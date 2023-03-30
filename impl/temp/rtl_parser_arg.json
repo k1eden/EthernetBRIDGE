@@ -13,6 +13,18 @@
    "Type" : "verilog"
   },
   {
+   "Path" : "E:/EthernetBRIDGE/src/phy_mii_rx_model.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/rx_control.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/tb_buff.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "E:/EthernetBRIDGE/src/tb_mac_controller.v",
    "Type" : "verilog"
   },
@@ -34,10 +46,6 @@
   },
   {
    "Path" : "E:/EthernetBRIDGE/src/tx_control.v",
-   "Type" : "verilog"
-  },
-  {
-   "Path" : "E:/EthernetBRIDGE/src/rx_control.v",
    "Type" : "verilog"
   }
  ],

@@ -1,4 +1,4 @@
-module fifo_buff (
+/* module fifo_buff (
 	input clk,
 	input rst_n,
 	input read,
@@ -80,4 +80,81 @@ if (!is_another_empty && read == 1'b0) read <= 1'b1;
         read <= 1'b0; 
 end
 */
+//endmodule 
+
+module fifo_buff(
+input clk,
+input rst_n,
+input write,
+input read,
+input [7:0] data_in,
+output reg [7:0] data_out,
+output reg empty,
+output reg full
+);
+
+// Параметры FIFO
+parameter ADDR_WIDTH = 8;
+parameter DEPTH = 2**ADDR_WIDTH;
+
+// Сигналы для RAM
+reg [7:0] ram [0:DEPTH-1];
+reg [ADDR_WIDTH-1:0] wr_ptr = 0;
+reg [ADDR_WIDTH-1:0] rd_ptr = 0;
+
+// Сигналы для FIFO
+reg [ADDR_WIDTH-1:0] count = 0;
+
+// Логика записи в FIFO
+always @(posedge clk, negedge rst_n)
+begin
+if (!rst_n) begin
+wr_ptr <= 0;
+rd_ptr <= 0;
+end
+else 
+begin
+if (write && !full)
+begin
+ram[wr_ptr] <= data_in;
+wr_ptr <= wr_ptr + 1;
+count <= count + 1;
+end
+// Логика чтения из FIFO
+if (read && !empty) begin
+data_out <= ram[rd_ptr];
+rd_ptr <= rd_ptr + 1;
+count <= count - 1;
+end
+end
+end
+
+/*
+// Логика чтения из FIFO
+always @(posedge clk, posedge rst)
+begin
+if (rst)
+rd_ptr <= 0;
+else if (read && !empty)
+begin
+data_out <= ram[rd_ptr];
+rd_ptr <= rd_ptr + 1;
+count <= count - 1;
+end
+end
+*/
+// Логика проверки пустоты и заполненности FIFO
+always @(count)
+begin
+if (count == 0)
+empty <= 1;
+else
+empty <= 0;
+
+if (count == DEPTH)
+full <= 1;
+else
+full <= 0;
+end
+
 endmodule

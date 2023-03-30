@@ -12,6 +12,7 @@ output [3:0] phy_txd;
 
 inout phy_mdio; 
 output phy_mdc;
+
 wire mdio_out;
 wire mdio_oen;
 
@@ -58,7 +59,7 @@ mac_controller mac (
 .phy_rx_clk(phy_rx_clk), .phy_rx_dv(phy_rx_dv), .phy_rxd(phy_rxd), .phy_rx_err(phy_rx_err),
 .phy_tx_clk(phy_tx_clk), .phy_tx_en(phy_tx_en), .phy_txd(phy_txd), .phy_tx_err(phy_tx_err),
 .phy_crs(phy_crs), .phy_col(phy_col), .phy_mdio(phy_mdio), .phy_mdc(phy_mdc), .tx_mac_valid(!empty_phy),
-.rx_mac_data(data_from_phy), .tx_mac_data(data_from_buff), .rx_mac_clk(rx_mac_clk), .tx_mac_clk(tx_mac_clk), 
+.rx_mac_data(data_from_phy), .tx_mac_data(data_from_buff), .rx_mac_clk(rx_mac_clk), .tx_mac_clk(tx_mac_clk), .tx_mac_ready(tx_mac_ready), 
 .tx_mac_last(last_byte), .mdio_out(mdio_out), .mdio_oen(mdio_oen), .clk(clk), .miim_phyad(miim_phyad), 
 .miim_regad(miim_regad), .miim_wrdata(miim_wrdata), .miim_wren(miim_wren), .miim_rden(miim_rden), 
 .miim_rddata(miim_rddata), .miim_rddata_valid(miim_rddata_valid), .miim_busy(miim_busy), .rx_mac_valid(rx_mac_valid), .reset(reset_mac),
@@ -68,7 +69,7 @@ mac_controller mac (
 );
 
 tx_control last_byte_checker (
-.clk(tx_mac_clk), .tx_data(data_from_buff), .tx_data_valid(!empty_phy), .rst(), .last_byte(last_byte)
+.clk(tx_mac_clk), .tx_data(data_from_buff), .tx_data_valid(!empty_phy), .rst(1'b1), .last_byte(last_byte)
 );
 
 rx_control fifo_overflow_control (
@@ -76,7 +77,7 @@ rx_control fifo_overflow_control (
 );
 
 fifo_buff txfifo (
-.clk(rx_mac_clk), .read(!empty_phy), .write(rx_mac_valid), .data_in(data_from_phy), .data_out(data_from_buff), .empty(empty_phy), .full(fifo_full)
+.clk(rx_mac_clk), .read(!empty_phy), .write(1'b1), .data_in(data_from_phy), .data_out(data_from_buff), .empty(empty_phy), .full(fifo_full), .rst_n(1'b1)
 );
 
 endmodule
