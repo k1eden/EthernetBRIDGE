@@ -47,6 +47,10 @@
   {
    "Path" : "E:/EthernetBRIDGE/src/tx_control.v",
    "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/mac_mii_tx_model.v",
+   "Type" : "verilog"
   }
  ],
  "IncludePath" : [
