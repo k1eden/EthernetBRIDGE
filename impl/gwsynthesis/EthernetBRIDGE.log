@@ -2,6 +2,7 @@ GowinSynthesis start
 Running parser ...
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\fifo_buff.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\mac_controller.v'
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\mac_mii_tx_model.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\phy_conf.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\phy_mii_rx_model.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\rx_control.v'
@@ -10,21 +11,19 @@ Analyzing Verilog file 'E:\EthernetBRIDGE\src\tb_mac_controller.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\tb_phy_mac_trans.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\top_bridge.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v'
-Undeclared symbol 'phy_rx_err', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":62)
-Undeclared symbol 'phy_tx_err', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":63)
-Undeclared symbol 'phy_crs', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":64)
-Undeclared symbol 'phy_col', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":64)
-Undeclared symbol 'tx_mac_ready', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":65)
-Undeclared symbol 'rx_mac_last', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":67)
+Undeclared symbol 'phy_rx_err', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":72)
+Undeclared symbol 'phy_tx_err', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":73)
+Undeclared symbol 'phy_crs', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":74)
+Undeclared symbol 'phy_col', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":74)
+Undeclared symbol 'tx_mac_ready', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":75)
+Undeclared symbol 'rx_mac_last', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":77)
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\tx_control.v'
-Analyzing Verilog file 'E:\EthernetBRIDGE\src\mac_mii_tx_model.v'
-WARN  (EX3073) : Port 'rx_stat_valid' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":72)
 Compiling module 'top_mac_to_fifo_test'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":1)
-WARN  (EX3780) : Using initial value of 'reset_mac' since it is never assigned("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":54)
+WARN  (EX3780) : Using initial value of 'reset_mac' since it is never assigned("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":64)
 Compiling module 'phy_conf'("E:\EthernetBRIDGE\src\phy_conf.v":1)
 WARN  (EX3780) : Using initial value of 'sft_rst' since it is never assigned("E:\EthernetBRIDGE\src\phy_conf.v":77)
-WARN  (EX3073) : Port 'rx_pause_req' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":103)
+WARN  (EX3073) : Port 'rx_pause_req' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
 Compiling module 'mac_controller'("E:\EthernetBRIDGE\src\mac_controller.v":1)
 Compiling module 'Triple_Speed_Ethernet_MAC_Top'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":6306)
 Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
@@ -43,34 +42,32 @@ Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_sp
 Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
 Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
 Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
-WARN  (EX1947) : Input port 'rx_fcs_fwd_ena' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":103)
-WARN  (EX1947) : Input port 'rx_jumbo_ena' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":103)
-WARN  (EX1947) : Input port 'tx_ifg_delay_ena' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":103)
-WARN  (EX1947) : Input port 'tx_ifg_delay[7]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":103)
-WARN  (EX1947) : Input port 'tx_ifg_delay[6]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":103)
-WARN  (EX1947) : Input port 'tx_ifg_delay[5]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":103)
-WARN  (EX1947) : Input port 'tx_ifg_delay[4]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":103)
-WARN  (EX1947) : Input port 'tx_ifg_delay[3]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":103)
-WARN  (EX1947) : Input port 'tx_ifg_delay[2]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":103)
-WARN  (EX1947) : Input port 'tx_ifg_delay[1]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":103)
-WARN  (EX1947) : Input port 'tx_ifg_delay[0]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":103)
-WARN  (EX3670) : Actual bit length 8 differs from formal bit length 16 for port 'tx_pause_val'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":70)
+WARN  (EX1947) : Input port 'rx_jumbo_ena' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
+WARN  (EX1947) : Input port 'tx_ifg_delay_ena' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
+WARN  (EX1947) : Input port 'tx_ifg_delay[7]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
+WARN  (EX1947) : Input port 'tx_ifg_delay[6]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
+WARN  (EX1947) : Input port 'tx_ifg_delay[5]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
+WARN  (EX1947) : Input port 'tx_ifg_delay[4]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
+WARN  (EX1947) : Input port 'tx_ifg_delay[3]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
+WARN  (EX1947) : Input port 'tx_ifg_delay[2]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
+WARN  (EX1947) : Input port 'tx_ifg_delay[1]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
+WARN  (EX1947) : Input port 'tx_ifg_delay[0]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
+WARN  (EX3670) : Actual bit length 8 differs from formal bit length 16 for port 'tx_pause_val'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":80)
 Compiling module 'tx_control'("E:\EthernetBRIDGE\src\tx_control.v":4)
-Extracting RAM for identifier 'memory'("E:\EthernetBRIDGE\src\tx_control.v":11)
+Extracting RAM for identifier 'memory'("E:\EthernetBRIDGE\src\tx_control.v":13)
 Compiling module 'rx_control'("E:\EthernetBRIDGE\src\rx_control.v":1)
 WARN  (EX3791) : Expression size 15 truncated to fit in target size 8("E:\EthernetBRIDGE\src\rx_control.v":17)
 Compiling module 'fifo_buff'("E:\EthernetBRIDGE\src\fifo_buff.v":85)
 Extracting RAM for identifier 'ram'("E:\EthernetBRIDGE\src\fifo_buff.v":104)
-WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("E:\EthernetBRIDGE\src\fifo_buff.v":124)
-WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("E:\EthernetBRIDGE\src\fifo_buff.v":125)
 WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("E:\EthernetBRIDGE\src\fifo_buff.v":126)
-WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("E:\EthernetBRIDGE\src\fifo_buff.v":131)
-WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("E:\EthernetBRIDGE\src\fifo_buff.v":132)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("E:\EthernetBRIDGE\src\fifo_buff.v":127)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("E:\EthernetBRIDGE\src\fifo_buff.v":133)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("E:\EthernetBRIDGE\src\fifo_buff.v":134)
 WARN  (EX1998) : Net 'miim_rden' does not have a driver("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":33)
-WARN  (EX1998) : Net 'phy_rx_err' does not have a driver("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":62)
-WARN  (EX1998) : Net 'phy_crs' does not have a driver("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":64)
-WARN  (EX1998) : Net 'phy_col' does not have a driver("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":64)
-WARN  (EX1947) : Input port 'tx_mac_err' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":72)
+WARN  (EX1998) : Net 'phy_rx_err' does not have a driver("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":72)
+WARN  (EX1998) : Net 'phy_crs' does not have a driver("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":74)
+WARN  (EX1998) : Net 'phy_col' does not have a driver("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":74)
+WARN  (EX2565) : Input 'tx_mac_err' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":84)
 NOTE  (EX0101) : Current top module is "top_mac_to_fifo_test"
 [5%] Running netlist conversion ...
 Running device independent optimization ...
@@ -88,7 +85,7 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
-WARN  (NL0002) : The module "rx_control" instantiated to "fifo_overflow_control" is swept in optimizing("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":80)
+WARN  (NL0002) : The module "rx_control" instantiated to "fifo_overflow_control" is swept in optimizing("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":93)
 WARN  (NL0002) : The module "~crc_chk.Triple_Speed_Ethernet_MAC_Top" instantiated to "u_crc_chk" is swept in optimizing("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
 [95%] Generate netlist file "E:\EthernetBRIDGE\impl\gwsynthesis\EthernetBRIDGE.vg" completed
 [100%] Generate report file "E:\EthernetBRIDGE\impl\gwsynthesis\EthernetBRIDGE_syn.rpt.html" completed

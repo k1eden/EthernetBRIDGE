@@ -93,12 +93,12 @@ mac_mii_tx_model u_mac_mii_tx_model(
     end
 
     initial begin
-      #100;
-        u_mac_mii_tx_model.start_tx_test(tx_mac_ready);
+  //    #100;
+  //      u_mac_mii_tx_model.start_tx_test(tx_mac_ready);
           
- //   #100;
- //       u_phy_mii_rx_model.phy_mii_rx_frame_en(48'hd23456781a1b/*48'hd2345678aabb*/,48'h59abcdef1122,1'b0, 16'ha/*1'b1,16'hab12*/,1'b1,8'h19,16'd100,1'b0,1'b0,16'd0,1'b0,16'h0);//unicast frame
- //       wait(dut.rx_mac_valid & dut.rx_mac_last);
+   #100;
+        u_phy_mii_rx_model.phy_mii_rx_frame_en(48'hd23456781a1b/*48'hd2345678aabb*/,48'h59abcdef1122,1'b0, 16'ha/*1'b1,16'hab12*/,1'b1,8'h19,16'd100,1'b0,1'b0,16'd0,1'b0,16'h0);//unicast frame
+        wait(dut.rx_mac_valid & dut.rx_mac_last);
  //  $stop;
     #100; 
         tx_mac_err <= 0;

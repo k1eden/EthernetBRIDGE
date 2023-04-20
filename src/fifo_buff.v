@@ -92,7 +92,7 @@ input [7:0] data_in,
 output reg [7:0] data_out,
 output reg empty,
 output reg full,
-output reg [7:0] frame_len,
+//output reg [10:0] frame_len,
 output reg tx_valid_flag
 );
 
@@ -107,7 +107,9 @@ reg [ADDR_WIDTH-1:0] rd_ptr = 0;
 
 // Сигналы для FIFO
 reg [ADDR_WIDTH-1:0] count = 0;
-reg [ADDR_WIDTH-1:0] frame_len_reg = 0;
+reg [10:0] frame_len_reg = 11'd0;
+
+//initial frame_len <= 11'h0;
 
 // Логика записи в FIFO
 always @(posedge clk, negedge rst_n)
@@ -123,7 +125,7 @@ begin
 ram[wr_ptr] <= data_in;
 wr_ptr <= wr_ptr + 1;
 count <= count + 1;
-frame_len_reg <= frame_len_reg + 1;
+frame_len_reg <= frame_len_reg + 1'd1;
 end
 // Логика чтения из FIFO
 if (read && !empty) begin
@@ -132,11 +134,11 @@ rd_ptr <= rd_ptr + 1;
 count <= count - 1;
 end
 if (rx_mac_last) begin 
-    frame_len <= frame_len_reg + 1'd1; // + 1 Из-за 1 такта задержки
+   // frame_len <= frame_len_reg + 1'd1; // + 1 Из-за 1 такта задержки
     frame_len_reg <= 1'b0;
-end
-
-if (frame_len_reg != 1'b0)
+end 
+ 
+if (frame_len_reg != 1'b0 || rd_ptr != wr_ptr)
     tx_valid_flag <= 1'b1; else tx_valid_flag <= 1'b0; 
 end
 end

@@ -87,7 +87,7 @@ Triple_Speed_Ethernet_MAC_Top mac_controller (
 .mii_tx_en(phy_tx_en), .mii_tx_er(phy_tx_err), .mii_col(phy_col), .mii_crs(phy_crs), .duplex_status(duplex_stat), .rstn(reset), .rx_mac_clk(rx_mac_clk),
 .rx_mac_valid(rx_mac_valid), .rx_mac_data(rx_mac_data), .rx_mac_last(rx_mac_last), .rx_mac_error(rx_mac_err), .rx_statistics_valid(rx_stat_valid),
 .rx_statistics_vector(rx_stat_vector), .tx_mac_clk(tx_mac_clk), .tx_mac_valid(tx_mac_valid), .tx_mac_data(tx_mac_data), .tx_mac_last(tx_mac_last),
-.tx_mac_error(tx_mac_err), .tx_mac_ready(tx_mac_ready), .tx_collision(tx_collision), .tx_retransmit(tx_retransmit), .tx_statistics_valid(tx_stat_valid),
+.tx_mac_error(/*tx_mac_err*/1'b0), .tx_mac_ready(tx_mac_ready), .tx_collision(tx_collision), .tx_retransmit(tx_retransmit), .tx_statistics_valid(tx_stat_valid),
 .tx_statistics_vector(tx_stat_vector), .mdc(phy_mdc), .mdio_in(phy_mdio), .mdio_out(mdio_out), .mdio_oen(mdio_oen), .clk(clk), .miim_phyad(miim_phyad),
 .miim_regad(miim_regad),
 .miim_wrdata(miim_wrdata),
@@ -99,7 +99,8 @@ Triple_Speed_Ethernet_MAC_Top mac_controller (
 .tx_pause_req(tx_pause_req),
 .tx_pause_val(tx_pause_val),
 .tx_pause_source_addr(tx_pause_source_addr),
-.tx_fcs_fwd_ena(1'b0) //auto fcs 
+.tx_fcs_fwd_ena(1'b0), //auto fcs 
+.rx_fcs_fwd_ena(1'b0)
 );
 
 endmodule

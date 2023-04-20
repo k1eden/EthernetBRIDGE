@@ -6,6 +6,7 @@
     <FileList>
         <File path="E:\EthernetBRIDGE\src\fifo_buff.v" type="verilog"/>
         <File path="E:\EthernetBRIDGE\src\mac_controller.v" type="verilog"/>
+        <File path="E:\EthernetBRIDGE\src\mac_mii_tx_model.v" type="verilog"/>
         <File path="E:\EthernetBRIDGE\src\phy_conf.v" type="verilog"/>
         <File path="E:\EthernetBRIDGE\src\phy_mii_rx_model.v" type="verilog"/>
         <File path="E:\EthernetBRIDGE\src\rx_control.v" type="verilog"/>
@@ -16,7 +17,6 @@
         <File path="E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v" type="verilog"/>
         <File path="E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v" type="verilog"/>
         <File path="E:\EthernetBRIDGE\src\tx_control.v" type="verilog"/>
-        <File path="E:\EthernetBRIDGE\src\mac_mii_tx_model.v" type="verilog"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="0"/>
