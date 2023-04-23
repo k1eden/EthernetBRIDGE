@@ -35,6 +35,8 @@ reg fifo_full;
 reg fifo_empty;
 wire last_byte;
 
+reg clk;
+
 top_mac_to_fifo_test dut (
 .phy_rx_clk(phy_rx_clk),
 .phy_rx_dv(phy_rx_dv), 
@@ -43,7 +45,8 @@ top_mac_to_fifo_test dut (
 .phy_tx_en(phy_tx_en),
 .phy_txd(phy_txd), 
 .data_from_buff(data_from_fifo), 
-.data_from_phy(mac_rxd)
+.data_from_phy(mac_rxd),
+.clk(clk)
 );
 
 phy_mii_rx_model u_phy_mii_rx_model(
@@ -54,6 +57,14 @@ phy_mii_rx_model u_phy_mii_rx_model(
         .speedis10(1'b1)
     );
 
+
+   initial begin
+        clk = 0;
+        forever begin
+            #10;
+            clk = !clk;
+        end
+    end
 
 
    initial begin   
@@ -68,6 +79,7 @@ phy_mii_rx_model u_phy_mii_rx_model(
         forever begin
             #200;
             phy_tx_clk = !phy_tx_clk;
+
             reset = 1;
   //          phy_crs = 0; 
   //          phy_col = 0; // no useable in FD mod

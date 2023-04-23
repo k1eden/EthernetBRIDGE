@@ -19,6 +19,8 @@ Undeclared symbol 'tx_mac_ready', assumed default net type 'wire'("E:\EthernetBR
 Undeclared symbol 'rx_mac_last', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":77)
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\tx_control.v'
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\tb_mdio.v'
+WARN  (EX3792) : Literal value 'h4 truncated to fit in 1 bits("E:\EthernetBRIDGE\src\tb_mdio.v":70)
 Compiling module 'top_mac_to_fifo_test'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":1)
 WARN  (EX3780) : Using initial value of 'reset_mac' since it is never assigned("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":64)
 Compiling module 'phy_conf'("E:\EthernetBRIDGE\src\phy_conf.v":1)

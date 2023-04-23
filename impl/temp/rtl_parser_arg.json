@@ -51,6 +51,10 @@
   {
    "Path" : "E:/EthernetBRIDGE/src/tx_control.v",
    "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/tb_mdio.v",
+   "Type" : "verilog"
   }
  ],
  "IncludePath" : [

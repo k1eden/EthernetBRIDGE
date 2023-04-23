@@ -68,6 +68,7 @@ E:\EthernetBRIDGE\src\top_bridge.v<br>
 E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v<br>
 E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v<br>
 E:\EthernetBRIDGE\src\tx_control.v<br>
+E:\EthernetBRIDGE\src\tb_mdio.v<br>
 </td>
 </tr>
 <tr>
@@ -92,7 +93,7 @@ E:\EthernetBRIDGE\src\tx_control.v<br>
 </tr>
 <tr>
 <td class="label">Created Time</td>
-<td>Thu Apr 20 20:27:43 2023
+<td>Sun Apr 23 21:21:02 2023
 </td>
 </tr>
 <tr>
@@ -108,11 +109,11 @@ E:\EthernetBRIDGE\src\tx_control.v<br>
 </tr>
 <tr>
 <td class="label">Synthesis Process</td>
-<td>Running parser:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.343s, Elapsed time = 0h 0m 0.399s, Peak memory usage = 106.539MB<br/>Running netlist conversion:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 0MB<br/>Running device independent optimization:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 0: CPU time = 0h 0m 0.031s, Elapsed time = 0h 0m 0.025s, Peak memory usage = 106.539MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 1: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.021s, Peak memory usage = 106.539MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 2: CPU time = 0h 0m 0.031s, Elapsed time = 0h 0m 0.033s, Peak memory usage = 106.539MB<br/>Running inference:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 0: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.011s, Peak memory usage = 106.539MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 1: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.001s, Peak memory usage = 106.539MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 2: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.005s, Peak memory usage = 106.539MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.001s, Peak memory usage = 106.539MB<br/>Running technical mapping:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 0: CPU time = 0h 0m 0.031s, Elapsed time = 0h 0m 0.017s, Peak memory usage = 106.539MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 1: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.01s, Peak memory usage = 106.539MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 2: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.006s, Peak memory usage = 106.539MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 3: CPU time = 0h 0m 0.156s, Elapsed time = 0h 0m 0.142s, Peak memory usage = 106.539MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 4: CPU time = 0h 0m 0.031s, Elapsed time = 0h 0m 0.036s, Peak memory usage = 106.539MB<br/>Generate output files:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.046s, Elapsed time = 0h 0m 0.055s, Peak memory usage = 106.539MB<br/></td>
+<td>Running parser:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.39s, Elapsed time = 0h 0m 0.408s, Peak memory usage = 128.492MB<br/>Running netlist conversion:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s, Peak memory usage = 0MB<br/>Running device independent optimization:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 0: CPU time = 0h 0m 0.031s, Elapsed time = 0h 0m 0.027s, Peak memory usage = 128.492MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 1: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.022s, Peak memory usage = 128.492MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Optimizing Phase 2: CPU time = 0h 0m 0.031s, Elapsed time = 0h 0m 0.036s, Peak memory usage = 128.492MB<br/>Running inference:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 0: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.012s, Peak memory usage = 128.492MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 1: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.001s, Peak memory usage = 128.492MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 2: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.005s, Peak memory usage = 128.492MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Inferring Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.002s, Peak memory usage = 128.492MB<br/>Running technical mapping:<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 0: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.021s, Peak memory usage = 128.492MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 1: CPU time = 0h 0m 0.015s, Elapsed time = 0h 0m 0.01s, Peak memory usage = 128.492MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 2: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.007s, Peak memory usage = 128.492MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 3: CPU time = 0h 0m 0.187s, Elapsed time = 0h 0m 0.208s, Peak memory usage = 128.559MB<br/>&nbsp;&nbsp;&nbsp;&nbsp;Tech-Mapping Phase 4: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.043s, Peak memory usage = 128.559MB<br/>Generate output files:<br/>&nbsp;&nbsp;&nbsp;&nbsp;CPU time = 0h 0m 0.046s, Elapsed time = 0h 0m 0.058s, Peak memory usage = 128.559MB<br/></td>
 </tr>
 <tr>
 <td class="label">Total Time and Memory Usage</td>
-<td>CPU time = 0h 0m 0.714s, Elapsed time = 0h 0m 0.762s, Peak memory usage = 106.539MB</td>
+<td>CPU time = 0h 0m 0.745s, Elapsed time = 0h 0m 0.86s, Peak memory usage = 128.559MB</td>
 </tr>
 </table>
 <h1><a name="resource">Resource</a></h1>
@@ -144,15 +145,15 @@ E:\EthernetBRIDGE\src\tx_control.v<br>
 </tr>
 <tr>
 <td class="label"><b>Register </b></td>
-<td>628</td>
+<td>644</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFF</td>
-<td>22</td>
+<td>24</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFE</td>
-<td>29</td>
+<td>43</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspDFFS</td>
@@ -184,27 +185,27 @@ E:\EthernetBRIDGE\src\tx_control.v<br>
 </tr>
 <tr>
 <td class="label"><b>LUT </b></td>
-<td>738</td>
+<td>766</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT2</td>
-<td>117</td>
+<td>120</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT3</td>
-<td>193</td>
+<td>203</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspLUT4</td>
-<td>428</td>
+<td>443</td>
 </tr>
 <tr>
 <td class="label"><b>ALU </b></td>
-<td>53</td>
+<td>69</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp&nbsp&nbspALU</td>
-<td>53</td>
+<td>69</td>
 </tr>
 <tr>
 <td class="label"><b>SSRAM </b></td>
@@ -240,13 +241,13 @@ E:\EthernetBRIDGE\src\tx_control.v<br>
 </tr>
 <tr>
 <td class="label">Logic</td>
-<td>940(749 LUTs, 53 ALUs, 23 SSRAMs) / 20736</td>
+<td>984(777 LUTs, 69 ALUs, 23 SSRAMs) / 20736</td>
 <td>5%</td>
 </tr>
 <tr>
 <td class="label">Register</td>
-<td>628 / 15909</td>
-<td>4%</td>
+<td>644 / 15909</td>
+<td>5%</td>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp--Register as Latch</td>
@@ -255,8 +256,8 @@ E:\EthernetBRIDGE\src\tx_control.v<br>
 </tr>
 <tr>
 <td class="label">&nbsp&nbsp--Register as FF</td>
-<td>628 / 15909</td>
-<td>4%</td>
+<td>644 / 15909</td>
+<td>5%</td>
 </tr>
 <tr>
 <td class="label">BSRAM</td>
@@ -422,7 +423,7 @@ E:\EthernetBRIDGE\src\tx_control.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>329</td>
+<td>345</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -561,7 +562,7 @@ E:\EthernetBRIDGE\src\tx_control.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>329</td>
+<td>345</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -666,7 +667,7 @@ E:\EthernetBRIDGE\src\tx_control.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>329</td>
+<td>345</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -805,7 +806,7 @@ E:\EthernetBRIDGE\src\tx_control.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>329</td>
+<td>345</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -910,7 +911,7 @@ E:\EthernetBRIDGE\src\tx_control.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>329</td>
+<td>345</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -1049,7 +1050,7 @@ E:\EthernetBRIDGE\src\tx_control.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>329</td>
+<td>345</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -1154,7 +1155,7 @@ E:\EthernetBRIDGE\src\tx_control.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>329</td>
+<td>345</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -1293,7 +1294,7 @@ E:\EthernetBRIDGE\src\tx_control.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>329</td>
+<td>345</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -1398,7 +1399,7 @@ E:\EthernetBRIDGE\src\tx_control.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>329</td>
+<td>345</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>
@@ -1537,7 +1538,7 @@ E:\EthernetBRIDGE\src\tx_control.v<br>
 <td>0.683</td>
 <td>tINS</td>
 <td>RR</td>
-<td>329</td>
+<td>345</td>
 <td>phy_tx_clk_ibuf/O</td>
 </tr>
 <tr>

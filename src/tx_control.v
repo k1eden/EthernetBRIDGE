@@ -48,8 +48,10 @@ else begin
                    // wait(tx_mac_ready);
                     end
                     
-                    if (tx_mac_ready) tx_data_o <= tx_data;
-                    
+                    if (tx_mac_ready) begin 
+                        tx_data_o <= tx_data;
+                        pointer <= pointer + 1'h1;
+                    end
                 end
 endcase
 end

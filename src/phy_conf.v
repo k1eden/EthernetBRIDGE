@@ -12,7 +12,7 @@ output reg wren;
 // broadcast address
 assign phy_add = 4'b0;
 
-reg process_flag;
+reg process_flag = 1'b0;
 
 // ------------------------------------------------------------------------------------------------------------- MII CONTROL REG
 
