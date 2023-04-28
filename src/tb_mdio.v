@@ -66,8 +66,8 @@ miim_regad = 1'h1;
 miim_wrdata = 16'h0;
 #20
 miim_rden = 1;
-miim_phyad = 1'h1;
-miim_regad = 1'h4;
+miim_phyad = 5'h1;
+miim_regad = 5'h4;
 miim_wrdata = 16'b0000000000000000;
 #20
 miim_rden = 0;

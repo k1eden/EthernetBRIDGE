@@ -8,6 +8,7 @@ Analyzing Verilog file 'E:\EthernetBRIDGE\src\phy_mii_rx_model.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\rx_control.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\tb_buff.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\tb_mac_controller.v'
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\tb_mdio.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\tb_phy_mac_trans.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\top_bridge.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v'
@@ -19,12 +20,10 @@ Undeclared symbol 'tx_mac_ready', assumed default net type 'wire'("E:\EthernetBR
 Undeclared symbol 'rx_mac_last', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":77)
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\tx_control.v'
-Analyzing Verilog file 'E:\EthernetBRIDGE\src\tb_mdio.v'
-WARN  (EX3792) : Literal value 'h4 truncated to fit in 1 bits("E:\EthernetBRIDGE\src\tb_mdio.v":70)
 Compiling module 'top_mac_to_fifo_test'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":1)
 WARN  (EX3780) : Using initial value of 'reset_mac' since it is never assigned("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":64)
 Compiling module 'phy_conf'("E:\EthernetBRIDGE\src\phy_conf.v":1)
-WARN  (EX3780) : Using initial value of 'sft_rst' since it is never assigned("E:\EthernetBRIDGE\src\phy_conf.v":77)
+WARN  (EX3840) : Wait statement is ignored for synthesis("E:\EthernetBRIDGE\src\phy_conf.v":94)
 WARN  (EX3073) : Port 'rx_pause_req' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
 Compiling module 'mac_controller'("E:\EthernetBRIDGE\src\mac_controller.v":1)
 Compiling module 'Triple_Speed_Ethernet_MAC_Top'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":6306)
@@ -54,11 +53,9 @@ WARN  (EX1947) : Input port 'tx_ifg_delay[3]' remains unconnected for this insta
 WARN  (EX1947) : Input port 'tx_ifg_delay[2]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
 WARN  (EX1947) : Input port 'tx_ifg_delay[1]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
 WARN  (EX1947) : Input port 'tx_ifg_delay[0]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
-WARN  (EX3670) : Actual bit length 8 differs from formal bit length 16 for port 'tx_pause_val'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":80)
 Compiling module 'tx_control'("E:\EthernetBRIDGE\src\tx_control.v":4)
 Extracting RAM for identifier 'memory'("E:\EthernetBRIDGE\src\tx_control.v":13)
 Compiling module 'rx_control'("E:\EthernetBRIDGE\src\rx_control.v":1)
-WARN  (EX3791) : Expression size 15 truncated to fit in target size 8("E:\EthernetBRIDGE\src\rx_control.v":17)
 Compiling module 'fifo_buff'("E:\EthernetBRIDGE\src\fifo_buff.v":85)
 Extracting RAM for identifier 'ram'("E:\EthernetBRIDGE\src\fifo_buff.v":104)
 WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("E:\EthernetBRIDGE\src\fifo_buff.v":126)

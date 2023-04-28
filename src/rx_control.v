@@ -5,7 +5,7 @@ input is_fifo_full;
 
 output reg [47:0] tx_pause_source_addr_r;
 output reg tx_pause_req;
-output reg [7:0] tx_pause_val;
+output reg [15:0] tx_pause_val;
 
 localparam [47:0]  tx_pause_source_addr = 48'h0180C2000001;
 

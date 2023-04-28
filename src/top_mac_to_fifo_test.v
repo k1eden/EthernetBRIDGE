@@ -37,7 +37,7 @@ wire miim_rddata_valid;
 wire miim_busy;
 
 wire tx_pause_req;
-wire [7:0] tx_pause_val;
+wire [15:0] tx_pause_val;
 wire [47:0] tx_pause_source_addr;
 wire tx_valid_flag;
 reg [15:0] frm_len;
@@ -63,8 +63,8 @@ initial begin
     frm_len = 16'h0;
 end
 
-phy_conf config_adin1300 (
-.clk(clk), .phy_add(miim_phyad), .reg_add(miim_regad), .wr_data(miim_wrdata), .wren(miim_wren), .busy(miim_busy)
+phy_conf configurator (
+.clk(clk), .phy_add_o(miim_phyad), .reg_add(miim_regad), .wr_data(miim_wrdata), .wren(miim_wren), .busy(miim_busy)
 ); //100 mb/s + full duplex + autoneg on
 
 

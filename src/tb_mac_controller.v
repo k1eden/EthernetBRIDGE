@@ -18,9 +18,9 @@ reg phy_col;
 //wire phy_mdio,
 //wire phy_mdc,
 wire [7:0] rx_mac_data;
-wire [7:0] tx_mac_data;
+reg [7:0] tx_mac_data;
 wire rx_mac_clk;
-wire tx_mac_valid;
+reg tx_mac_valid;
 reg tx_mac_err;
 reg tx_mac_last;
 wire rx_mac_last;
@@ -65,8 +65,8 @@ phy_mii_rx_model u_phy_mii_rx_model(
 
 mac_mii_tx_model u_mac_mii_tx_model(
     //    .mac_mii_tx_clk_o(tx_mac_clk),
-        .mac_mii_tx_dv_o(tx_mac_valid),
-        .mac_mii_txd_o(tx_mac_data)
+    //    .mac_mii_tx_dv_o(tx_mac_valid),
+    //    .mac_mii_txd_o(tx_mac_data)
     //    .speedis1000(1'b0),
     //    .speedis10(1'b1)
     );
@@ -76,16 +76,16 @@ mac_mii_tx_model u_mac_mii_tx_model(
         phy_crs = 0;
         phy_col = 1;
         reset = 0;
-//        tx_mac_data <= 8'h0;
+        tx_mac_data <= 8'h0;
 //        phy_rx_clk = 0;
         phy_tx_clk = 0;
      //   rx_mac_valid = 0;
-//        tx_mac_valid = 0;
+            tx_mac_valid = 0;
         forever begin
-            #20;
+            #200;
   //          phy_rx_clk = !phy_rx_clk;
             phy_tx_clk = !phy_tx_clk;
-            reset = 1;
+        //    reset = 1;
             phy_crs = 0; 
             phy_col = 0; // no useable in FD mod
      //       rx_mac_valid = 1;
@@ -95,10 +95,16 @@ mac_mii_tx_model u_mac_mii_tx_model(
     initial begin
   //    #100;
   //      u_mac_mii_tx_model.start_tx_test(tx_mac_ready);
-          
-   #100;
-        u_phy_mii_rx_model.phy_mii_rx_frame_en(48'hd23456781a1b/*48'hd2345678aabb*/,48'h59abcdef1122,1'b0, 16'ha/*1'b1,16'hab12*/,1'b1,8'h19,16'd100,1'b0,1'b0,16'd0,1'b0,16'h0);//unicast frame
-        wait(dut.rx_mac_valid & dut.rx_mac_last);
+     #2000
+        reset = 1'b1;
+     #4800
+        tx_mac_data = 8'h11;
+        tx_mac_valid = 1'b1;
+        wait(dut.tx_mac_ready)
+        tx_mac_data = 8'h12;
+ //  #100;
+ //       u_phy_mii_rx_model.phy_mii_rx_frame_en(48'hd23456781a1b/*48'hd2345678aabb*/,48'h59abcdef1122,1'b0, 16'ha/*1'b1,16'hab12*/,1'b1,8'h19,16'd100,1'b0,1'b0,16'd0,1'b0,16'h0);//unicast frame
+ //      wait(dut.rx_mac_valid & dut.rx_mac_last);
  //  $stop;
     #100; 
         tx_mac_err <= 0;

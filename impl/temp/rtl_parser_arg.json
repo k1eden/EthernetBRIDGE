@@ -33,6 +33,10 @@
    "Type" : "verilog"
   },
   {
+   "Path" : "E:/EthernetBRIDGE/src/tb_mdio.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "E:/EthernetBRIDGE/src/tb_phy_mac_trans.v",
    "Type" : "verilog"
   },
@@ -50,10 +54,6 @@
   },
   {
    "Path" : "E:/EthernetBRIDGE/src/tx_control.v",
-   "Type" : "verilog"
-  },
-  {
-   "Path" : "E:/EthernetBRIDGE/src/tb_mdio.v",
    "Type" : "verilog"
   }
  ],
