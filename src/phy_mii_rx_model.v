@@ -4,7 +4,8 @@ module phy_mii_rx_model(
     output reg phy_mii_rx_dv_o,
     output reg [3:0] phy_mii_rxd_o,
     input speedis1000,
-    input speedis10
+    input speedis10,
+    input start
     );
     
     reg clk;
@@ -21,7 +22,7 @@ module phy_mii_rx_model(
             else begin//10M clk
                 #200 clk = !clk; 
             end
-        end
+        end 
     end 
     
     // assign #2 phy_mii_rx_clk_o = clk;
@@ -487,6 +488,7 @@ module phy_mii_rx_model(
         end
     endfunction
 
-    
+    always @(posedge start)
+    phy_mii_rx_frame_en(48'h12d146111011,48'h59abcdef1122,1'b0,16'hab12,1'b1,8'h19,16'd100,1'b0,1'b0,16'd0,1'b0,16'h0);
 endmodule
 

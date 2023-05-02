@@ -34,6 +34,7 @@ wire [7:0] mac_rxd;
 reg fifo_full;
 reg fifo_empty;
 wire last_byte;
+reg start;
 
 reg clk;
 
@@ -54,7 +55,8 @@ phy_mii_rx_model u_phy_mii_rx_model(
         .phy_mii_rx_dv_o(phy_rx_dv),
         .phy_mii_rxd_o(phy_rxd),
         .speedis1000(1'b0),
-        .speedis10(1'b1)
+        .speedis10(1'b1),
+        .start(start)
     );
 
 
@@ -73,6 +75,7 @@ phy_mii_rx_model u_phy_mii_rx_model(
         phy_crs = 0;
         phy_col = 0;
         reset = 0;
+        start = 0;
 //        phy_rx_clk = 0;
         phy_tx_clk = 0;
      //   rx_mac_valid = 0;
@@ -97,7 +100,11 @@ phy_mii_rx_model u_phy_mii_rx_model(
     #1000
         u_phy_mii_rx_model.phy_mii_rx_frame_en(48'hd2345678aabb,48'h59abcdef1122,1'b1,16'hab12,1'b1,8'h19,16'd99,1'b0,1'b0,16'd0,1'b0,16'h0);
 
-    #100000;
+ /*   #100
+    start = 1;
+    #100
+    start = 0; */
+    #100000; 
    
 
 $stop;
