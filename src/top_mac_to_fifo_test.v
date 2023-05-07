@@ -86,7 +86,7 @@ mac_controller mac (
 
 tx_control controller (
 .clk(/*tx_mac_ready*/ tx_mac_clk), .tx_data(data_from_buff), .tx_data_valid(/*tx_mac_valid*/ tx_valid_flag), .rst(1'b1), .last_byte(last_byte), .tx_data_o(tx_control_data),
-.valid_flag(tx_valid_control), .tx_mac_ready(tx_mac_ready), .frm_len(frm_len), .nextByte(nextByte)
+.valid_flag(tx_valid_control), .tx_mac_ready(tx_mac_ready), .frm_len(frm_len), .nextByte(nextByte), .empty_buff(empty_phy)
 );
 
 rx_control fifo_overflow_control (
@@ -94,7 +94,7 @@ rx_control fifo_overflow_control (
 );
 
 fifo_buff rxfifo (
-.clk(rx_mac_clk), .read(/*!empty_phy*//*tx_mac_ready*/tx_valid_control /* !empty_phy && nextByte */), .write(rx_mac_valid), .data_in(data_from_phy), .data_out(data_from_buff),
+.clk(rx_mac_clk), .read(/*!empty_phy*//*tx_mac_ready*/ /*tx_valid_control*/ !empty_phy && nextByte), .write(rx_mac_valid), .data_in(data_from_phy), .data_out(data_from_buff),
 .empty(empty_phy), .full(fifo_full), .rst_n(1'b1), .tx_valid_flag(tx_valid_flag), .rx_mac_last(rx_mac_last) 
 );
 

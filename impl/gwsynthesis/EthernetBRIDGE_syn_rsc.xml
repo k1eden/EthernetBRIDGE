@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top_mac_to_fifo_test" Register="16" Alu="13" Lut="2">
+<Module name="top_mac_to_fifo_test" Register="16" Alu="13" Lut="7">
     <SubModule name="mac" Lut="1">
-        <SubModule name="mac_controller" Register="564" Lut="721" Ssram="23"/>
+        <SubModule name="mac_controller" Register="561" Lut="717" Ssram="23"/>
     </SubModule>
-    <SubModule name="controller" Register="26" Alu="16" Lut="41"/>
-    <SubModule name="rxfifo" Register="36" Alu="40" Lut="12" Bsram="1"/>
+    <SubModule name="controller" Register="27" Lut="168"/>
+    <SubModule name="rxfifo" Register="24" Alu="22" Lut="3" Bsram="1"/>
 </Module>

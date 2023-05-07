@@ -54,7 +54,7 @@ WARN  (EX1947) : Input port 'tx_ifg_delay[2]' remains unconnected for this insta
 WARN  (EX1947) : Input port 'tx_ifg_delay[1]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
 WARN  (EX1947) : Input port 'tx_ifg_delay[0]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
 Compiling module 'tx_control'("E:\EthernetBRIDGE\src\tx_control.v":4)
-Extracting RAM for identifier 'memory'("E:\EthernetBRIDGE\src\tx_control.v":14)
+Extracting RAM for identifier 'memory'("E:\EthernetBRIDGE\src\tx_control.v":15)
 Compiling module 'rx_control'("E:\EthernetBRIDGE\src\rx_control.v":1)
 Compiling module 'fifo_buff'("E:\EthernetBRIDGE\src\fifo_buff.v":85)
 Extracting RAM for identifier 'ram'("E:\EthernetBRIDGE\src\fifo_buff.v":104)

@@ -109,7 +109,7 @@ reg [ADDR_WIDTH-1:0] rd_ptr = 0;
 reg [ADDR_WIDTH-1:0] count = 0;
 reg [10:0] frame_len_reg = 11'd0;
 
-//initial frame_len <= 11'h0;
+initial data_out = 8'h0;
 
 // Логика записи в FIFO
 always @(posedge clk, negedge rst_n)
