@@ -1,4 +1,6 @@
 
+IO_LOC "clk"  122
+
 IO_LOC "phy_rx_clk" 30
 IO_LOC "phy_rx_dv"  29
 IO_LOC "phy_tx_clk" 27
@@ -7,14 +9,14 @@ IO_LOC "phy_tx_en"  28
 IO_LOC "phy_mdio"   40
 IO_LOC "phy_mdc"    41
 
-IO_LOC "data_from_phy[0]"  141
-IO_LOC "data_from_phy[1]"  140
-IO_LOC "data_from_phy[2]"  139
-IO_LOC "data_from_phy[3]"  138
-IO_LOC "data_from_phy[4]"  112
-IO_LOC "data_from_phy[5]"  113
-IO_LOC "data_from_phy[6]"  110
-IO_LOC "data_from_phy[7]"  111
+IO_LOC "data_from_phy[0]"  140
+IO_LOC "data_from_phy[1]"  139
+IO_LOC "data_from_phy[2]"  138
+IO_LOC "data_from_phy[3]"  124
+IO_LOC "data_from_phy[4]"  125
+IO_LOC "data_from_phy[5]"  112
+IO_LOC "data_from_phy[6]"  113
+IO_LOC "data_from_phy[7]"  110
 
 IO_LOC "phy_rxd[0]" 32
 IO_LOC "phy_rxd[1]" 33

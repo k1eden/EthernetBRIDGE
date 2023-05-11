@@ -145,6 +145,6 @@ end */
 end
 endtask
 
-initial conf_adin1300(5'h1);
+initial conf_adin1300(5'h0);
 
 endmodule

@@ -65,7 +65,7 @@ initial begin
 end
 
 phy_conf configurator (
-.clk(clk), .phy_add_o(miim_phyad), .reg_add(miim_regad), .wr_data(miim_wrdata), .wren(miim_wren), .busy(miim_busy)
+.clk(phy_mdc), .phy_add_o(miim_phyad), .reg_add(miim_regad), .wr_data(miim_wrdata), .wren(miim_wren), .busy(miim_busy)
 ); //100 mb/s + full duplex + autoneg on
 
 
@@ -95,7 +95,7 @@ rx_control fifo_overflow_control (
 
 fifo_buff rxfifo (
 .clk(rx_mac_clk), .read(/*!empty_phy*//*tx_mac_ready*/ /*tx_valid_control*/ !empty_phy && nextByte), .write(rx_mac_valid), .data_in(data_from_phy), .data_out(data_from_buff),
-.empty(empty_phy), .full(fifo_full), .rst_n(1'b1), .tx_valid_flag(tx_valid_flag), .rx_mac_last(rx_mac_last) 
+.empty(empty_phy), .full(fifo_full), .rst_n(reset_mac), .tx_valid_flag(tx_valid_flag), .rx_mac_last(rx_mac_last) 
 );
 
 endmodule

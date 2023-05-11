@@ -12,6 +12,7 @@ Running routing......
 [60%] Routing Phase 0 completed
 [70%] Routing Phase 1 completed
 [80%] Routing Phase 2 completed
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk_d' by the specified constraint. And then it may lead to the excessive delay or skew
 WARN  (PR1014) : Generic routing resource will be used to clock signal 'phy_rx_clk_d' by the specified constraint. And then it may lead to the excessive delay or skew
 WARN  (PR1014) : Generic routing resource will be used to clock signal 'phy_tx_clk_d' by the specified constraint. And then it may lead to the excessive delay or skew
 [90%] Routing Phase 3 completed
@@ -27,5 +28,5 @@ Generate file "E:\EthernetBRIDGE\impl\pnr\EthernetBRIDGE.pin.html" completed
 Generate file "E:\EthernetBRIDGE\impl\pnr\EthernetBRIDGE.rpt.html" completed
 Generate file "E:\EthernetBRIDGE\impl\pnr\EthernetBRIDGE.rpt.txt" completed
 Generate file "E:\EthernetBRIDGE\impl\pnr\EthernetBRIDGE.tr.html" completed
-Mon Mar 13 23:03:52 2023
+Thu May 11 14:35:13 2023
 
