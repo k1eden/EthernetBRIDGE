@@ -11,6 +11,18 @@ Analyzing Verilog file 'E:\EthernetBRIDGE\src\tb_mac_controller.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\tb_mdio.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\tb_phy_mac_trans.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\top_bridge.v'
+Undeclared symbol 'phy_rx_err_1100', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.v":229)
+Undeclared symbol 'phy_tx_err_1100', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.v":234)
+Undeclared symbol 'phy_crs_1100', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.v":236)
+Undeclared symbol 'phy_col_1100', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.v":237)
+Undeclared symbol 'tx_mac_ready_1100', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.v":247)
+Undeclared symbol 'rx_mac_last_1100', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.v":249)
+Undeclared symbol 'phy_rx_err_1300', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.v":276)
+Undeclared symbol 'phy_tx_err_1300', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.v":281)
+Undeclared symbol 'phy_crs_1300', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.v":283)
+Undeclared symbol 'phy_col_1300', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.v":284)
+Undeclared symbol 'tx_mac_ready_1300', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.v":294)
+Undeclared symbol 'rx_mac_last_1300', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.v":296)
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v'
 Undeclared symbol 'phy_rx_err', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":73)
 Undeclared symbol 'phy_tx_err', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":74)
