@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top_mac_to_fifo_test" Register="16" Alu="13" Lut="7">
+<Module name="top_mac_to_fifo_test" Register="16" Alu="13" Lut="4">
     <SubModule name="configurator" Register="35" Alu="31" Lut="15"/>
     <SubModule name="mac" Lut="1">
         <SubModule name="mac_controller" Register="562" Lut="721" Ssram="23"/>
     </SubModule>
-    <SubModule name="controller" Register="28" Lut="227"/>
-    <SubModule name="rxfifo" Register="24" Alu="22" Lut="3" Bsram="1"/>
+    <SubModule name="controller" Register="29" Lut="217"/>
+    <SubModule name="rxfifo" Register="24" Alu="22" Lut="6" Bsram="1"/>
 </Module>

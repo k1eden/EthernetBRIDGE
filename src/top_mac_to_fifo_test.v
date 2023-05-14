@@ -86,7 +86,7 @@ mac_controller mac (
 
 tx_control controller (
 .clk(/*tx_mac_ready*/ tx_mac_clk), .tx_data(data_from_buff), .tx_data_valid(/*tx_mac_valid*/ tx_valid_flag), .rst(1'b1), .last_byte(last_byte), .tx_data_o(tx_control_data),
-.valid_flag(tx_valid_control), .tx_mac_ready(tx_mac_ready), .frm_len(frm_len), .nextByte(nextByte), .empty_buff(empty_phy)
+.valid_flag(tx_valid_control), .tx_mac_ready(tx_mac_ready), .frm_len(frm_len), .nextByte(nextByte), .empty_buff(empty_phy), .rx_frame(rx_stat_valid)
 );
 
 rx_control fifo_overflow_control (
