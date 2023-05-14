@@ -65,7 +65,7 @@ else begin
                   //  end
                     valid_flag <= 1'b1;
 
-                    if (/*tx_mac_ready*/ valid_flag) begin 
+                    if (tx_mac_ready /*valid_flag*/) begin 
                       //  if (pointer == frm_len + 16'h2) last_byte <= 1;
                         tx_data_o <= tx_data;
                         nextByte <= 1'b1;

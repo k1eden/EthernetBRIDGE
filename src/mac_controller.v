@@ -79,7 +79,8 @@ wire duplex_stat = 0; // if 0 = full duplex, else half duplex
 input tx_pause_req;
 input [15:0] tx_pause_val;
 input [47:0] tx_pause_source_addr;
-
+wire rx_pause_req;
+wire [15:0] rx_pause_val;
 //----------------------------------------------------------------------------------------------------------------------------- IP Configure
 
 Triple_Speed_Ethernet_MAC_Top mac_controller (
@@ -96,11 +97,16 @@ Triple_Speed_Ethernet_MAC_Top mac_controller (
 .miim_rddata(miim_rddata),
 .miim_rddata_valid(miim_rddata_valid),
 .miim_busy(miim_busy),
-.tx_pause_req(tx_pause_req),
-.tx_pause_val(tx_pause_val),
-.tx_pause_source_addr(tx_pause_source_addr),
+.tx_pause_req(/*tx_pause_req*/ 1'b0),
+.tx_pause_val(/*tx_pause_val*/ 16'h0),
+.tx_pause_source_addr(/*tx_pause_source_addr*/ 48'h0),
 .tx_fcs_fwd_ena(1'b0), //auto fcs 
-.rx_fcs_fwd_ena(1'b0)
+.rx_fcs_fwd_ena(1'b0),
+.tx_ifg_delay_ena(1'b0),
+.tx_ifg_delay(8'h0),
+.rx_jumbo_ena(1'b0),
+.rx_pause_req(rx_pause_req),
+.rx_pause_val(rx_pause_val)
 );
 
 endmodule

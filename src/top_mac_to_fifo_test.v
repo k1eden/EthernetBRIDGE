@@ -65,7 +65,7 @@ initial begin
 end
 
 phy_conf configurator (
-.clk(phy_mdc), .phy_add_o(miim_phyad), .reg_add(miim_regad), .wr_data(miim_wrdata), .wren(miim_wren), .busy(miim_busy)
+.clk(phy_mdc), .phy_add_o(miim_phyad), .reg_add(miim_regad), .wr_data(miim_wrdata), .wren(miim_wren), .busy(miim_busy), .start_conf(1'b1)
 ); //100 mb/s + full duplex + autoneg on
 
 

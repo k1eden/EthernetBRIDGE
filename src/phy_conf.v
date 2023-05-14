@@ -1,12 +1,14 @@
-module phy_conf (clk, phy_add_o, reg_add, wr_data, wren, busy);
+module phy_conf (clk, phy_add_o, reg_add, wr_data, wren, busy, rden, start_conf);
 
 input clk;
 input busy;
+input start_conf;
 
 output reg [4:0] phy_add_o;
 output reg [4:0] reg_add;
 output reg [15:0] wr_data;
 output reg wren;
+output reg rden;
 
 
 // broadcast address
@@ -50,14 +52,30 @@ reg speed_sel_msb;
 reg undir_en;
 reg [4:0] reserved;
 
-//-------------------------------------------------------------------------------------------------------------
-task conf_adin1300;
-input phy_add_i;
- 
-begin
+integer i = 0;
 
-// initial 
-//begin
+reg finish_flag;
+
+//-------------------------------------------------------------------------------------------------------------
+
+initial begin
+    reg_add = 5'h0;
+    phy_add_o = 5'h0;
+    wr_data = 16'h0;
+    wren = 1'b0;
+    rden = 1'b0;
+
+    finish_flag = 1'b0;
+end
+
+//task conf_adin1300;
+//input phy_add_i;
+
+//integer i = 0;
+ 
+ begin
+
+initial begin
 sft_rst = 1'b0;
 
 loopback = 1'b0;
@@ -78,73 +96,31 @@ coltest = 0;
 
 speed_sel_msb = 0; // 01 => 100 mb/s
 
-//end
-if (!busy) begin
-    @(posedge clk);
-    wren <= 1'b1;
-    phy_add_o <= phy_add_i;
-    //MII_CONTROL REG
-    reg_add <= 5'h0;
-    wr_data <= {
-                    sft_rst, loopback, speed_sel_lsb, autoneg_en, sft_pd,
-                    isolate, restart_aneg, dplx_mode, coltest, speed_sel_msb 
-                  };
-    @(negedge clk);
-    wren <= 1'b0; 
-end else wait(!busy);
-
-
-
-/*@(posedge clk) 
-begin
-    
-    phy_add_i = 5'h1;
-
-    wren = 1'b0;
-
-    if (reg_add == 5'h0 && process_flag == 1'b0 && !busy)
-        begin
-        //MII_CONTROL REG
-        reg_add <= 5'h0;
-        process_flag <= 1'b1;
-        wren <= 1'b1;
-        phy_add_o <= phy_add_i;
-        wr_data <= {
-                    sft_rst, loopback, speed_sel_lsb, autoneg_en, sft_pd,
-                    isolate, restart_aneg, dplx_mode, coltest, speed_sel_msb 
-                  };
-        process_flag <= 1'b0;
-        end
- 
 end
 
-/*wait(!busy);
-
-
-@(posedge clk) 
-begin
-    phy_add_i = 5'h2;
+   always @(posedge clk)  begin
+    if (start_conf && !finish_flag) begin
+    case (i)
     
-    wren = 1'b0;
-
-    if (reg_add == 5'h0 && process_flag == 1'b0 && !busy)
-        begin
-        process_flag = 1'b1;
+        0: if (!busy) begin
         wren <= 1'b1;
+        phy_add_o <= 5'h1;
         //MII_CONTROL REG
         reg_add <= 5'h0;
-        phy_add_o <= phy_add_i;
+        wr_data <=  {
+                        sft_rst, loopback, speed_sel_lsb, autoneg_en, sft_pd,
+                        isolate, restart_aneg, dplx_mode, coltest, speed_sel_msb 
+                    };
+        i <= i + 1;
+    end
 
-        wr_data <= {
-                    sft_rst, loopback, speed_sel_lsb, autoneg_en, sft_pd,
-                    isolate, restart_aneg, dplx_mode, coltest, speed_sel_msb 
-                  };
-        process_flag = 1'b0;
+        1: begin 
+        wren <= 1'b0;
+        finish_flag <= 1;
         end
-end */
+    endcase
 end
-endtask
-
-initial conf_adin1300(5'h0);
+end
+end
 
 endmodule

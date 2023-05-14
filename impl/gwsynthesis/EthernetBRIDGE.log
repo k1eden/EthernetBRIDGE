@@ -32,11 +32,11 @@ Undeclared symbol 'tx_mac_ready', assumed default net type 'wire'("E:\EthernetBR
 Undeclared symbol 'rx_mac_last', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":78)
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v'
 Analyzing Verilog file 'E:\EthernetBRIDGE\src\tx_control.v'
+WARN  (EX3073) : Port 'rden' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":69)
 Compiling module 'top_mac_to_fifo_test'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":1)
 WARN  (EX3780) : Using initial value of 'reset_mac' since it is never assigned("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":65)
 Compiling module 'phy_conf'("E:\EthernetBRIDGE\src\phy_conf.v":1)
-WARN  (EX3840) : Wait statement is ignored for synthesis("E:\EthernetBRIDGE\src\phy_conf.v":94)
-WARN  (EX3073) : Port 'rx_pause_req' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
+WARN  (EX3780) : Using initial value of 'sft_rst' since it is never assigned("E:\EthernetBRIDGE\src\phy_conf.v":99)
 Compiling module 'mac_controller'("E:\EthernetBRIDGE\src\mac_controller.v":1)
 Compiling module 'Triple_Speed_Ethernet_MAC_Top'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":6306)
 Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
@@ -55,16 +55,6 @@ Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_sp
 Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
 Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
 Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
-WARN  (EX1947) : Input port 'rx_jumbo_ena' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
-WARN  (EX1947) : Input port 'tx_ifg_delay_ena' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
-WARN  (EX1947) : Input port 'tx_ifg_delay[7]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
-WARN  (EX1947) : Input port 'tx_ifg_delay[6]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
-WARN  (EX1947) : Input port 'tx_ifg_delay[5]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
-WARN  (EX1947) : Input port 'tx_ifg_delay[4]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
-WARN  (EX1947) : Input port 'tx_ifg_delay[3]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
-WARN  (EX1947) : Input port 'tx_ifg_delay[2]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
-WARN  (EX1947) : Input port 'tx_ifg_delay[1]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
-WARN  (EX1947) : Input port 'tx_ifg_delay[0]' remains unconnected for this instance("E:\EthernetBRIDGE\src\mac_controller.v":104)
 Compiling module 'tx_control'("E:\EthernetBRIDGE\src\tx_control.v":4)
 Extracting RAM for identifier 'memory'("E:\EthernetBRIDGE\src\tx_control.v":15)
 Compiling module 'rx_control'("E:\EthernetBRIDGE\src\rx_control.v":1)
@@ -80,6 +70,7 @@ WARN  (EX1998) : Net 'phy_crs' does not have a driver("E:\EthernetBRIDGE\src\top
 WARN  (EX1998) : Net 'phy_col' does not have a driver("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":75)
 WARN  (EX2565) : Input 'tx_mac_err' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.v":85)
 NOTE  (EX0101) : Current top module is "top_mac_to_fifo_test"
+WARN  (EX0211) : The output port "rden" of module "phy_conf" has no driver, assigning undriven bits to Z, simulation mismatch possible("E:\EthernetBRIDGE\src\phy_conf.v":11)
 [5%] Running netlist conversion ...
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed

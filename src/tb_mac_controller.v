@@ -74,15 +74,17 @@ mac_mii_tx_model u_mac_mii_tx_model(
    initial begin   
         phy_rx_err = 0;
         phy_crs = 0;
-        phy_col = 1;
+        phy_col = 0;
         reset = 0;
         tx_mac_data <= 8'h0;
+        tx_mac_last <= 0;
+        tx_mac_err <= 0;
 //        phy_rx_clk = 0;
         phy_tx_clk = 0;
      //   rx_mac_valid = 0;
             tx_mac_valid = 0;
         forever begin
-            #200;
+            #4;
   //          phy_rx_clk = !phy_rx_clk;
             phy_tx_clk = !phy_tx_clk;
         //    reset = 1;
@@ -107,8 +109,8 @@ mac_mii_tx_model u_mac_mii_tx_model(
  //      wait(dut.rx_mac_valid & dut.rx_mac_last);
  //  $stop;
     #100; 
-        tx_mac_err <= 0;
-        tx_mac_last <= 0;
+        
+      
      //   tx_mac_valid <= 1;
      //   tx_mac_data <= 8'h1;
     #2000;
