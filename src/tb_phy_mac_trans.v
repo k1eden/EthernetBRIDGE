@@ -104,9 +104,9 @@ phy_mii_rx_model u_phy_mii_rx_model(
     start = 1;
     #100
     start = 0; */
-    #100000; 
-   
-
+    #150000; 
+  /*  u_phy_mii_rx_model.phy_mii_rx_frame_en(48'h12d146111011,48'h59abcdef1122,1'b0,16'hab12,1'b1,8'h19,16'd99,1'b0,1'b0,16'd0,1'b0,16'h0);//unicast frame
+    #150000; */
 $stop;
    
     end

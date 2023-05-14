@@ -4,6 +4,6 @@
     <SubModule name="mac" Lut="1">
         <SubModule name="mac_controller" Register="562" Lut="721" Ssram="23"/>
     </SubModule>
-    <SubModule name="controller" Register="27" Lut="179"/>
+    <SubModule name="controller" Register="28" Lut="227"/>
     <SubModule name="rxfifo" Register="24" Alu="22" Lut="3" Bsram="1"/>
 </Module>

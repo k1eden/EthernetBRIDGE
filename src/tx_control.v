@@ -14,6 +14,7 @@ input empty_buff;
 
 reg [7:0] memory [255:0];
 reg [15:0] pointer;
+reg first_iter;
 
 
 output reg nextByte;
@@ -27,6 +28,7 @@ last_byte <= 1'b0;
 pointer <= 16'd0;
 valid_flag <= 1'b0;
 nextByte <= 1'b0;
+first_iter <= 1'b1;
 end
 
 always@(posedge clk or negedge rst)
@@ -39,19 +41,32 @@ if(!rst)
 else begin
  //   if (pointer == 16'd0) nextByte <= 1'b1;
  case (pointer)
+//    (frm_len + 16'h1): begin
+//            nextByte <= 0;
+//            pointer <= pointer + 1;
+//        end
+
+    (frm_len + 16'h2): begin 
+                last_byte <= 1;
+                nextByte <= 0;
+                pointer <= pointer + 1'h1;
+            end
+  
     (frm_len + 16'h3): begin if (frm_len > 16'd63) begin
-                    last_byte <= 1;
+                    last_byte <= 0;
                     pointer <= pointer + 1'h1;
                   //  pointer <= 16'h0;
                     valid_flag <= 1'b1;
+                    nextByte <= 1'b0;
                end
                end
 
     (frm_len + 16'h4): begin if (frm_len > 16'd63) begin
                       pointer <= 16'h0;             
                       tx_data_o <= 16'h0; 
-                      last_byte <= 0;
+                     // last_byte <= 0;
                       valid_flag <= 1'b0;
+                      first_iter <= 1'b0;
                         end
                      end
 
@@ -75,18 +90,24 @@ else begin
                     end else nextByte <= 1'b0;
                 end
 
-    0: begin if (!empty_buff) begin
+    0: begin if (!empty_buff && frm_len > 0) begin
+        if (first_iter) begin
        nextByte <= 1'b1;
    // tx_data_o <= tx_data;
-    pointer <= pointer + 1'h1;
+       pointer <= pointer + 1'h1;
+        end else pointer <= pointer + 1'h1;
         end
     end
 
-    1: begin
-        tx_data_o <= tx_data;
+    1: begin 
+       if (first_iter)
+      //  tx_data_o <= tx_data;
       //  nextByte <= 1'b1;
       //  valid_flag <= 1'b1;
-        pointer <= pointer + 1'h1;
+        pointer <= pointer + 1'h1; else begin
+         nextByte <= 1'b1;
+         pointer <= pointer + 1'h1;
+        end
        end
 
    2: begin
