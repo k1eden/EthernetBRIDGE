@@ -82,14 +82,14 @@ end
 */
 //endmodule 
 
-module fifo_buff(
+module fifo_buff #(parameter ADDR_WIDTH = 8, parameter DEPTH = 256)(
 input rx_mac_last,
 input clk,
 input rst_n,
 input write,
 input read,
-input [7:0] data_in,
-output reg [7:0] data_out,
+input [ADDR_WIDTH - 1:0] data_in,
+output reg [ADDR_WIDTH - 1:0] data_out,
 output reg empty,
 output reg full,
 //output reg [10:0] frame_len,
@@ -97,11 +97,11 @@ output reg tx_valid_flag
 );
 
 // Параметры FIFO
-parameter ADDR_WIDTH = 8;
-parameter DEPTH = 2**ADDR_WIDTH;
+
+
 
 // Сигналы для RAM
-reg [7:0] ram [0:DEPTH-1];
+reg [ADDR_WIDTH - 1:0] ram [0:DEPTH-1];
 reg [ADDR_WIDTH-1:0] wr_ptr = 0;
 reg [ADDR_WIDTH-1:0] rd_ptr = 0;
 

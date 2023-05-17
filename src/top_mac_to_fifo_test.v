@@ -40,12 +40,16 @@ wire tx_pause_req;
 wire [15:0] tx_pause_val;
 wire [47:0] tx_pause_source_addr;
 wire tx_valid_flag;
-reg [15:0] frm_len;
+wire [15:0] frm_len;
 wire tx_mac_valid;
 wire tx_valid_control;
 wire [26:0] rx_stat_vector;
 wire rx_stat_valid;
 wire nextByte;
+wire nextLen;
+
+wire empty_len;
+
 
 
 output wire [7:0] data_from_phy;
@@ -56,12 +60,13 @@ wire [7:0] tx_control_data;
 assign phy_mdio = (!mdio_oen) ? mdio_out : 1'bz;
 assign tx_mac_valid = tx_valid_control;
 
-always @(posedge rx_stat_valid)
- frm_len <= rx_stat_vector [21:6] - 16'd4;
 
+/*always @(posedge rx_stat_valid)
+ frm_len <= rx_stat_vector [21:6] - 16'd4;
+*/
 initial begin
     reset_mac = 1'b1; // 0 is active lvl
-    frm_len = 16'h0;
+//    frm_len = 16'h0;
 end
 
 phy_conf configurator (
@@ -86,7 +91,7 @@ mac_controller mac (
 
 tx_control controller (
 .clk(/*tx_mac_ready*/ tx_mac_clk), .tx_data(data_from_buff), .tx_data_valid(/*tx_mac_valid*/ tx_valid_flag), .rst(1'b1), .last_byte(last_byte), .tx_data_o(tx_control_data),
-.valid_flag(tx_valid_control), .tx_mac_ready(tx_mac_ready), .frm_len(frm_len), .nextByte(nextByte), .empty_buff(empty_phy), .rx_frame(rx_stat_valid)
+.valid_flag(tx_valid_control), .tx_mac_ready(tx_mac_ready), .frm_len(frm_len), .nextByte(nextByte), .empty_buff(empty_phy), .rx_frame(rx_stat_valid), .nextLen(nextLen), .empty_len_buff(empty_len)
 );
 
 rx_control fifo_overflow_control (
@@ -97,5 +102,7 @@ fifo_buff rxfifo (
 .clk(rx_mac_clk), .read(/*!empty_phy*//*tx_mac_ready*/ /*tx_valid_control*/ !empty_phy && nextByte), .write(rx_mac_valid), .data_in(data_from_phy), .data_out(data_from_buff),
 .empty(empty_phy), .full(fifo_full), .rst_n(reset_mac), .tx_valid_flag(tx_valid_flag), .rx_mac_last(rx_mac_last) 
 );
+
+fifo_buff #(16) rx_frm_len_fifo  (.clk(rx_mac_clk), .read(!empty_len && nextLen), .write(rx_stat_valid), .data_in(rx_stat_vector [21:6] - 16'd4), .data_out(frm_len), .empty(empty_len), .rst_n(reset_mac));
 
 endmodule
