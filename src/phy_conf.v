@@ -80,7 +80,7 @@ sft_rst = 1'b0;
 
 loopback = 1'b0;
 
-speed_sel_lsb = 1; // x1 => 10 or 100 mb/s
+speed_sel_lsb = 0; // x1 => 10 or 100 mb/s
 
 autoneg_en = 1;
 
