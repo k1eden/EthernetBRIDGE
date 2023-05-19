@@ -52,9 +52,14 @@ reg speed_sel_msb;
 reg undir_en;
 reg [4:0] reserved;
 
-integer i = 0;
 
 reg finish_flag;
+
+reg [2:0] state;
+
+reg [2:0] idle = 3'b001;
+reg [2:0] write_conf = 3'b010;
+reg [2:0] write_finish = 3'b100;
 
 //-------------------------------------------------------------------------------------------------------------
 
@@ -96,27 +101,32 @@ coltest = 0;
 
 speed_sel_msb = 0; // 01 => 100 mb/s
 
+state = idle;
+
 end
 
    always @(posedge clk)  begin
     if (start_conf && !finish_flag) begin
-    case (i)
+    case (state)
     
-        0: if (!busy) begin
+        idle: if (!busy && !finish_flag) state <= write_conf;
+
+        write_conf: begin
         wren <= 1'b1;
-        phy_add_o <= 5'h1;
+        phy_add_o <= 5'hf;
         //MII_CONTROL REG
         reg_add <= 5'h0;
         wr_data <=  {
                         sft_rst, loopback, speed_sel_lsb, autoneg_en, sft_pd,
                         isolate, restart_aneg, dplx_mode, coltest, speed_sel_msb 
                     };
-        i <= i + 1;
+        state <= write_finish;
     end
 
-        1: begin 
+        write_finish: begin 
         wren <= 1'b0;
         finish_flag <= 1;
+        state <= idle;
         end
     endcase
 end

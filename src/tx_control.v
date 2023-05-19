@@ -26,6 +26,16 @@ output reg last_byte;
 output reg [7:0] tx_data_o;
 output reg nextLen;
 
+reg [6:0] state;
+
+reg [6:0] wait_frame = 7'b0000001;
+reg [6:0] prepare = 7'b0000010;
+reg [6:0] prepare2 = 7'b0000100;
+reg [6:0] send_data = 7'b0001000;
+reg [6:0] finish_send = 7'b0010000;
+reg [6:0] finish_send2 = 7'b0100000;
+reg [6:0] finish_send3 = 7'b1000000;
+
 initial begin
 tx_data_o <= 8'h0;
 last_byte <= 1'b0;
@@ -36,7 +46,9 @@ first_iter <= 1'b1;
 finish_flag <= 1'b0;
 nextLen <= 1'b1;
 proc_flag <= 1'b0;
+state <= wait_frame;
 end
+
 
 
 always @(posedge clk or negedge rst)
@@ -47,112 +59,91 @@ if(!rst)
 		last_byte <= 1'b0;
 	end
 else begin
- //   if (pointer == 16'd0) nextByte <= 1'b1;
- case (pointer)
-//    (frm_len + 16'h1): begin
-//            nextByte <= 0;
-//            pointer <= pointer + 1;
-//        end
+ 
+ case (state)
 
-    (frm_len + 16'h2): begin 
+    (finish_send): begin 
                 last_byte <= 1;
+                tx_data_o <= tx_data;
                 nextByte <= 0;
-                pointer <= pointer + 1'h1;
+                state <= finish_send2;
             end
   
-    (frm_len + 16'h3): begin if (frm_len > 16'd59) begin
+    (finish_send2): begin if (frm_len > 16'd59) begin
                     last_byte <= 0;
-                    pointer <= pointer + 1'h1;
-                  //  pointer <= 16'h0;
                     valid_flag <= 1'b1;
                     nextByte <= 1'b0;
+                    state <= finish_send3;
                end
                end
 
-    (frm_len + 16'h4): begin if (frm_len > 16'd59) begin
+    (finish_send3): begin if (frm_len > 16'd59) begin
                       pointer <= 16'h0;             
                       tx_data_o <= 16'h0; 
-                     // last_byte <= 0;
+                      last_byte <= 0;
                       valid_flag <= 1'b0;
                       first_iter <= 1'b0;
                       finish_flag <= 1'b1;
+                      state <= wait_frame;
                         end
                      end
 
-    default: begin // if (tx_data_valid) begin
-                  //  last_byte <= 1'b0;
-                  //  valid_flag <= 1'b1;
-                  //  nextByte <= 1'b0;
-                   /*memory[pointer]*/ // tx_data_o <= tx_data;
-                  //  pointer <= pointer + 1'h1;
-                   // wait(tx_mac_ready);
-                  //  end
+    send_data: begin 
                     valid_flag <= 1'b1;
-
-                    if (tx_mac_ready /*valid_flag*/) begin 
-                      //  if (pointer == frm_len + 16'h2) last_byte <= 1;
+         
+                    if (tx_mac_ready) begin 
                         tx_data_o <= tx_data;
                         nextByte <= 1'b1;
                         pointer <= pointer + 1'h1;
                         last_byte <= 1'b0;
                         valid_flag <= 1'b1;
+                        if (pointer == frm_len - 16'h1) begin
+                            state <= finish_send;
+                            tx_data_o <= tx_data;
+                            end
                     end else nextByte <= 1'b0;
                 end
 
-    0: begin if (!empty_buff && frm_len > 0 && !finish_flag) begin
+    wait_frame: begin if (!empty_buff && frm_len > 0 && !finish_flag) begin
         if (first_iter) begin
-       nextByte <= 1'b1;
-   // tx_data_o <= tx_data;
-       pointer <= pointer + 1'h1;
-        end else pointer <= pointer + 1'h1;
+        nextByte <= 1'b1;
+       //tx_data_o <= tx_data;
+     //  pointer <= pointer + 1'h1;
+        state <= prepare;
+        end else begin
+       // pointer <= pointer + 1'h1;
+        state <= prepare;
+        end
         end
     end
 
-    1: begin 
+    prepare: begin 
        if (first_iter) begin
-      //  tx_data_o <= tx_data;
-      //  nextByte <= 1'b1;
-      //  valid_flag <= 1'b1;
-        pointer <= pointer + 1'h1;
         nextLen <= 1'b1; 
+        state <= prepare2;
         end else begin
          nextLen <= 1'b1;
          nextByte <= 1'b1;
-         pointer <= pointer + 1'h1;
+         state <= prepare2;
         end
        end
 
-   2: begin
+   prepare2: begin
         tx_data_o <= tx_data;
-      //  nextByte <= 1'b1;
-      //  valid_flag <= 1'b1;
         pointer <= pointer + 1'h1;
         nextByte <= 1'b0;
         nextLen <= 1'b0;
+        state <= send_data;
        end
 
-/*    2: begin
-        tx_data_o <= tx_data;
-    //    nextByte <= 1'b0;
-        valid_flag <= 1'b1;
-        pointer <= pointer + 1'h1;
-       end */
 endcase
    
  if (empty_buff) first_iter <= 1'h1;
 
- if (/*rx_frame*/ !valid_flag && !empty_len_buff) finish_flag <= 1'b0;
+ if (!valid_flag && !empty_len_buff) finish_flag <= 1'b0;
 
 end
 
 
 end
 endmodule
-/*    if (pointer == 6'b111111)
- begin
-        last_byte <= 1;
-        pointer <= 6'b000000;
-    else 
-        last_byte <= 0;
- end 
-end */
