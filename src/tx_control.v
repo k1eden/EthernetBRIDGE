@@ -1,5 +1,5 @@
 /* 
- THIS MODULE RESPONSE FOR FORMING LAST_BYTE SIGNAL, TX_VALID FLAG AND SENDING DATA
+ THIS MODULE IS RESPONSIBLE FOR FORMING LAST_BYTE SIGNAL, TX_VALID FLAG AND SENDING DATA TO THE MAC
 */
 module tx_control(clk, tx_data, tx_data_valid, rst, last_byte, tx_data_o, frm_len, valid_flag, tx_mac_ready, nextByte, empty_buff, rx_frame, nextLen, empty_len_buff);
 
@@ -13,7 +13,6 @@ input empty_buff;
 input rx_frame;
 input empty_len_buff;
 
-reg [7:0] memory [255:0];
 reg [15:0] pointer;
 reg first_iter;
 reg finish_flag;
@@ -28,13 +27,13 @@ output reg nextLen;
 
 reg [6:0] state;
 
-reg [6:0] wait_frame = 7'b0000001;
-reg [6:0] prepare = 7'b0000010;
-reg [6:0] prepare2 = 7'b0000100;
-reg [6:0] send_data = 7'b0001000;
-reg [6:0] finish_send = 7'b0010000;
-reg [6:0] finish_send2 = 7'b0100000;
-reg [6:0] finish_send3 = 7'b1000000;
+localparam [6:0] wait_frame = 7'b0000001;
+localparam [6:0] prepare = 7'b0000010;
+localparam [6:0] prepare2 = 7'b0000100;
+localparam [6:0] send_data = 7'b0001000;
+localparam [6:0] finish_send = 7'b0010000;
+localparam [6:0] finish_send2 = 7'b0100000;
+localparam [6:0] finish_send3 = 7'b1000000;
 
 initial begin
 tx_data_o <= 8'h0;
@@ -57,6 +56,9 @@ if(!rst)
 	begin
         pointer <= 16'd0;
 		last_byte <= 1'b0;
+        state <= wait_frame;
+        finish_flag <= 1'b0;
+        nextByte <= 1'b0;
 	end
 else begin
  

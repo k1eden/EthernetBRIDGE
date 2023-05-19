@@ -1,3 +1,6 @@
+/* 
+ THIS MODULE IS RESPONSIBLE FOR CONFIGURING THE INTERNAL PHY REGISTERS
+*/
 module phy_conf (clk, phy_add_o, reg_add, wr_data, wren, busy, rden, start_conf);
 
 input clk;
@@ -57,9 +60,9 @@ reg finish_flag;
 
 reg [2:0] state;
 
-reg [2:0] idle = 3'b001;
-reg [2:0] write_conf = 3'b010;
-reg [2:0] write_finish = 3'b100;
+localparam [2:0] idle = 3'b001;
+localparam [2:0] write_conf = 3'b010;
+localparam [2:0] write_finish = 3'b100;
 
 //-------------------------------------------------------------------------------------------------------------
 

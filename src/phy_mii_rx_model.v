@@ -1,3 +1,6 @@
+/* 
+ THIS MODULE IS RESPONSIBLE FOR SIMULATING THE WORK OF PHY (SENDING DATA VIA MII INTERFACE)
+*/
 `timescale 1ns/1ps
 module phy_mii_rx_model(
     output phy_mii_rx_clk_o,
@@ -50,11 +53,11 @@ module phy_mii_rx_model(
         input [15:0] pause_val;
         begin
             set_phy_rx_frame_task(dest_mac,sour_mac,vlan_en,vlan,mac_ctrl_en,data_start,frame_lgt,crc_error,rx_er_en,rx_er_site,flow_ctrl_en,pause_val);
-            phy_rgmii_rx_frame_task(frame_lgt);
+            phy_mii_rx_frame_task(frame_lgt);
         end
     endtask
     
-    task phy_rgmii_rx_frame_task;
+    task phy_mii_rx_frame_task;
         input [15:0] frame_lgt;//include CRC
         integer i;
         begin
@@ -147,60 +150,7 @@ module phy_mii_rx_model(
             end
         end
     endtask
-    
-    task phy_rgmii_rx_er_only_for_col_test_task;
-        input [15:0] rx_er_lgt;//include CRC
-        integer i;
-        begin
-            if (speedis1000) begin//1000M
-                phy_mii_rx_dv_o = 0;
-                phy_mii_rxd_o = 0;
-                for (i=0;i<rx_er_lgt;i=i+1) begin
-                    @(posedge clk);
-                    phy_mii_rx_dv_o <= 1'b0;
-                    phy_mii_rxd_o <= 4'h0;
-                    @(negedge clk);
-                    phy_mii_rx_dv_o <= 1'b1;
-                    phy_mii_rxd_o <= 4'h0;
-                end
-                @(posedge clk);
-                phy_mii_rx_dv_o = 0;
-                phy_mii_rxd_o = 0;
-            end
-            else begin
-                phy_mii_rx_dv_o = 0;
-                phy_mii_rxd_o = 0;
-                for (i=0;i<rx_er_lgt;i=i+1) begin
-                    @(posedge clk);
-                    phy_mii_rx_dv_o <= 1'b0;
-                    phy_mii_rxd_o <= 4'h0;
-                    @(negedge clk);
-                    phy_mii_rx_dv_o <= 1'b1;
-                    phy_mii_rxd_o <= 4'h0;
-                    @(posedge clk);
-                    phy_mii_rx_dv_o <= 1'b0;
-                    phy_mii_rxd_o <= 4'h0;
-                    @(negedge clk);
-                    phy_mii_rx_dv_o <= 1'b1;
-                    phy_mii_rxd_o <= 4'h0;
-                end
-                @(posedge clk);
-                phy_mii_rx_dv_o = 0;
-                phy_mii_rxd_o = 0;
-            end
-        end
-    endtask
    
-    task phy_rgmii_rx_frame_inband_status_task;
-        begin
-            @(posedge clk);
-            phy_mii_rx_dv_o <= 0;
-            phy_mii_rxd_o <= 0;
-            
-        end
-    endtask
-    
-    
     
     task set_phy_rx_frame_task;
         input [47:0] dest_mac;
