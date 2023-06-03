@@ -12,26 +12,26 @@
   <Part Number>: GW2A-LV18EQ144C8/I7
   <Device>: GW2A-18
   <Device Version>: C
-  <Created Time>:Fri May 19 23:05:31 2023
+  <Created Time>:Sat Jun 03 16:50:16 2023
 
 
 2. PnR Details
 
   Running placement:
-    Placement Phase 0: CPU time = 0h 0m 0.122s, Elapsed time = 0h 0m 0.122s
-    Placement Phase 1: CPU time = 0h 0m 0.233s, Elapsed time = 0h 0m 0.233s
-    Placement Phase 2: CPU time = 0h 0m 0.138s, Elapsed time = 0h 0m 0.139s
-    Placement Phase 3: CPU time = 0h 0m 0.859s, Elapsed time = 0h 0m 0.858s
+    Placement Phase 0: CPU time = 0h 0m 0.118s, Elapsed time = 0h 0m 0.118s
+    Placement Phase 1: CPU time = 0h 0m 0.24s, Elapsed time = 0h 0m 0.24s
+    Placement Phase 2: CPU time = 0h 0m 0.142s, Elapsed time = 0h 0m 0.142s
+    Placement Phase 3: CPU time = 0h 0m 0.893s, Elapsed time = 0h 0m 0.892s
     Total Placement: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
  Running routing:
     Routing Phase 0: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0.001s
-    Routing Phase 1: CPU time = 0h 0m 0.13s, Elapsed time = 0h 0m 0.13s
+    Routing Phase 1: CPU time = 0h 0m 0.126s, Elapsed time = 0h 0m 0.127s
     Routing Phase 2: CPU time = 0h 0m 0.425s, Elapsed time = 0h 0m 0.425s
-    Total Routing: CPU time = 0h 0m 0.556s, Elapsed time = 0h 0m 0.556s
+    Total Routing: CPU time = 0h 0m 0.552s, Elapsed time = 0h 0m 0.553s
  Generate output files:
     CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
 
- Total Time and Memory Usage: CPU time = 0h 0m 5s, Elapsed time = 0h 0m 5s, Peak memory usage = 346MB
+ Total Time and Memory Usage: CPU time = 0h 0m 5s, Elapsed time = 0h 0m 5s, Peak memory usage = 336MB
 
 
 3. Resource Usage Summary
@@ -39,15 +39,15 @@
   ----------------------------------------------------------
   Resources                   | Usage
   ----------------------------------------------------------
-  Logic                       | 1089/20736  6%
-    --LUT,ALU,ROM16           | 951(871 LUT, 80 ALU, 0 ROM16)
+  Logic                       | 1091/20736  6%
+    --LUT,ALU,ROM16           | 953(873 LUT, 80 ALU, 0 ROM16)
     --SSRAM(RAM16)            | 23
-  Register                    | 669/15909  5%
+  Register                    | 668/15909  5%
     --Logic Register as Latch | 0/15552  0%
-    --Logic Register as FF    | 659/15552  5%
+    --Logic Register as FF    | 658/15552  5%
     --I/O Register as Latch   | 0/357  0%
     --I/O Register as FF      | 10/357  3%
-  CLS                         | 725/10368  7%
+  CLS                         | 731/10368  8%
   I/O Port                    | 31
   I/O Buf                     | 31
     --Input Buf               | 8
@@ -90,7 +90,7 @@
   -------------------------------
   Global Clock  | Usage       
   -------------------------------
-  PRIMARY       | 4/8(50%)
+  PRIMARY       | 3/8(38%)
   LW            | 1/8(13%)
   GCLK_PIN      | 3/6(50%)
   PLL           | 0/4(0%)
@@ -107,7 +107,6 @@
   clk_d          | PRIMARY        |  TL
   phy_rx_clk_d   | PRIMARY        |  TL BR BL
   phy_tx_clk_d   | PRIMARY        |  TR BR BL
-  phy_mdc_d      | PRIMARY        |  TR TL BL
   clk_tx_ena_int | LW             |  -
   ===========================================
 
@@ -130,7 +129,7 @@ phy_txd[0]         |           | 26/6          | Y          | out   | IOL29[B] |
 phy_txd[1]         |           | 25/6          | Y          | out   | IOL29[A] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | FAST      | NA         | OFF             | NA            | 1.8       
 phy_txd[2]         |           | 24/6          | Y          | out   | IOL32[B] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | FAST      | NA         | OFF             | NA            | 1.8       
 phy_txd[3]         |           | 23/6          | Y          | out   | IOL32[A] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | FAST      | NA         | OFF             | NA            | 1.8       
-phy_mdc            |           | 41/5          | Y          | out   | IOB6[B]  | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | FAST      | NA         | NA              | NA            | 1.8       
+phy_mdc            |           | 41/5          | Y          | out   | IOB6[B]  | LVCMOS18   | 8     | NONE      | NA        | NA         | OFF        | FAST      | NA         | NA              | NA            | 1.8       
 data_from_buff[0]  |           | 117/1         | N          | out   | IOT40[A] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | FAST      | NA         | NA              | NA            | 1.8       
 data_from_buff[1]  |           | 114/1         | N          | out   | IOT42[B] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | FAST      | NA         | NA              | NA            | 1.8       
 data_from_buff[2]  |           | 111/1         | N          | out   | IOT50[A] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | FAST      | NA         | NA              | NA            | 1.8       
@@ -147,7 +146,7 @@ data_from_phy[4]   |           | 125/0         | Y          | out   | IOT22[A] |
 data_from_phy[5]   |           | 112/1         | Y          | out   | IOT48[B] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | FAST      | NA         | NA              | NA            | 1.8       
 data_from_phy[6]   |           | 113/1         | Y          | out   | IOT48[A] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | FAST      | NA         | NA              | NA            | 1.8       
 data_from_phy[7]   |           | 110/1         | Y          | out   | IOT50[B] | LVCMOS18   | 8     | UP        | NA        | NA         | OFF        | FAST      | NA         | NA              | NA            | 1.8       
-phy_mdio           |           | 40/5          | Y          | io    | IOB6[A]  | LVCMOS18   | 8     | UP        | NA        | NONE       | OFF        | FAST      | NA         | NA              | NA            | 1.8       
+phy_mdio           |           | 40/5          | Y          | io    | IOB6[A]  | LVCMOS18   | 8     | NONE      | NA        | NONE       | OFF        | FAST      | NA         | NA              | NA            | 1.8       
 ==========================================================================================================================================================================================================================
 
 
@@ -192,8 +191,8 @@ Loc./Bank| Signal             | Dir.  | Site     | IO Type  | Drive | Pull Mode 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 38/5     | phy_rxd[3]         | in    | IOB5[A]  | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA        | NA         | NA              | NA            | 1.8  
 39/5     | -                  | in    | IOB5[B]  | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA        | NA         | NA              | NA            | 1.8  
-40/5     | phy_mdio           | io    | IOB6[A]  | LVCMOS18 | 8     | UP        | NA        | NONE       | OFF        | FAST      | NA         | NA              | NA            | 1.8  
-41/5     | phy_mdc            | out   | IOB6[B]  | LVCMOS18 | 8     | UP        | NA        | NA         | OFF        | FAST      | NA         | NA              | NA            | 1.8  
+40/5     | phy_mdio           | io    | IOB6[A]  | LVCMOS18 | 8     | NONE      | NA        | NONE       | OFF        | FAST      | NA         | NA              | NA            | 1.8  
+41/5     | phy_mdc            | out   | IOB6[B]  | LVCMOS18 | 8     | NONE      | NA        | NA         | OFF        | FAST      | NA         | NA              | NA            | 1.8  
 42/5     | -                  | in    | IOB7[A]  | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA        | NA         | NA              | NA            | 1.8  
 43/5     | -                  | in    | IOB7[B]  | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA        | NA         | NA              | NA            | 1.8  
 44/5     | -                  | in    | IOB12[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA        | NA         | NA              | NA            | 1.8  

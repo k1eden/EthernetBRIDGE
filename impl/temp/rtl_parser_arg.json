@@ -1,51 +1,51 @@
 {
  "Files" : [
   {
-   "Path" : "E:/EthernetBRIDGE/src/fifo_buff.v",
+   "Path" : "E:/EthernetBRIDGE/src/fifo_buff.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/src/mac_controller.v",
+   "Path" : "E:/EthernetBRIDGE/src/mac_controller.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/src/mac_mii_tx_model.v",
+   "Path" : "E:/EthernetBRIDGE/src/mac_mii_tx_model.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/src/phy_conf.v",
+   "Path" : "E:/EthernetBRIDGE/src/phy_conf.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/src/phy_mii_rx_model.v",
+   "Path" : "E:/EthernetBRIDGE/src/phy_mii_rx_model.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/src/rx_control.v",
+   "Path" : "E:/EthernetBRIDGE/src/rx_control.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/src/tb_buff.v",
+   "Path" : "E:/EthernetBRIDGE/src/tb_buff.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/src/tb_mac_controller.v",
+   "Path" : "E:/EthernetBRIDGE/src/tb_mac_controller.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/src/tb_mdio.v",
+   "Path" : "E:/EthernetBRIDGE/src/tb_mdio.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/src/tb_phy_mac_trans.v",
+   "Path" : "E:/EthernetBRIDGE/src/tb_phy_mac_trans.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/src/top_bridge.v",
+   "Path" : "E:/EthernetBRIDGE/src/top_bridge.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
+   "Path" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.sv",
    "Type" : "verilog"
   },
   {
@@ -53,7 +53,7 @@
    "Type" : "verilog"
   },
   {
-   "Path" : "E:/EthernetBRIDGE/src/tx_control.v",
+   "Path" : "E:/EthernetBRIDGE/src/tx_control.sv",
    "Type" : "verilog"
   }
  ],
@@ -63,6 +63,6 @@
  "LoopLimit" : 2000,
  "ResultFile" : "E:/EthernetBRIDGE/impl/temp/rtl_parser.result",
  "Top" : "top_mac_to_fifo_test",
- "VerilogStd" : "verilog_2001",
+ "VerilogStd" : "sysv",
  "VhdlStd" : "vhdl_93"
 }

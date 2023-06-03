@@ -5,20 +5,20 @@
     <Version>5</Version>
     <Device name="GW2A-18C" pn="GW2A-LV18EQ144C8/I7">gw2a18c-005</Device>
     <FileList>
-        <File path="src/fifo_buff.v" type="file.verilog" enable="1"/>
-        <File path="src/mac_controller.v" type="file.verilog" enable="1"/>
-        <File path="src/mac_mii_tx_model.v" type="file.verilog" enable="1"/>
-        <File path="src/phy_conf.v" type="file.verilog" enable="1"/>
-        <File path="src/phy_mii_rx_model.v" type="file.verilog" enable="1"/>
-        <File path="src/rx_control.v" type="file.verilog" enable="1"/>
-        <File path="src/tb_buff.v" type="file.verilog" enable="1"/>
-        <File path="src/tb_mac_controller.v" type="file.verilog" enable="1"/>
-        <File path="src/tb_mdio.v" type="file.verilog" enable="1"/>
-        <File path="src/tb_phy_mac_trans.v" type="file.verilog" enable="1"/>
-        <File path="src/top_bridge.v" type="file.verilog" enable="1"/>
-        <File path="src/top_mac_to_fifo_test.v" type="file.verilog" enable="1"/>
+        <File path="src/fifo_buff.sv" type="file.verilog" enable="1"/>
+        <File path="src/mac_controller.sv" type="file.verilog" enable="1"/>
+        <File path="src/mac_mii_tx_model.sv" type="file.verilog" enable="1"/>
+        <File path="src/phy_conf.sv" type="file.verilog" enable="1"/>
+        <File path="src/phy_mii_rx_model.sv" type="file.verilog" enable="1"/>
+        <File path="src/rx_control.sv" type="file.verilog" enable="1"/>
+        <File path="src/tb_buff.sv" type="file.verilog" enable="1"/>
+        <File path="src/tb_mac_controller.sv" type="file.verilog" enable="1"/>
+        <File path="src/tb_mdio.sv" type="file.verilog" enable="1"/>
+        <File path="src/tb_phy_mac_trans.sv" type="file.verilog" enable="1"/>
+        <File path="src/top_bridge.sv" type="file.verilog" enable="1"/>
+        <File path="src/top_mac_to_fifo_test.sv" type="file.verilog" enable="1"/>
         <File path="src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v" type="file.verilog" enable="1"/>
-        <File path="src/tx_control.v" type="file.verilog" enable="1"/>
+        <File path="src/tx_control.sv" type="file.verilog" enable="1"/>
         <File path="src/pinout_test_board.cst" type="file.cst" enable="1"/>
     </FileList>
 </Project>
