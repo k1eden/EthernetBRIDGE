@@ -140,7 +140,7 @@ phy_conf configurator_1100 (
     .wr_data(miim_wrdata_1100),
     .wren(miim_wren_1100),
     .busy(miim_busy_1100)
-); //100 mb/s + full duplex + autoneg on
+); //10 mb/s + full duplex
 
 phy_conf configurator_1300 (
     .clk(phy_mdc_1300),
@@ -149,7 +149,7 @@ phy_conf configurator_1300 (
     .wr_data(miim_wrdata_1300),
     .wren(miim_wren_1300),
     .busy(miim_busy_1300)
-); //100 mb/s + full duplex + autoneg on
+); //10 mb/s + full duplex 
 
 
 mac_controller mac_1100 (

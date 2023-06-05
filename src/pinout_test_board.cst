@@ -1,6 +1,6 @@
 
 //IO_LOC "clk_out" 141;
-//IO_LOC "reset_phy" 12;
+IO_LOC "phy_reset" 12;
 //IO_PORT "clk_out" PULL_MODE=UP DRIVE=8;
 IO_LOC "data_from_phy[7]" 110;
 IO_PORT "data_from_phy[7]" PULL_MODE=UP DRIVE=8;

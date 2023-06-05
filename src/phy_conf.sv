@@ -22,8 +22,8 @@ module phy_conf #(parameter phyad = 5'b00000) (
     typedef enum logic [2:0] {
         s_idle = 3'd0,
         s_prep = 3'd1,
-        s_read = 3'd2,
-        s_write = 3'd3,
+        s_readReg = 3'd2,
+        s_writeConf = 3'd3,
         s_wait = 3'd4
 } conf_state;
 
@@ -148,6 +148,7 @@ module phy_conf #(parameter phyad = 5'b00000) (
             miim_wren <= 1'b0;
             miim_rden <= 1'b0;
             case(state)
+
             s_idle:begin
                 if (start_flag & !finish_flag) begin
                     state <= s_prep;
@@ -156,32 +157,37 @@ module phy_conf #(parameter phyad = 5'b00000) (
                 miim_regad <= 5'b0;
                 miim_wrdata <= 16'b0;
             end
+
             s_prep:        // check rw_reg to get next operation; 1 - write, 0 - read
                 if (rw_reg) begin
-                    state <= s_write;
+                    state <= s_writeConf;
                 end
                 else begin
-                    state <= s_read;
+                    state <= s_readReg;
                 end
-            s_write:begin
+
+            s_writeConf:begin
                 miim_wren <= 1'b1;
                 miim_phyad <= phy_address_reg;
                 miim_regad <= reg_address_reg;
                 miim_wrdata <= wrdata_reg;
                 state <= s_wait;
             end
-            s_read:begin
+
+            s_readReg:begin
                 miim_rden <= 1'b1;
                 miim_phyad <= phy_address_reg;
                 miim_regad <= reg_address_reg;
                 miim_wrdata <= wrdata_reg;
                 state <= s_wait;
             end
+
             s_wait:begin                                          // wait end of operations
                 if (!busy & (!miim_wren & !miim_rden)) begin
                     state <= s_idle;
                 end
             end
+
             default:
                 state <= s_idle;
             endcase

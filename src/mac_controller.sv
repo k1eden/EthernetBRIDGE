@@ -100,9 +100,9 @@ Triple_Speed_Ethernet_MAC_Top mac_controller (
 .miim_rddata(miim_rddata),
 .miim_rddata_valid(miim_rddata_valid),
 .miim_busy(miim_busy),
-.tx_pause_req(/*tx_pause_req*/ 1'b0),
-.tx_pause_val(/*tx_pause_val*/ 16'h0),
-.tx_pause_source_addr(/*tx_pause_source_addr*/ 48'h0),
+.tx_pause_req(tx_pause_req),
+.tx_pause_val(tx_pause_val),
+.tx_pause_source_addr(tx_pause_source_addr),
 .tx_fcs_fwd_ena(1'b0), //auto fcs 
 .rx_fcs_fwd_ena(1'b0),
 .tx_ifg_delay_ena(1'b0),

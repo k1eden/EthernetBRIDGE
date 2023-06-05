@@ -1,13 +1,12 @@
 /* 
  THIS MODULE IS THE TOP-LEVEL FILE FOR DEBUGING PROJECT WITH 1 PHY CONFIGURATION
 */
-module top_mac_to_fifo_test (clk, phy_rx_clk, phy_rx_dv, phy_rxd, phy_tx_clk, phy_tx_en, phy_txd, phy_mdio, phy_mdc, data_from_buff, data_from_phy);
+module top_mac_to_fifo_test (clk, phy_rx_clk, phy_rx_dv, phy_rxd, phy_tx_clk, phy_tx_en, phy_txd, phy_mdio, phy_mdc, phy_reset, data_from_buff, data_from_phy);
 
 input phy_rx_clk;
 input [3:0] phy_rxd;
 input phy_rx_dv; // data valid -- Указывает на действительность данных на phy1100_rxd
 input phy_tx_clk;
-
 
 output phy_tx_en;
 output [3:0] phy_txd;
@@ -15,6 +14,8 @@ output [3:0] phy_txd;
 
 inout phy_mdio; 
 output phy_mdc;
+
+output reg phy_reset;
 
 wire mdio_out;
 wire mdio_oen;
@@ -60,6 +61,8 @@ output wire [7:0] data_from_buff;
 
 wire [7:0] tx_control_data;
 
+logic fifo_buff_almost_full;
+
 assign phy_mdio = (!mdio_oen) ? mdio_out : 1'bz;
 assign tx_mac_valid = tx_valid_control;
 
@@ -69,6 +72,7 @@ assign tx_mac_valid = tx_valid_control;
 */
 initial begin
     reset_mac = 1'b0; // 0 is active lvl
+    phy_reset = 1'b0;
 //    frm_len = 16'h0;
 end
 
@@ -78,14 +82,19 @@ logic start_flag = 1'b0;
 always_ff @(posedge clk) begin
     if (start_cnt < 8'hff)   
             start_cnt <= start_cnt + 1'b1;  
-            if (start_cnt == 8'hff) start_flag <= 1'b1;  
+    
+    if (start_cnt == 8'hff) start_flag <= 1'b1;  
                 else start_flag <= 1'b0;    
-    end
+end
 
 always @(posedge clk) 
-    if (start_flag) reset_mac <= 1'b1;
-        else reset_mac <= 1'b0;
-
+    if (start_flag) begin 
+        reset_mac <= 1'b1;
+        phy_reset <= 1'b1;
+    end else begin
+        reset_mac <= 1'b0;
+        phy_reset <= 1'b0;
+    end
 phy_conf #(5'h0) configurator (
     .rstn(reset_mac),
     .clk(/*phy_mdc*/clk),
@@ -161,9 +170,11 @@ tx_control controller (
 rx_control fifo_overflow_control (
     .tx_clk(tx_mac_clk),
     .tx_pause_source_addr_r(tx_pause_source_addr),
-    .is_fifo_full(fifo_full),
+    .is_fifo_full(fifo_buff_almost_full),
     .tx_pause_req(tx_pause_req),
-    .tx_pause_val(tx_pause_val)
+    .tx_pause_val(tx_pause_val),
+    .rstn(reset_mac),
+    .rx_dv(rx_mac_valid)
 );
 
 fifo_buff rxfifo (
@@ -176,7 +187,8 @@ fifo_buff rxfifo (
     .full(fifo_full),
     .rst_n(reset_mac),
     .tx_valid_flag(tx_valid_flag),
-    .rx_mac_last(rx_mac_last) 
+    .rx_mac_last(rx_mac_last), 
+    .almost_full(fifo_buff_almost_full)
 );
 
 fifo_buff #(16) rx_frm_len_fifo  (

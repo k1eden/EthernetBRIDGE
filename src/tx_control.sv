@@ -38,16 +38,6 @@ typedef enum logic [6:0] {
 tx_state state = wait_frame;
 
 
-//reg [6:0] state;
-
-//localparam [6:0] wait_frame = 7'b0000001;
-//localparam [6:0] prepare = 7'b0000010;
-//localparam [6:0] prepare2 = 7'b0000100;
-//localparam [6:0] send_data = 7'b0001000;
-//localparam [6:0] finish_send = 7'b0010000;
-//localparam [6:0] finish_send2 = 7'b0100000;
-//localparam [6:0] finish_send3 = 7'b1000000;
-
 initial begin
 tx_data_o <= 8'h0;
 last_byte <= 1'b0;
