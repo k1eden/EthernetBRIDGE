@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW2A-18C" package="eLQFP144" speed="8" partNumber="GW2A-LV18EQ144C8/I7"/>
+    <FileList>
+        <File path="E:\EthernetBRIDGE\src\fifo_buff.sv" type="verilog"/>
+        <File path="E:\EthernetBRIDGE\src\mac_controller.sv" type="verilog"/>
+        <File path="E:\EthernetBRIDGE\src\mac_mii_tx_model.sv" type="verilog"/>
+        <File path="E:\EthernetBRIDGE\src\phy_conf.sv" type="verilog"/>
+        <File path="E:\EthernetBRIDGE\src\phy_mii_rx_model.sv" type="verilog"/>
+        <File path="E:\EthernetBRIDGE\src\rx_control.sv" type="verilog"/>
+        <File path="E:\EthernetBRIDGE\src\tb_buff.sv" type="verilog"/>
+        <File path="E:\EthernetBRIDGE\src\tb_mac_controller.sv" type="verilog"/>
+        <File path="E:\EthernetBRIDGE\src\tb_mdio.sv" type="verilog"/>
+        <File path="E:\EthernetBRIDGE\src\tb_phy_mac_trans.sv" type="verilog"/>
+        <File path="E:\EthernetBRIDGE\src\top_bridge.sv" type="verilog"/>
+        <File path="E:\EthernetBRIDGE\src\top_mac_to_fifo_test.sv" type="verilog"/>
+        <File path="E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v" type="verilog"/>
+        <File path="E:\EthernetBRIDGE\src\tx_control.sv" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="dsp_balance" value="0"/>
+        <Option type="looplimit" value="2000"/>
+        <Option type="output_file" value="E:\EthernetBRIDGE\impl\gwsynthesis\EthernetBRIDGE.vg"/>
+        <Option type="print_all_synthesis_warning" value="0"/>
+        <Option type="ram_rw_check" value="1"/>
+        <Option type="top_module" value="top_mac_to_fifo_test"/>
+        <Option type="verilog_language" value="sysv-2017"/>
+        <Option type="vhdl_language" value="vhdl-1993"/>
+    </OptionList>
+</Project>

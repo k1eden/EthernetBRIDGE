@@ -1,0 +1,146 @@
+[
+ {
+  "InstFile" : "E:/EthernetBRIDGE/src/top_bridge.v",
+  "InstLine" : 1,
+  "InstName" : "top_bridge",
+  "ModuleFile" : "E:/EthernetBRIDGE/src/top_bridge.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "top_bridge",
+  "SubInsts" : [
+   {
+    "InstFile" : "E:/EthernetBRIDGE/src/top_bridge.v",
+    "InstLine" : 48,
+    "InstName" : "mac1100",
+    "ModuleFile" : "E:/EthernetBRIDGE/src/mac_controller.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "mac_controller",
+    "SubInsts" : [
+     {
+      "InstFile" : "E:/EthernetBRIDGE/src/mac_controller.v",
+      "InstLine" : 76,
+      "InstName" : "mac_controller",
+      "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+      "ModuleLine" : 6522,
+      "ModuleName" : "Triple_Speed_Ethernet_MAC_Top",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+        "InstLine" : 6631,
+        "InstName" : "u_triple_speed_mac",
+        "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "~triple_speed_mac.Triple_Speed_Ethernet_MAC_Top"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "InstFile" : "E:/EthernetBRIDGE/src/top_bridge.v",
+    "InstLine" : 55,
+    "InstName" : "txfifo_1100",
+    "ModuleFile" : "E:/EthernetBRIDGE/src/fifo_buff.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "fifo_buff"
+   },
+   {
+    "InstFile" : "E:/EthernetBRIDGE/src/top_bridge.v",
+    "InstLine" : 60,
+    "InstName" : "txfifo_1200",
+    "ModuleFile" : "E:/EthernetBRIDGE/src/fifo_buff.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "fifo_buff"
+   },
+   {
+    "InstFile" : "E:/EthernetBRIDGE/src/top_bridge.v",
+    "InstLine" : 64,
+    "InstName" : "mac1200",
+    "ModuleFile" : "E:/EthernetBRIDGE/src/mac_controller.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "mac_controller",
+    "SubInsts" : [
+     {
+      "InstFile" : "E:/EthernetBRIDGE/src/mac_controller.v",
+      "InstLine" : 76,
+      "InstName" : "mac_controller",
+      "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+      "ModuleLine" : 6522,
+      "ModuleName" : "Triple_Speed_Ethernet_MAC_Top",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+        "InstLine" : 6631,
+        "InstName" : "u_triple_speed_mac",
+        "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "~triple_speed_mac.Triple_Speed_Ethernet_MAC_Top"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "InstFile" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
+  "InstLine" : 1,
+  "InstName" : "top_mac_to_fifo_test",
+  "ModuleFile" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "top_mac_to_fifo_test",
+  "SubInsts" : [
+   {
+    "InstFile" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
+    "InstLine" : 44,
+    "InstName" : "config_adin1300",
+    "ModuleFile" : "E:/EthernetBRIDGE/src/phy_conf.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "phy_conf"
+   },
+   {
+    "InstFile" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
+    "InstLine" : 49,
+    "InstName" : "mac",
+    "ModuleFile" : "E:/EthernetBRIDGE/src/mac_controller.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "mac_controller",
+    "SubInsts" : [
+     {
+      "InstFile" : "E:/EthernetBRIDGE/src/mac_controller.v",
+      "InstLine" : 76,
+      "InstName" : "mac_controller",
+      "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+      "ModuleLine" : 6522,
+      "ModuleName" : "Triple_Speed_Ethernet_MAC_Top",
+      "SubInsts" : [
+       {
+        "InstFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+        "InstLine" : 6631,
+        "InstName" : "u_triple_speed_mac",
+        "ModuleFile" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+        "ModuleLine" : 1,
+        "ModuleName" : "~triple_speed_mac.Triple_Speed_Ethernet_MAC_Top"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "InstFile" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
+    "InstLine" : 59,
+    "InstName" : "last_byte_checker",
+    "ModuleFile" : "E:/EthernetBRIDGE/src/tx_control.v",
+    "ModuleLine" : 4,
+    "ModuleName" : "tx_control"
+   },
+   {
+    "InstFile" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.v",
+    "InstLine" : 63,
+    "InstName" : "txfifo",
+    "ModuleFile" : "E:/EthernetBRIDGE/src/fifo_buff.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "fifo_buff"
+   }
+  ]
+ }
+]

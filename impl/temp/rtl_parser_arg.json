@@ -1,0 +1,68 @@
+{
+ "Files" : [
+  {
+   "Path" : "E:/EthernetBRIDGE/src/fifo_buff.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/mac_controller.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/mac_mii_tx_model.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/phy_conf.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/phy_mii_rx_model.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/rx_control.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/tb_buff.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/tb_mac_controller.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/tb_mdio.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/tb_phy_mac_trans.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/top_bridge.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/top_mac_to_fifo_test.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/triple_speed_ethernet_mac/triple_speed_ethernet_mac.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "E:/EthernetBRIDGE/src/tx_control.sv",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "E:/EthernetBRIDGE/impl/temp/rtl_parser.result",
+ "Top" : "top_mac_to_fifo_test",
+ "VerilogStd" : "sysv",
+ "VhdlStd" : "vhdl_93"
+}

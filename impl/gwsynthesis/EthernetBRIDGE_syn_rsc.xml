@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="top_mac_to_fifo_test" Register="10" Alu="20" Lut="13">
+    <SubModule name="configurator" Register="28" Alu="14" Lut="27"/>
+    <SubModule name="mac" Lut="1">
+        <SubModule name="mac_controller" Register="562" Lut="721" Ssram="23"/>
+    </SubModule>
+    <SubModule name="controller" Register="37" Lut="123"/>
+    <SubModule name="fifo_overflow_control" Register="3" Lut="6"/>
+    <SubModule name="rxfifo" Register="24" Alu="22" Lut="5" Bsram="1"/>
+    <SubModule name="rx_frm_len_fifo" Register="40" Alu="38" Lut="14" Bsram="1"/>
+</Module>

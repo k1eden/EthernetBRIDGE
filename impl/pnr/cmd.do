@@ -1,0 +1,11 @@
+-d E:\EthernetBRIDGE\impl\gwsynthesis\EthernetBRIDGE.vg
+-p GW2A-18C-eLQFP144-8
+-pn GW2A-LV18EQ144C8/I7
+-cst E:\EthernetBRIDGE\src\pinout_test_board.cst
+-cfg E:\EthernetBRIDGE\impl\pnr\device.cfg
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-route_maxfan 23

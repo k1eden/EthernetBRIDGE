@@ -1,0 +1,95 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\fifo_buff.sv'
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\mac_controller.sv'
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\mac_mii_tx_model.sv'
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\phy_conf.sv'
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\phy_mii_rx_model.sv'
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\rx_control.sv'
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\tb_buff.sv'
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\tb_mac_controller.sv'
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\tb_mdio.sv'
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\tb_phy_mac_trans.sv'
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\top_bridge.sv'
+Undeclared symbol 'phy_rx_err_1100', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.sv":194)
+Undeclared symbol 'phy_tx_err_1100', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.sv":199)
+Undeclared symbol 'phy_crs_1100', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.sv":201)
+Undeclared symbol 'phy_col_1100', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.sv":202)
+Undeclared symbol 'tx_mac_ready_1100', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.sv":212)
+Undeclared symbol 'rx_mac_last_1100', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.sv":214)
+Undeclared symbol 'phy_rx_err_1300', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.sv":241)
+Undeclared symbol 'phy_tx_err_1300', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.sv":246)
+Undeclared symbol 'phy_crs_1300', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.sv":248)
+Undeclared symbol 'phy_col_1300', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.sv":249)
+Undeclared symbol 'tx_mac_ready_1300', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.sv":259)
+Undeclared symbol 'rx_mac_last_1300', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_bridge.sv":261)
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\top_mac_to_fifo_test.sv'
+Undeclared symbol 'phy_rx_err', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.sv":117)
+Undeclared symbol 'phy_tx_err', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.sv":121)
+Undeclared symbol 'phy_crs', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.sv":122)
+Undeclared symbol 'phy_col', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.sv":123)
+Undeclared symbol 'tx_mac_ready', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.sv":131)
+Undeclared symbol 'rx_mac_last', assumed default net type 'wire'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.sv":141)
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v'
+Analyzing Verilog file 'E:\EthernetBRIDGE\src\tx_control.sv'
+WARN  (EX3073) : Port 'rx_mac_last' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.sv":203)
+Compiling module 'top_mac_to_fifo_test'("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.sv":4)
+Compiling module 'phy_conf(phyad=5'h0)'("E:\EthernetBRIDGE\src\phy_conf.sv":4)
+Compiling module 'mac_controller'("E:\EthernetBRIDGE\src\mac_controller.sv":4)
+Compiling module 'Triple_Speed_Ethernet_MAC_Top'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":6306)
+Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+Compiling module '**'("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+Compiling module 'tx_control'("E:\EthernetBRIDGE\src\tx_control.sv":4)
+Compiling module 'rx_control'("E:\EthernetBRIDGE\src\rx_control.sv":1)
+Compiling module 'fifo_buff'("E:\EthernetBRIDGE\src\fifo_buff.sv":4)
+Extracting RAM for identifier 'ram'("E:\EthernetBRIDGE\src\fifo_buff.sv":20)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("E:\EthernetBRIDGE\src\fifo_buff.sv":45)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("E:\EthernetBRIDGE\src\fifo_buff.sv":46)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("E:\EthernetBRIDGE\src\fifo_buff.sv":52)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("E:\EthernetBRIDGE\src\fifo_buff.sv":53)
+Compiling module 'fifo_buff(ADDR_WIDTH=16)'("E:\EthernetBRIDGE\src\fifo_buff.sv":4)
+Extracting RAM for identifier 'ram'("E:\EthernetBRIDGE\src\fifo_buff.sv":20)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("E:\EthernetBRIDGE\src\fifo_buff.sv":45)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("E:\EthernetBRIDGE\src\fifo_buff.sv":46)
+WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("E:\EthernetBRIDGE\src\fifo_buff.sv":52)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("E:\EthernetBRIDGE\src\fifo_buff.sv":53)
+WARN  (EX1998) : Net 'phy_rx_err' does not have a driver("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.sv":117)
+WARN  (EX1998) : Net 'phy_crs' does not have a driver("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.sv":122)
+WARN  (EX1998) : Net 'phy_col' does not have a driver("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.sv":123)
+WARN  (EX2565) : Input 'tx_mac_err' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.sv":152)
+WARN  (EX1947) : Input port 'rx_mac_last' remains unconnected for this instance("E:\EthernetBRIDGE\src\top_mac_to_fifo_test.sv":203)
+NOTE  (EX0101) : Current top module is "top_mac_to_fifo_test"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "~crc_chk.Triple_Speed_Ethernet_MAC_Top" instantiated to "u_crc_chk" is swept in optimizing("E:\EthernetBRIDGE\src\triple_speed_ethernet_mac\triple_speed_ethernet_mac.v":0)
+[95%] Generate netlist file "E:\EthernetBRIDGE\impl\gwsynthesis\EthernetBRIDGE.vg" completed
+[100%] Generate report file "E:\EthernetBRIDGE\impl\gwsynthesis\EthernetBRIDGE_syn.rpt.html" completed
+GowinSynthesis finish
