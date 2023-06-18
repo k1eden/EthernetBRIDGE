@@ -88,7 +88,7 @@ module phy_conf #(parameter phyad = 5'b00000) (
                     rw_reg <= 1'b1;
                     phy_address_reg <= phyad;
                     reg_address_reg <= 5'h0;
-                    wrdata_reg <= 16'h44;
+                    wrdata_reg <= 16'h0100;
                 end
                 else if (op_cnt == 8'd1) begin  // read ID REG (should be 0x0283)
                     rw_reg <= 1'b0;

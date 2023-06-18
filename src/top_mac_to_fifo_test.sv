@@ -5,7 +5,7 @@ module top_mac_to_fifo_test (clk, phy_rx_clk, phy_rx_dv, phy_rxd, phy_tx_clk, ph
 
 input phy_rx_clk;
 input [3:0] phy_rxd;
-input phy_rx_dv; // data valid -- Указывает на действительность данных на phy1100_rxd
+input phy_rx_dv; 
 input phy_tx_clk;
 
 output phy_tx_en;
@@ -63,7 +63,7 @@ wire [7:0] tx_control_data;
 
 logic fifo_buff_almost_full;
 
-assign phy_mdio = (!mdio_oen) ? mdio_out : 1'bz;
+assign phy_mdio = (!mdio_oen) ? mdio_out : 'z;
 assign tx_mac_valid = tx_valid_control;
 
 
@@ -79,7 +79,7 @@ end
 logic [7:0] start_cnt = 8'h0;
 logic start_flag = 1'b0;
 
-always_ff @(posedge clk) begin
+always_ff @(posedge clk) begin // start delay
     if (start_cnt < 8'hff)   
             start_cnt <= start_cnt + 1'b1;  
     
@@ -95,6 +95,7 @@ always @(posedge clk)
         reset_mac <= 1'b0;
         phy_reset <= 1'b0;
     end
+
 phy_conf #(5'h0) configurator (
     .rstn(reset_mac),
     .clk(/*phy_mdc*/clk),
@@ -106,7 +107,7 @@ phy_conf #(5'h0) configurator (
     .miim_wren(miim_wren),
     .miim_rden(miim_rden)
   
-); //10 mb/s + full duplex + autoneg on
+); //10 mb/s + full duplex
 
 
 mac_controller mac (

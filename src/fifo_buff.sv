@@ -15,13 +15,13 @@ output reg almost_full,
 //output reg [10:0] frame_len,
 output reg tx_valid_flag
 );
-
-// Сигналы для RAM
+ 
+// RAM Signals
 reg [ADDR_WIDTH - 1:0] ram [0:DEPTH-1];
 reg [ADDR_WIDTH-1:0] wr_ptr = 0;
 reg [ADDR_WIDTH-1:0] rd_ptr = 0;
 
-// Сигналы для FIFO
+// FIFO Signals
 reg [ADDR_WIDTH-1:0] count = 0;
 reg [10:0] frame_len_reg = 11'd0;
 
@@ -30,7 +30,7 @@ initial begin
     full = 1'b0;
     empty = 1'b1;
 end
-// Логика записи в FIFO
+// Write op
 always @(posedge clk, negedge rst_n)
 begin
 if (!rst_n) begin
@@ -46,7 +46,7 @@ else
             count <= count + 1;
             frame_len_reg <= frame_len_reg + 1'd1;
         end
-// Логика чтения из FIFO
+// Read op
         if (read && !empty) begin
             data_out <= ram[rd_ptr];
             rd_ptr <= rd_ptr + 1;
@@ -63,6 +63,7 @@ else
     end
 end
 
+// full/empty check
 always @(count)
 begin
     if (count == 0)
